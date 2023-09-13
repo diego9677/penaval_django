@@ -21,7 +21,7 @@ from django.views.generic import RedirectView, TemplateView
 
 
 class WebAppView(LoginRequiredMixin, TemplateView):
-    template_name = 'index.html'
+    template_name = 'registration/home.html'
 
 
 urlpatterns = [
