@@ -1,3 +1,5 @@
+.idea
+.vscode
 .env
 static
 web_app/node_modules

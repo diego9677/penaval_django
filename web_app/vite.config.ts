@@ -8,10 +8,10 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        assetFileNames: (file) => {
+        assetFileNames: () => {
           return `assets/css/[name].min.css`
         },
-        entryFileNames: (file) => {
+        entryFileNames: () => {
           return 'assets/js/[name].min.js'
         }
       }
