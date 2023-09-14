@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import RedirectView, TemplateView
 from .api import api
@@ -30,5 +30,5 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('api/', api.urls),
     path('wa/', WebAppView.as_view(), name='web_app'),
-    path('', RedirectView.as_view(pattern_name='web_app'), name='index')
+    re_path(r'^.*$', RedirectView.as_view(pattern_name='web_app', permanent=False), name='index')
 ]

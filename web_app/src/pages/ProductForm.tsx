@@ -33,7 +33,6 @@ export const ProductForm = () => {
     if (id) {
       Promise.all([getApiProduct(Number(id), controller.signal), getApiBrands('', controller.signal), getApiPlaces('', controller.signal)])
         .then(([product, brands, places]) => {
-          console.log(product);
           const { code, measures, price, place: { id: place_id }, brand: { id: brand_id }, stock } = product;
           setData({
             code,
@@ -148,7 +147,7 @@ export const ProductForm = () => {
               label="Marca"
               options={brands.map(b => ({ label: b.name, value: b.id }))}
               value={data.brand_id}
-              onChange={(value) => setData({ ...data, brand_id: value })}
+              onChange={(value) => setData({ ...data, brand_id: Number(value) })}
             />
 
           </div>
@@ -158,7 +157,7 @@ export const ProductForm = () => {
               label="Lugar"
               options={places.map(p => ({ label: p.name, value: p.id }))}
               value={data.place_id}
-              onChange={(value) => setData({ ...data, place_id: value })}
+              onChange={(value) => setData({ ...data, place_id: Number(value) })}
             />
           </div>
         </section>

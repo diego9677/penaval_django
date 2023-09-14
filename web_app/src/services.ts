@@ -117,7 +117,7 @@ export const createApiBrand = async (input: any) => {
 };
 
 export const updateApiBrand = async (id: number, input: any) => {
-  const response = await fetch(`/api/brands/${id}`, { method: 'PUT', body: JSON.stringify(input), headers })
+  const response = await fetch(`/api/brands/${id}/`, { method: 'PUT', body: JSON.stringify(input), headers })
   const data: Brand = await response.json()
   return data;
 };
