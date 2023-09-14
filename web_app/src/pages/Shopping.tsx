@@ -123,7 +123,7 @@ export const Shopping = () => {
                 <tr key={s.id} className="text-left text-sm font-normal text-gray-900">
                   <td className="p-2">{s.id}</td>
                   <td className="p-2">{s.provider.name}</td>
-                  <td className="p-2">{new Date(s.createdAt).toLocaleString()}</td>
+                  <td className="p-2">{new Date(s.date).toLocaleString()}</td>
                   <td className="p-2">{s.shoppingDetail.length}</td>
                   <td className="p-2">{s.shoppingDetail.reduce((acc, el) => acc + (Number(el.salePrice) * el.quantity), 0)} Bs</td>
                   <td className="p-2">

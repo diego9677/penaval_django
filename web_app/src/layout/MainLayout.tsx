@@ -1,8 +1,9 @@
-// import { Menu } from "@headlessui/react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Menu } from "@headlessui/react";
 import clsx from "clsx";
 import React, { useEffect } from 'react';
 import { NavLink } from "react-router-dom";
-// import { User } from "../interfaces";
+import { User } from "../interfaces";
 
 type Props = {
   title: string;
@@ -25,10 +26,17 @@ const NavItem = ({ to, title, icon }: { to: string; title: string; icon: React.R
 };
 
 export const MainLayout = ({ title, children }: Props) => {
+  const user: User = (window as any).user;
+  console.log(user)
 
   useEffect(() => {
     document.title = title;
   }, [title]);
+
+  const logout = () => {
+    window.location.href = '/accounts/logout/'
+    console.log('logout')
+  }
 
   return (
     <main className="grid grid-cols-12 h-screen">
@@ -49,7 +57,7 @@ export const MainLayout = ({ title, children }: Props) => {
             <div>
               <h4 className='md:hidden flex-1 text-2xl text-gray-700 font-bold'>PeñaVal</h4>
             </div>
-            {/* {user && <UserSection user={user} logout={logout} />} */}
+            {user && <UserSection user={user} logout={logout} />}
           </header>
           <section className="md:py-2 md:px-4 h-[calc(100vh_-_3.5rem)]">
             {children}
@@ -60,7 +68,7 @@ export const MainLayout = ({ title, children }: Props) => {
   );
 };
 
-/*
+
 const UserSection = ({ user, logout }: { user: User, logout: () => void; }) => {
   return (
     <Menu as="div" className="relative w-1/2 sm:w-1/3 md:w-1/4">
@@ -68,7 +76,7 @@ const UserSection = ({ user, logout }: { user: User, logout: () => void; }) => {
         <div className="flex-1 flex gap-1">
           <i className="las la-user la-lg" />
           <span className="text-left text-sm font-medium">
-            {user.person.firstName} {user.person.lastName}
+            {user.email}
           </span>
         </div>
         <i className="las la-angle-down la-lg" />
@@ -90,4 +98,4 @@ const UserSection = ({ user, logout }: { user: User, logout: () => void; }) => {
     </Menu>
   );
 };
-*/
+

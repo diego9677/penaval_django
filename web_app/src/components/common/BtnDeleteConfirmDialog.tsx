@@ -1,5 +1,5 @@
-import React, { Fragment, useState } from 'react';
-import { Dialog, Transition } from "@headlessui/react";
+import { useState } from 'react';
+import { Dialog } from "@headlessui/react";
 import { Button } from "./Button";
 import { CustomDialog } from "../CustomDialog";
 

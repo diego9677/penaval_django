@@ -124,7 +124,7 @@ export const Sales = () => {
                 <tr key={s.id} className="text-left text-sm font-normal text-gray-900">
                   <td className="p-2">{s.client.nit}</td>
                   <td className="p-2">{s.client.person.firstName} {s.client.person.lastName}</td>
-                  <td className="p-2">{new Date(s.createdAt).toLocaleString()}</td>
+                  <td className="p-2">{new Date(s.date).toLocaleString()}</td>
                   <td className="p-2">{s.saleDetail.length}</td>
                   <td className="p-2">{s.saleDetail.reduce((acc, el) => acc + (Number(el.salePrice) * el.quantity), 0)} Bs</td>
                   <td className="p-2">

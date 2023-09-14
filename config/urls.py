@@ -30,5 +30,6 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('api/', api.urls),
     path('wa/', WebAppView.as_view(), name='web_app'),
-    re_path(r'^.*$', RedirectView.as_view(pattern_name='web_app', permanent=False), name='index')
+    path('', RedirectView.as_view(pattern_name='web_app', permanent=False), name='index'),
+    # re_path(r'^.*$', RedirectView.as_view(pattern_name='web_app', permanent=False), name='index')
 ]

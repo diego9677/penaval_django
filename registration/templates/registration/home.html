@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load load_user %}
 
 {% block title %}Web App{% endblock %}
 
@@ -8,6 +9,10 @@
 {% endblock %}
 
 {% block scripts %}
+  <script>
+    const user = JSON.parse('{{ user|userdumps|safe }}')
+    window.user = user
+  </script>
 	{% if debug %}
         <script type="module">
           import RefreshRuntime from 'http://localhost:5173/@react-refresh'

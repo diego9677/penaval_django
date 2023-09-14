@@ -1,19 +1,14 @@
-interface Base {
-  createdAt: string;
-  updatedAt: string;
-}
 
-export interface Provider extends Base {
+export interface Provider {
   id: number;
   name: string;
   address: string;
 }
 
-export interface User extends Base {
+export interface User {
   id: number;
   username: string;
-  token: string;
-  person: Person;
+  email: string
 }
 
 export interface Person {
@@ -23,7 +18,7 @@ export interface Person {
   phone: string;
 }
 
-export interface Product extends Base {
+export interface Product {
   id: number;
   code: string;
   stock: number;
@@ -48,14 +43,14 @@ interface ProductShort {
   price: number,
 }
 
-export interface Place extends Base {
+export interface Place {
   id: number;
   name: string;
   description?: string;
   products: ProductShort[];
 }
 
-export interface Brand extends Base {
+export interface Brand {
   id: number;
   name: string;
   description?: string;
@@ -63,8 +58,9 @@ export interface Brand extends Base {
 }
 
 
-export interface Shopping extends Base {
+export interface Shopping {
   id: number;
+  date: string;
   provider: {
     id: number;
     name: string;
@@ -81,8 +77,9 @@ export interface Shopping extends Base {
   }[];
 }
 
-export interface Sale extends Base {
+export interface Sale {
   id: number;
+  date: string;
   client: {
     id: number;
     nit: string;
@@ -121,7 +118,7 @@ export interface ParamsReport {
   end: string | null;
 }
 
-export interface Client extends Base {
+export interface Client {
   id: number;
   nit: string;
   person: Person;

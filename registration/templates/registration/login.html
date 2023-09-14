@@ -7,7 +7,13 @@
 <main class="h-screen flex items-center justify-center">
 	<section class="w-full sm:w-1/2 lg:w-1/3">
 		<h4 class='text-2xl font-bold text-gray-800 text-center py-2'>PeñaVal</h4>
+
 		<form class="flex flex-col gap-6 px-4" action="{% url 'login' %}" method="POST">{% csrf_token %}
+			{% if form.errors %}
+				<div class="text-sm text-red-600 font-semibold" role="alert">
+					El usuario o contraseña no son validas, intentelo nuevamente.
+				</div>
+			{% endif %}
 
 			<div class="flex flex-col gap-3">
 				<label class="text-sm font-semibold text-neutral-800" for="id_username">{{ form.username.label_tag }}</label>
@@ -25,4 +31,11 @@
 		</form>
 	</section>
 </main>
+{% endblock %}
+
+{% block scripts %}
+	<script>
+		const input_pwd = document.querySelector('#id_password')
+		console.log(input_pwd)
+	</script>
 {% endblock %}

@@ -19,12 +19,12 @@ type Props = {
 };
 
 
-export const Select = ({ id, label, error, color = 'primary', options, value, onChange }: Props) => {
+export const Select = ({ id, label, options, value, onChange }: Props) => {
   const [selected, setSelected] = useState<Item | string>('');
 
   useEffect(() => {
     setSelected(options.find((o) => o.value === value) || '');
-  }, [value]);
+  }, [value, options]);
 
   const handleChange = (item: Item) => {
     setSelected(item);

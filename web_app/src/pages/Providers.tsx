@@ -12,8 +12,8 @@ const COLUMNS = [
   '#',
   'Nombre',
   'Dirección',
-  'Creado',
-  'Actualizado',
+  // 'Creado',
+  // 'Actualizado',
   ''
 ];
 
@@ -88,8 +88,8 @@ export const Providers = () => {
                   <td className="p-2">{b.id}</td>
                   <td className="p-2">{b.name}</td>
                   <td className="p-2">{b.address}</td>
-                  <td className="p-2">{new Date(b.createdAt).toLocaleDateString()}</td>
-                  <td className="p-2">{new Date(b.updatedAt).toLocaleDateString()}</td>
+                  {/* <td className="p-2">{new Date(b.createdAt).toLocaleDateString()}</td>
+                  <td className="p-2">{new Date(b.updatedAt).toLocaleDateString()}</td> */}
                   <td className="flex gap-2 items-center h-12">
                     <div className="w-8">
                       <Link to={`/wa/providers/form?id=${b.id}`}>
