@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import RedirectView, TemplateView
+from .api import api
 
 
 class WebAppView(LoginRequiredMixin, TemplateView):
@@ -27,6 +28,7 @@ class WebAppView(LoginRequiredMixin, TemplateView):
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('api/', api.urls),
     path('wa/', WebAppView.as_view(), name='web_app'),
     path('', RedirectView.as_view(pattern_name='web_app'), name='index')
 ]

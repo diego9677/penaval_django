@@ -1,9 +1,8 @@
-import { Menu } from "@headlessui/react";
+// import { Menu } from "@headlessui/react";
 import clsx from "clsx";
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from "react-router-dom";
-import { AuthContext } from "../context/AuthProvider";
-import { User } from "../interfaces";
+// import { User } from "../interfaces";
 
 type Props = {
   title: string;
@@ -27,8 +26,6 @@ const NavItem = ({ to, title, icon }: { to: string; title: string; icon: React.R
 
 export const MainLayout = ({ title, children }: Props) => {
 
-  const { authState: { user }, logout } = useContext(AuthContext);
-
   useEffect(() => {
     document.title = title;
   }, [title]);
@@ -38,12 +35,12 @@ export const MainLayout = ({ title, children }: Props) => {
       <section className="hidden md:block md:col-span-2 bg-gray-800">
         <h4 className='text-2xl text-gray-300 text-center py-4 font-bold'>PeñaVal</h4>
         <div className="flex flex-col">
-          <NavItem icon={<i className="las la-clipboard la-lg" />} to="/products" title="Productos" />
-          <NavItem icon={<i className="las la-donate la-lg" />} to="/sales" title="Ventas" />
-          <NavItem icon={<i className="las la-shopping-cart la-lg" />} to="/shopping" title="Compras" />
-          <NavItem icon={<i className="las la-memory la-lg" />} to="/brands" title="Marcas" />
-          <NavItem icon={<i className="las la-map-pin la-lg" />} to="/places" title="Lugares" />
-          <NavItem icon={<i className="las la-store-alt la-lg" />} to="/providers" title="Provedores" />
+          <NavItem icon={<i className="las la-clipboard la-lg" />} to="/wa/products" title="Productos" />
+          <NavItem icon={<i className="las la-donate la-lg" />} to="/wa/sales" title="Ventas" />
+          <NavItem icon={<i className="las la-shopping-cart la-lg" />} to="/wa/shopping" title="Compras" />
+          <NavItem icon={<i className="las la-memory la-lg" />} to="/wa/brands" title="Marcas" />
+          <NavItem icon={<i className="las la-map-pin la-lg" />} to="/wa/places" title="Lugares" />
+          <NavItem icon={<i className="las la-store-alt la-lg" />} to="/wa/providers" title="Provedores" />
         </div>
       </section>
       <section className="col-span-12 md:col-span-10">
@@ -52,7 +49,7 @@ export const MainLayout = ({ title, children }: Props) => {
             <div>
               <h4 className='md:hidden flex-1 text-2xl text-gray-700 font-bold'>PeñaVal</h4>
             </div>
-            {user && <UserSection user={user} logout={logout} />}
+            {/* {user && <UserSection user={user} logout={logout} />} */}
           </header>
           <section className="md:py-2 md:px-4 h-[calc(100vh_-_3.5rem)]">
             {children}
@@ -63,7 +60,7 @@ export const MainLayout = ({ title, children }: Props) => {
   );
 };
 
-
+/*
 const UserSection = ({ user, logout }: { user: User, logout: () => void; }) => {
   return (
     <Menu as="div" className="relative w-1/2 sm:w-1/3 md:w-1/4">
@@ -93,3 +90,4 @@ const UserSection = ({ user, logout }: { user: User, logout: () => void; }) => {
     </Menu>
   );
 };
+*/
