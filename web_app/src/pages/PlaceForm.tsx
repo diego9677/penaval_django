@@ -41,10 +41,10 @@ export const PlaceForm = () => {
     e.preventDefault();
     if (id) {
       await updateApiPlace(Number(id), data);
-      navigate('/wa/places', { replace: true });
+      navigate('/places', { replace: true });
     } else {
       await createApiPlace(data);
-      navigate('/wa/places', { replace: true });
+      navigate('/places', { replace: true });
     }
   };
 
@@ -64,7 +64,7 @@ export const PlaceForm = () => {
             {id ? 'Editar' : 'Nuevo'} Lugar
           </h3>
           <div className="w-8">
-            <Link to="/wa/places">
+            <Link to="/places">
               <Button type="button" color="danger" size="xs">
                 <i className="las la-times la-lg" />
               </Button>

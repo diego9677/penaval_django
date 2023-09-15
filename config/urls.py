@@ -24,12 +24,22 @@ from .api import api
 class WebAppView(LoginRequiredMixin, TemplateView):
     template_name = 'registration/home.html'
 
+FRONTEND_URLS = [
+    'products',
+    'products/form',
+    'brands',
+    'brands/form',
+    'providers',
+    'providers/form',
+    'sales',
+    'sales/form',
+    'shopping',
+    'shopping/form',
+]
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('api/', api.urls),
-    path('wa/', WebAppView.as_view(), name='web_app'),
-    path('', RedirectView.as_view(pattern_name='web_app', permanent=False), name='index'),
-    # re_path(r'^.*$', RedirectView.as_view(pattern_name='web_app', permanent=False), name='index')
-]
+] + [path(url, WebAppView.as_view()) for url in FRONTEND_URLS] + [path('', WebAppView.as_view(), name='index')]
+

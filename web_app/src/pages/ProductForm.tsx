@@ -64,10 +64,10 @@ export const ProductForm = () => {
     e.preventDefault();
     if (id) {
       await updateApiProduct(Number(id), data);
-      navigate('/wa/products', { replace: true });
+      navigate('/products', { replace: true });
     } else {
       await createApiProduct(data);
-      navigate('/wa/products', { replace: true });
+      navigate('/products', { replace: true });
     }
   };
 
@@ -87,7 +87,7 @@ export const ProductForm = () => {
             {id ? 'Editar' : 'Nuevo'} Producto
           </h3>
           <div className="w-8">
-            <Link to="/wa/products">
+            <Link to="/products">
               <Button type="button" color="danger" size="xs">
                 <i className="las la-times la-lg" />
               </Button>

@@ -21,7 +21,7 @@ const App = () => {
       <Routes>
 
         <Route
-          path="/wa/products/form"
+          path="/products/form"
           element={
               <MainLayout title="Formulario de productos">
                 <ProductForm />
@@ -30,7 +30,7 @@ const App = () => {
         />
 
         <Route
-          path="/wa/brands/form"
+          path="/brands/form"
           element={
               <MainLayout title="Formulario de marcas">
                 <BrandForm />
@@ -39,7 +39,7 @@ const App = () => {
         />
 
         <Route
-          path="/wa/places/form"
+          path="/places/form"
           element={
               <MainLayout title="Formulario de lugares">
                 <PlaceForm />
@@ -48,7 +48,7 @@ const App = () => {
         />
 
         <Route
-          path="/wa/providers/form"
+          path="/providers/form"
           element={
               <MainLayout title="Formulario de proveedores">
                 <ProviderForm />
@@ -57,7 +57,7 @@ const App = () => {
         />
 
         <Route
-          path="/wa/sales/form"
+          path="/sales/form"
           element={
               <MainLayout title="Formulario de ventas">
                 <SaleForm />
@@ -66,7 +66,7 @@ const App = () => {
         />
 
         <Route
-          path="/wa/shopping/form"
+          path="/shopping/form"
           element={
               <MainLayout title="Formulario de compras">
                 <ShoppingForm />
@@ -75,7 +75,7 @@ const App = () => {
         />
 
         <Route
-          path="/wa/products"
+          path="/products"
           element={
               <MainLayout title="Productos">
                 <Products />
@@ -84,7 +84,7 @@ const App = () => {
         />
 
         <Route
-          path="/wa/sales"
+          path="/sales"
           element={
               <MainLayout title="Ventas">
                 <Sales />
@@ -93,7 +93,7 @@ const App = () => {
         />
 
         <Route
-          path="/wa/shopping"
+          path="/shopping"
           element={
               <MainLayout title="Compras">
                 <Shopping />
@@ -102,7 +102,7 @@ const App = () => {
         />
 
         <Route
-          path="/wa/brands"
+          path="/brands"
           element={
               <MainLayout title="Marcas">
                 <Brands />
@@ -111,7 +111,7 @@ const App = () => {
         />
 
         <Route
-          path="/wa/places"
+          path="/places"
           element={
               <MainLayout title="Lugares">
                 <Places />
@@ -120,7 +120,7 @@ const App = () => {
         />
 
         <Route
-          path="/wa/providers"
+          path="/providers"
           element={
               <MainLayout title="Proveedores">
                 <Providers />
@@ -129,8 +129,8 @@ const App = () => {
         />
 
         <Route
-          path="/wa/"
-          element={<Navigate to="/wa/products" replace />}
+          path="/"
+          element={<Navigate to="/products" replace />}
         />
 
       </Routes>

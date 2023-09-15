@@ -103,7 +103,7 @@ export const Sales = () => {
       <header className="flex justify-between">
 
         <div className="w-20">
-          <Link to="/wa/sales/form">
+          <Link to="/sales/form">
             <Button type="button">Nuevo</Button>
           </Link>
         </div>

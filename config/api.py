@@ -4,7 +4,7 @@ from django.db.models import Q
 from django.http import HttpRequest
 from products.models import Brand, Place, Product
 from shopping.models import Provider
-from ninja import NinjaAPI, ModelSchema
+from ninja import NinjaAPI, ModelSchema, Schema
 
 api = NinjaAPI()
 
@@ -60,6 +60,20 @@ class ProviderIn(ModelSchema):
     class Config:
         model = Provider
         model_fields = ['name', 'address']
+
+
+class Params(Schema):
+    begin: str
+    end: str
+
+
+class ShoppingIn(ModelSchema):
+    pass
+
+
+class SaleIn(ModelSchema):
+    pass
+
 
 
 # products section
@@ -194,3 +208,25 @@ def delete_provider(request: HttpRequest, id: int):
     qs = get_object_or_404(Provider, id=id)
     qs.delete()
     return qs
+
+
+# # shopping section
+# @api.get('shopping/')
+# def get_shopping(request: HttpRequest):
+#     pass
+
+
+# @api.post('shopping/')
+# def create_shopping(reqeust: HttpRequest):
+#     pass
+
+
+# # sales section
+# @api.get('sales/')
+# def get_sales(request: HttpRequest):
+#     pass
+
+
+# @api.post('sales/')
+# def create_sales(reqeust: HttpRequest):
+#     pass

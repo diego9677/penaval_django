@@ -59,7 +59,7 @@ export const Products = () => {
       <header className="flex justify-between py-2 px-4 md:p-0">
 
         <div className="w-20">
-          <Link to="/wa/products/form" className="hidden md:block">
+          <Link to="/products/form" className="hidden md:block">
             <Button type="button">Nuevo</Button>
           </Link>
         </div>
@@ -102,7 +102,7 @@ export const Products = () => {
                       <td className="p-2">{b.price} Bs</td>
                       <td className="flex gap-2 items-center justify-center h-12">
                         <div className="w-8">
-                          <Link to={`/wa/products/form?id=${b.id}`}>
+                          <Link to={`/products/form?id=${b.id}`}>
                             <Button type="button" color="success" size="xs">
                               <i className="las la-pen la-lg" />
                             </Button>

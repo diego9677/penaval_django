@@ -41,10 +41,10 @@ export const BrandForm = () => {
     e.preventDefault();
     if (id) {
       await updateApiBrand(Number(id), data);
-      navigate('/wa/brands', { replace: true });
+      navigate('/brands', { replace: true });
     } else {
       await createApiBrand(data);
-      navigate('/wa/brands', { replace: true });
+      navigate('/brands', { replace: true });
     }
   };
 

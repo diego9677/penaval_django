@@ -58,7 +58,7 @@ export const Places = () => {
       <header className="flex justify-between">
 
         <div className="w-20">
-          <Link to="/wa/places/form">
+          <Link to="/places/form">
             <Button type="button">Nuevo</Button>
           </Link>
         </div>
@@ -93,7 +93,7 @@ export const Places = () => {
                   <td className="p-2">{new Date(b.updatedAt).toLocaleDateString()}</td> */}
                   <td className="flex gap-2 items-center h-12">
                     <div className="w-8">
-                      <Link to={`/wa/places/form?id=${b.id}`}>
+                      <Link to={`/places/form?id=${b.id}`}>
                         <Button type="button" color="success" size="xs">
                           <i className="las la-pen la-lg" />
                         </Button>

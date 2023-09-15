@@ -41,10 +41,10 @@ export const ProviderForm = () => {
     e.preventDefault();
     if (id) {
       await updateApiProvider(Number(id), data);
-      navigate('/wa/providers', { replace: true });
+      navigate('/providers', { replace: true });
     } else {
       await createApiProvide(data);
-      navigate('/wa/providers', { replace: true });
+      navigate('/providers', { replace: true });
     }
   };
 
@@ -66,7 +66,7 @@ export const ProviderForm = () => {
             {id ? 'Editar' : 'Nuevo'} Lugar
           </h3>
           <div className="w-8">
-            <Link to="/wa/providers">
+            <Link to="/providers">
               <Button type="button" color="danger" size="xs">
                 <i className="las la-times la-lg" />
               </Button>
