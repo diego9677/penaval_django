@@ -27,7 +27,6 @@ const NavItem = ({ to, title, icon }: { to: string; title: string; icon: React.R
 
 export const MainLayout = ({ title, children }: Props) => {
   const user: User = (window as any).user;
-  console.log(user)
 
   useEffect(() => {
     document.title = title;

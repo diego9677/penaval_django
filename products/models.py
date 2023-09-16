@@ -30,6 +30,7 @@ class Product(models.Model):
     place = models.ForeignKey(Place, related_name='products', on_delete=models.CASCADE)
     brand = models.ForeignKey(Brand, related_name='products', on_delete=models.CASCADE)
     stock = models.PositiveIntegerField(default=0, verbose_name='Cantidad Disponible')
+    pucharse_price = models.DecimalField(default=0, max_digits=9, decimal_places=2, verbose_name='Precio Compra')
     price = models.DecimalField(default=0, max_digits=9, decimal_places=2, verbose_name='Precio Unitario')
     measures = models.CharField(max_length=255, verbose_name='Medidas')
 

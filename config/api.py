@@ -1,9 +1,9 @@
+from datetime import datetime
 from django.shortcuts import get_object_or_404
-from typing import List
-from django.db.models import Q
+from django.db.models import Q, Prefetch
 from django.http import HttpRequest
 from products.models import Brand, Place, Product
-from shopping.models import Provider
+from shopping.models import Provider, Shopping, ShoppingDetail
 from ninja import NinjaAPI, ModelSchema, Schema
 
 api = NinjaAPI()
@@ -27,7 +27,7 @@ class ProductSchema(ModelSchema):
 
     class Config:
         model = Product
-        model_fields = ['id', 'code', 'place', 'brand', 'stock', 'price', 'measures']
+        model_fields = ['id', 'code', 'place', 'brand', 'stock', 'price', 'pucharse_price', 'measures']
 
 
 class ProviderSchema(ModelSchema):
@@ -56,28 +56,59 @@ class BrandIn(ModelSchema):
         model = Brand
         model_fields = ['name', 'description']
 
+
 class ProviderIn(ModelSchema):
     class Config:
         model = Provider
         model_fields = ['name', 'address']
 
 
-class Params(Schema):
-    begin: str
-    end: str
+class ShoppingCart(Schema):
+    product_code: str
+    product_id: int
+    pucharse_price: float
+    sale_price: float
+    amount: int
 
 
-class ShoppingIn(ModelSchema):
-    pass
+class ShoppingIn(Schema):
+    provider_id: int
+    products: list[ShoppingCart]
 
 
-class SaleIn(ModelSchema):
-    pass
+class SaleCart(Schema):
+    product_code: str
+    product_id: str
+    sale_price: float
+    quantity: int
+
+
+class SaleIn(Schema):
+    nit: str
+    first_name: str
+    last_name: str
+    phone: str
+    products: list[SaleCart]
+
+
+class ShoppingDetailSchema(ModelSchema):
+    product: ProductSchema
+
+    class Config:
+        model = ShoppingDetail
+        model_fields = ['id', 'amount', 'unit_price_shopping', 'unit_price_sale']
+
+
+class ShoppingSchema(Schema):
+    id: int
+    date: str
+    provider: ProviderSchema
+    shopping_detail: list[ShoppingDetailSchema]
 
 
 
 # products section
-@api.get('products/', response=List[ProductSchema])
+@api.get('products/', response=list[ProductSchema])
 def get_products(request: HttpRequest, search: str):
     qs = Product.objects.select_related('brand', 'place').filter(
         Q(code__icontains=search) |
@@ -115,7 +146,7 @@ def delete_product(request: HttpRequest, id: int):
 
 
 #places section
-@api.get('places/', response=List[PlaceSchema])
+@api.get('places/', response=list[PlaceSchema])
 def get_places(request: HttpRequest, search: str):
     qs = Place.objects.filter(name__iendswith=search).order_by('id')[:20]
     return qs
@@ -147,7 +178,7 @@ def delete_place(request: HttpRequest, id: int):
 
 
 # brands section
-@api.get('brands/', response=List[BrandSchema])
+@api.get('brands/', response=list[BrandSchema])
 def get_brands(request: HttpRequest, search: str):
     qs = Brand.objects.filter(name__icontains=search).order_by('id')[:20]
     return qs
@@ -179,7 +210,7 @@ def delete_brand(request: HttpRequest, id: int):
 
 
 # provider section
-@api.get('providers/', response=List[ProviderSchema])
+@api.get('providers/', response=list[ProviderSchema])
 def get_providers(request: HttpRequest, search: str):
     qs = Provider.objects.filter(name__icontains=search).order_by('id')[:20]
     return qs
@@ -210,15 +241,35 @@ def delete_provider(request: HttpRequest, id: int):
     return qs
 
 
-# # shopping section
-# @api.get('shopping/')
-# def get_shopping(request: HttpRequest):
-#     pass
+# shopping section
+@api.get('shopping/', response=ShoppingSchema)
+def get_shopping(request: HttpRequest, begin: str, end: str):
+    date1 = datetime.fromisoformat(begin)
+    date2 = datetime.fromisoformat(end)
+    qs = Shopping.objects.select_related('provider').prefetch_related(
+            Prefetch('shopping_detail', queryset=ShoppingDetail.objects.select_related('product'))
+        ).filter(date__range=(date1, date2))
+    print(qs.query)
+    return qs
 
 
-# @api.post('shopping/')
-# def create_shopping(reqeust: HttpRequest):
-#     pass
+@api.post('shopping/')
+def create_shopping(request: HttpRequest, input: ShoppingIn):
+    shopping = Shopping.objects.create(provider_id=input.provider_id, user=request.user)
+    for product in input.products:
+        prod_instance = Product.objects.get(pk=product.product_id)
+        ShoppingDetail.objects.create(
+            shopping=shopping,
+            product=prod_instance,
+            amount=product.amount,
+            unit_price_shopping=product.pucharse_price,
+            unit_price_sale=product.sale_price,
+        )
+        prod_instance.stock += product.amount
+        prod_instance.price = product.sale_price
+        prod_instance.pucharse_price = product.pucharse_price
+        prod_instance.save()
+    return {'msg': 'Shopping created successfully'}
 
 
 # # sales section

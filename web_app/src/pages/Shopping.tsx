@@ -59,10 +59,10 @@ const ShoppingDetail = ({ row }: { row: ShoppingType; }) => {
               return (
                 <tr key={s.id} className="text-left text-sm font-normal text-gray-900">
                   <td className="p-2">{s.product.code}</td>
-                  <td className="p-2">{s.quantity}</td>
-                  <td className="p-2">{s.pucharsePrice} Bs</td>
-                  <td className="p-2">{s.salePrice} Bs</td>
-                  <td className="p-2">{Number(s.pucharsePrice) * s.quantity} Bs</td>
+                  <td className="p-2">{s.amount}</td>
+                  <td className="p-2">{s.unit_price_shopping} Bs</td>
+                  <td className="p-2">{s.unit_price_sale} Bs</td>
+                  <td className="p-2">{Number(s.unit_price_shopping) * s.amount} Bs</td>
                 </tr>
               );
             })}
@@ -78,6 +78,7 @@ export const Shopping = () => {
   const [shopping, setShopping] = useState<ShoppingType[]>([]);
 
   const getShopping = async (params: { begin: string; end: string; }) => {
+    console.log(params)
     setLoading(true);
     try {
       const data = await getApiShopping(params);
@@ -125,7 +126,7 @@ export const Shopping = () => {
                   <td className="p-2">{s.provider.name}</td>
                   <td className="p-2">{new Date(s.date).toLocaleString()}</td>
                   <td className="p-2">{s.shoppingDetail.length}</td>
-                  <td className="p-2">{s.shoppingDetail.reduce((acc, el) => acc + (Number(el.salePrice) * el.quantity), 0)} Bs</td>
+                  <td className="p-2">{s.shoppingDetail.reduce((acc, el) => acc + (Number(el.unit_price_sale) * el.amount), 0)} Bs</td>
                   <td className="p-2">
                     <ShoppingDetail row={s} />
                   </td>

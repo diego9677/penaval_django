@@ -30,7 +30,7 @@ class Shopping(models.Model):
 
 
 class ShoppingDetail(models.Model):
-    shopping = models.ForeignKey(Shopping, on_delete=models.CASCADE)
+    shopping = models.ForeignKey(Shopping, on_delete=models.CASCADE, related_name='shopping_detail')
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     amount = models.PositiveIntegerField(verbose_name='Cantidad')
     unit_price_shopping = models.DecimalField(max_digits=9, decimal_places=2, verbose_name='Precio Unitario Compra')

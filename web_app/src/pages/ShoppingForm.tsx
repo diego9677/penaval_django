@@ -58,7 +58,7 @@ export const ShoppingForm = () => {
   const onAddShoppingCart = (shopping: ShoppingCart) => {
 
     setShoppingCartState((prev) => {
-      const index = prev.findIndex(p => p.productCode === shopping.productCode);
+      const index = prev.findIndex(p => p.product_code === shopping.product_code);
       if (prev[index]) {
         prev[index] = shopping;
         return prev;
@@ -70,12 +70,12 @@ export const ShoppingForm = () => {
 
 
   const removeItem = (productCode: string) => {
-    const newProducts = shoppingCartState.filter(p => p.productCode !== productCode);
+    const newProducts = shoppingCartState.filter(p => p.product_code !== productCode);
     setShoppingCartState(newProducts);
   };
 
   const setTotal = () => {
-    const total = shoppingCartState.reduce((acc, el) => acc + (el.quantity * el.pucharsePrice), 0);
+    const total = shoppingCartState.reduce((acc, el) => acc + (el.amount * el.pucharse_price), 0);
     return total;
   };
 
@@ -98,7 +98,7 @@ export const ShoppingForm = () => {
     }
 
     setSaveLoading(true);
-    const data = { providerId: selectedProvider, products: shoppingCartState };
+    const data = { provider_id: selectedProvider, products: shoppingCartState };
     await createApiShopping(data);
     await getProducts();
     onClean();
@@ -165,18 +165,19 @@ export const ShoppingForm = () => {
                 columns={COLUMNS}
                 children={shoppingCartState.map((s) => {
                   return (
-                    <tr key={s.productCode} className="text-left text-sm font-normal text-gray-900">
-                      <td className="p-2">{s.productCode}</td>
-                      <td className="p-2">{s.quantity}</td>
-                      <td className="p-2">{s.salePrice} Bs</td>
-                      <td className="p-2">{Math.round((s.quantity * s.salePrice) * 10) / 10} Bs</td>
+                    <tr key={s.product_code} className="text-left text-sm font-normal text-gray-900">
+                      <td className="p-2">{s.product_code}</td>
+                      <td className="p-2">{s.amount}</td>
+                      <td className="p-2">{s.pucharse_price} Bs</td>
+                      <td className="p-2">{s.sale_price} Bs</td>
+                      <td className="p-2">{Math.round((s.amount * s.sale_price) * 10) / 10} Bs</td>
                       <td className="p-2">
                         <div className="w-10">
                           <Button
                             type="button"
                             color="danger"
                             size="xs"
-                            onClick={() => removeItem(s.productCode)}
+                            onClick={() => removeItem(s.product_code)}
                           >
                             <i className="las la-trash-alt la-lg" />
                           </Button>
@@ -187,7 +188,7 @@ export const ShoppingForm = () => {
                 })}
                 footer={
                   <>
-                    <td className="p-2 uppercase" colSpan={3}>
+                    <td className="p-2 uppercase" colSpan={4}>
                       Total:
                     </td>
                     <td className="p-2" colSpan={2}>

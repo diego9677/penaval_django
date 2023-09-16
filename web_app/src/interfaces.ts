@@ -22,7 +22,7 @@ export interface Product {
   id: number;
   code: string;
   stock: number;
-  pucharsePrice: number;
+  pucharse_price: number;
   price: number;
   measures: string;
   place: {
@@ -67,9 +67,9 @@ export interface Shopping {
   };
   shoppingDetail: {
     id: number;
-    quantity: number;
-    pucharsePrice: number;
-    salePrice: number;
+    amount: number;
+    unit_price_shopping: number;
+    unit_price_sale: number;
     product: {
       id: number;
       code: string;
@@ -98,11 +98,11 @@ export interface Sale {
 
 // shopping form
 export interface ShoppingCart {
-  productCode: string;
-  productId: number;
-  quantity: number;
-  pucharsePrice: number;
-  salePrice: number;
+  product_code: string;
+  product_id: number;
+  amount: number;
+  pucharse_price: number;
+  sale_price: number;
 }
 
 

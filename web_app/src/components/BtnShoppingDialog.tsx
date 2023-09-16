@@ -12,34 +12,34 @@ type Props = {
 
 export const BtnShoppingDialog = ({ product, onConfirmDialog }: Props) => {
   const [dialog, setDialog] = useState(false);
-  const [shoppingState, setShoppingState] = useState<ShoppingCart>({ productId: 0, productCode: '', quantity: 0, pucharsePrice: 0, salePrice: 0 });
+  const [shoppingState, setShoppingState] = useState<ShoppingCart>({ product_id: 0, product_code: '', amount: 0, pucharse_price: 0, sale_price: 0 });
 
   useEffect(() => {
     if (product) {
-      setShoppingState((prev) => ({ ...prev, productId: product.id, productCode: product.code, pucharsePrice: Number(product.pucharsePrice), salePrice: Number(product.price) }));
+      setShoppingState((prev) => ({ ...prev, product_id: product.id, product_code: product.code, pucharse_price: Number(product.pucharse_price), sale_price: Number(product.price) }));
     }
 
   }, [product]);
 
   const closeDialog = () => {
-    setShoppingState({ ...shoppingState, quantity: 0, pucharsePrice: 0 });
+    setShoppingState({ ...shoppingState, amount: 0, pucharse_price: 0 });
     setDialog(false);
   };
 
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (typeof shoppingState.quantity === 'string' || typeof shoppingState.salePrice === 'string') {
+    if (typeof shoppingState.amount === 'string' || typeof shoppingState.sale_price === 'string') {
       alert('Formulario no valido');
       return;
     }
 
-    if (shoppingState.quantity === 0) {
+    if (shoppingState.amount === 0) {
       alert('Debe ingresar una cantidad');
       return;
     }
 
-    if (shoppingState.pucharsePrice === 0) {
+    if (shoppingState.amount === 0) {
       alert('Debe ingresar un precio de compra');
       return;
     }
@@ -77,8 +77,8 @@ export const BtnShoppingDialog = ({ product, onConfirmDialog }: Props) => {
               color="primary"
               placeholder="'3'"
               min={0}
-              value={shoppingState.quantity}
-              onChange={(e) => setShoppingState({ ...shoppingState, quantity: Number(e.target.value) })}
+              value={shoppingState.amount}
+              onChange={(e) => setShoppingState({ ...shoppingState, amount: Number(e.target.value) })}
             />
 
             <Input
@@ -88,8 +88,8 @@ export const BtnShoppingDialog = ({ product, onConfirmDialog }: Props) => {
               label="Precio de compra (Bs)"
               color="primary"
               placeholder="'40.5'"
-              value={shoppingState.pucharsePrice}
-              onChange={(e) => setShoppingState({ ...shoppingState, pucharsePrice: Number(e.target.value) })}
+              value={shoppingState.pucharse_price}
+              onChange={(e) => setShoppingState({ ...shoppingState, pucharse_price: Number(e.target.value) })}
             />
 
             <Input
@@ -99,8 +99,8 @@ export const BtnShoppingDialog = ({ product, onConfirmDialog }: Props) => {
               label="Precio de venta (Bs)"
               color="primary"
               placeholder="'40.5'"
-              value={shoppingState.salePrice}
-              onChange={(e) => setShoppingState({ ...shoppingState, salePrice: Number(e.target.value) })}
+              value={shoppingState.sale_price}
+              onChange={(e) => setShoppingState({ ...shoppingState, sale_price: Number(e.target.value) })}
             />
 
             <Button type="submit" color="primary">Guardar</Button>

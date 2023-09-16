@@ -131,8 +131,7 @@ export const deleteApiBrand = async (id: number) => {
 
 // shopping section
 export const getApiShopping = async (params: { begin: string; end: string; }, signal?: AbortSignal) => {
- //  const { data } = await axiosInstance.get<Shopping[]>(`/shopping`, { params, signal },);
-  const response = await fetch(new URL(`/api/shopping?`) + new URLSearchParams(params).toString(), { signal,  headers })
+  const response = await fetch(`/api/shopping?begin=${params.begin}&end=${params.end}`, { signal,  headers })
   const data: Shopping[] = await response.json()
   return data;
 };
