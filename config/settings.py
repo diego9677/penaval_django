@@ -25,12 +25,11 @@ SECRET_KEY = 'django-insecure-3j#xcdmuxr%qa9xmt_@sn0vpoks(r@-qv+-z2tj+s#%$y+g-#t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['penaval.com']
 
 INTERNAL_IPS = [
     'localhost',
     '127.0.0.1',
-    'https://penaval.com',
 ]
 
 # Application definition
