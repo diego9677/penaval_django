@@ -1,4 +1,5 @@
-from datetime import datetime, date
+from typing import List
+from datetime import datetime
 from django.shortcuts import get_object_or_404
 from django.db.models import Q, Prefetch
 from django.http import HttpRequest
@@ -75,7 +76,7 @@ class ShoppingCart(Schema):
 
 class ShoppingIn(Schema):
     provider_id: int
-    products: list[ShoppingCart]
+    products: List[ShoppingCart]
 
 
 class SaleCart(Schema):
@@ -90,7 +91,7 @@ class SaleIn(Schema):
     first_name: str
     last_name: str
     phone: str
-    products: list[SaleCart]
+    products: List[SaleCart]
 
 
 ProductSchemaShort = create_schema(Product, fields=['id', 'code'])
@@ -106,7 +107,7 @@ class ShoppingSchema(Schema):
     id: int
     date: datetime
     provider: ProviderSchema
-    shopping_detail: list[ShoppingDetailSchema]
+    shopping_detail: List[ShoppingDetailSchema]
 
 
 class ClientSchema(ModelSchema):
@@ -127,11 +128,11 @@ class SaleSchema(Schema):
     id: int
     date: datetime
     client: ClientSchema
-    sale_detail: list[SaleDetailSchema]
+    sale_detail: List[SaleDetailSchema]
 
 
 # products section
-@api.get('products/', response=list[ProductSchema])
+@api.get('products/', response=List[ProductSchema])
 def get_products(request: HttpRequest, search: str):
     qs = Product.objects.select_related('brand', 'place').filter(
         Q(code__icontains=search) |
@@ -168,7 +169,7 @@ def delete_product(request: HttpRequest, id: int):
 
 
 #places section
-@api.get('places/', response=list[PlaceSchema])
+@api.get('places/', response=List[PlaceSchema])
 def get_places(request: HttpRequest, search: str):
     qs = Place.objects.filter(name__iendswith=search).order_by('id')[:20]
     return qs
@@ -200,7 +201,7 @@ def delete_place(request: HttpRequest, id: int):
 
 
 # brands section
-@api.get('brands/', response=list[BrandSchema])
+@api.get('brands/', response=List[BrandSchema])
 def get_brands(request: HttpRequest, search: str):
     qs = Brand.objects.filter(name__icontains=search).order_by('id')[:20]
     return qs
@@ -232,7 +233,7 @@ def delete_brand(request: HttpRequest, id: int):
 
 
 # provider section
-@api.get('providers/', response=list[ProviderSchema])
+@api.get('providers/', response=List[ProviderSchema])
 def get_providers(request: HttpRequest, search: str):
     qs = Provider.objects.filter(name__icontains=search).order_by('id')[:20]
     return qs
@@ -264,7 +265,7 @@ def delete_provider(request: HttpRequest, id: int):
 
 
 # shopping section
-@api.get('shopping/', response=list[ShoppingSchema])
+@api.get('shopping/', response=List[ShoppingSchema])
 def get_shopping(request: HttpRequest, begin: str, end: str):
     date1 = datetime.fromisoformat(begin)
     date2 = datetime.fromisoformat(end)
@@ -295,7 +296,7 @@ def create_shopping(request: HttpRequest, input: ShoppingIn):
 
 
 # sales section
-@api.get('sales/', response=list[SaleSchema])
+@api.get('sales/', response=List[SaleSchema])
 def get_sales(request: HttpRequest, begin: str, end: str):
     date1 = datetime.fromisoformat(begin)
     date2 = datetime.fromisoformat(end)
