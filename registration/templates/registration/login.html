@@ -22,7 +22,12 @@
 
 			<div class="flex flex-col gap-3">
 				<label class="text-sm font-semibold text-neutral-800" for="id_password">{{ form.password.label_tag }}</label>
-				{{ form.password|addclss:"form-control" }}
+				<div class="relative flex items-center">
+					{{ form.password|addclss:"form-control" }}
+					<span id="toggle_pwd" class="absolute right-2 cursor-pointer p-1 rounded-full">
+						<i class="las la-eye la-lg"></i>
+					</span>
+				</div>
 			</div>
 
 			<button type="submit" class="btn-primary">
@@ -35,7 +40,21 @@
 
 {% block scripts %}
 	<script>
+		const eyeSlash = '<i class="las la-eye-slash la-lg"></i>'
+		const eye = '<i class="las la-eye la-lg"></i>'
 		const input_pwd = document.querySelector('#id_password')
-		console.log(input_pwd)
+		const toggle_pwd = document.querySelector('#toggle_pwd')
+
+		toggle_pwd.addEventListener('click', () => {
+			const expression = toggle_pwd.innerHTML.trim()
+
+			if (expression === eye) {
+				toggle_pwd.innerHTML = eyeSlash
+				input_pwd.setAttribute('type', 'text')
+			} else {
+				toggle_pwd.innerHTML = eye
+				input_pwd.setAttribute('type', 'password')
+			}
+		})
 	</script>
 {% endblock %}

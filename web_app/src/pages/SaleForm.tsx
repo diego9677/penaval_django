@@ -8,7 +8,6 @@ import { Spinner } from "../components/Spinner";
 import { BtnSaleDialog } from "../components/BtnSaleDialog";
 import { ProductItem } from "../components/ProductItem";
 import { TableBuilder } from "../components/TableBuilder";
-import { AxiosError } from "axios";
 
 const COLUMNS = [
   'Código',
@@ -20,8 +19,8 @@ const COLUMNS = [
 
 interface SaleState {
   nit: string;
-  firstName: string;
-  lastName: string;
+  first_name: string;
+  last_name: string;
   phone: string;
 }
 
@@ -29,7 +28,7 @@ export const SaleForm = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [search, setSearch] = useState('');
   const [saleCartState, setSaleCartState] = useState<SaleCart[]>(getSale());
-  const [saleState, setSaleState] = useState<SaleState>({ nit: '', firstName: '', lastName: '', phone: '' });
+  const [saleState, setSaleState] = useState<SaleState>({ nit: '', first_name: '', last_name: '', phone: '' });
   // loadings
   const [loading, setLoading] = useState(true);
   const [searchLoading, setSearchLoading] = useState(false);
@@ -56,30 +55,30 @@ export const SaleForm = () => {
     setProducts(data);
   };
 
-  const onAddSaleCart = (shopping: SaleCart) => {
+  const onAddSaleCart = (sale: SaleCart) => {
     setSaleCartState((prev) => {
-      const index = prev.findIndex(p => p.productCode === shopping.productCode);
+      const index = prev.findIndex(p => p.product_code === sale.product_code);
       if (prev[index]) {
-        prev[index] = shopping;
+        prev[index] = sale;
         return prev;
       } else {
-        return [...prev, shopping];
+        return [...prev, sale];
       }
     });
   };
 
   const removeItem = (productCode: string) => {
-    const newProducts = saleCartState.filter(p => p.productCode !== productCode);
+    const newProducts = saleCartState.filter(p => p.product_code !== productCode);
     setSaleCartState(newProducts);
   };
 
   const setTotal = () => {
-    const total = saleCartState.reduce((acc, el) => acc + (el.quantity * el.salePrice), 0);
+    const total = saleCartState.reduce((acc, el) => acc + (el.amount * el.unit_price), 0);
     return total;
   };
 
   const onClean = () => {
-    setSaleState({ nit: '', firstName: '', lastName: '', phone: '' });
+    setSaleState({ nit: '', first_name: '', last_name: '', phone: '' });
     setSaleCartState([]);
   };
 
@@ -90,13 +89,14 @@ export const SaleForm = () => {
       return;
     }
 
-    if (saleState.nit === '' || saleState.firstName === '' || saleState.lastName === '' || saleState.phone === '') {
+    if (saleState.nit === '' || saleState.first_name === '' || saleState.last_name === '' || saleState.phone === '') {
       alert('Debe proporcionar datos del cliente');
       return;
     }
 
     setSaveLoading(true);
     const data = { ...saleState, products: saleCartState };
+    console.log(data);
     await createApiSale(data);
     await getProducts();
     onClean();
@@ -105,16 +105,18 @@ export const SaleForm = () => {
 
   const onFindClient = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (saleState.nit === '') {
+      alert('Debe proporcionar un nit para realizar la busqueda')
+      return
+    }
     setSearchLoading(true);
-    try {
-      const data = await getClientByNit(saleState.nit);
-      if (data) {
-        setSaleState({ nit: data.nit, firstName: data.person.firstName, lastName: data.person.lastName, phone: data.person.phone });
-      }
-    } catch (error) {
-      if (error instanceof AxiosError && error.response?.status === 404) {
-        setSaleState({ nit: saleState.nit, firstName: '', lastName: '', phone: '' });
-      }
+    const result = await getClientByNit(saleState.nit);
+    if (result.success) {
+      setSaleState({ nit: result.data.nit, first_name: result.data.first_name, last_name: result.data.last_name, phone: result.data.phone });
+    } else if (result.error.status === 400)  {
+      setSaleState({ nit: saleState.nit, first_name: '', last_name: '', phone: '' });
+    } else {
+      console.error(result.error)
     }
     setSearchLoading(false);
   };
@@ -190,8 +192,8 @@ export const SaleForm = () => {
                 type="text"
                 label="Nombres"
                 placeholder="'Pepe'"
-                value={saleState.firstName}
-                onChange={(e) => setSaleState({ ...saleState, firstName: e.target.value })}
+                value={saleState.first_name}
+                onChange={(e) => setSaleState({ ...saleState, first_name: e.target.value })}
               />
             </div>
             <div className="flex-1">
@@ -199,8 +201,8 @@ export const SaleForm = () => {
                 type="text"
                 label="Apellidos"
                 placeholder="'Perez'"
-                value={saleState.lastName}
-                onChange={(e) => setSaleState({ ...saleState, lastName: e.target.value })}
+                value={saleState.last_name}
+                onChange={(e) => setSaleState({ ...saleState, last_name: e.target.value })}
               />
             </div>
             <div className="flex-1">
@@ -220,18 +222,18 @@ export const SaleForm = () => {
                 columns={COLUMNS}
                 children={saleCartState.map((s) => {
                   return (
-                    <tr key={s.productCode} className="text-left text-sm font-normal text-gray-900">
-                      <td className="p-2">{s.productCode}</td>
-                      <td className="p-2">{s.quantity}</td>
-                      <td className="p-2">{s.salePrice} Bs</td>
-                      <td className="p-2">{Math.round((s.quantity * s.salePrice) * 10) / 10} Bs</td>
+                    <tr key={s.product_code} className="text-left text-sm font-normal text-gray-900">
+                      <td className="p-2">{s.product_code}</td>
+                      <td className="p-2">{s.amount}</td>
+                      <td className="p-2">{s.unit_price} Bs</td>
+                      <td className="p-2">{Math.round((s.amount * s.unit_price) * 10) / 10} Bs</td>
                       <td className="p-2">
                         <div className="w-10">
                           <Button
                             type="button"
                             color="danger"
                             size="xs"
-                            onClick={() => removeItem(s.productCode)}
+                            onClick={() => removeItem(s.product_code)}
                           >
                             <i className="las la-trash-alt la-lg" />
                           </Button>

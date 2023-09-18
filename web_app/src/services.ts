@@ -86,13 +86,13 @@ export const createApiProvide = async (input: any) => {
 };
 
 export const updateApiProvider = async (id: number, input: any) => {
-  const response = await fetch(`/providers/${id}/`, { method: 'PUT', body: JSON.stringify(input), headers })
+  const response = await fetch(`/api/providers/${id}/`, { method: 'PUT', body: JSON.stringify(input), headers })
   const data: Provider = await response.json()
   return data;
 };
 
 export const deleteApiProvider = async (id: number) => {
-  const response = await fetch(`/providers/${id}/`, { method: 'DELETE', headers })
+  const response = await fetch(`/api/providers/${id}/`, { method: 'DELETE', headers })
   const data: Provider = await response.json()
   return data;
 };
@@ -207,8 +207,13 @@ export const removeShopping = () => {
   localStorage.removeItem('shopping');
 };
 
-export const getClientByNit = async (nit: string) => {
+type ClientResponse = { success: true; data: Client } | { success: false; error: { status: number; text: string } };
+
+export const getClientByNit = async (nit: string): Promise<ClientResponse> => {
   const response = await fetch(`/api/clients/${nit}/`, { headers })
+  if (!response.ok) {
+    return { success: false, error: { status: response.status, text: response.statusText } }
+  }
   const data: Client = await response.json()
-  return data;
+  return { success: true, data };
 };

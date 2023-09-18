@@ -47,7 +47,7 @@ const SaleDetail = ({ row }: { row: Sale; }) => {
         <section className="flex flex-col gap-6">
           <div className='flex justify-between gap-2'>
             <div className='flex-1'>
-              <p className="text-lg font-medium text-gray-800">Detalle: {row.client.person.firstName} {row.client.person.lastName}</p>
+              <p className="text-lg font-medium text-gray-800">Detalle: {row.client.first_name} {row.client.last_name}</p>
             </div>
             <div className='flex-initial'>
               <Button type='button' color='danger' onClick={closeDialog} size='xs'>
@@ -58,13 +58,13 @@ const SaleDetail = ({ row }: { row: Sale; }) => {
 
           <TableBuilder
             columns={COLUMNS_DETAIL}
-            children={row.saleDetail.map((s) => {
+            children={row.sale_detail.map((s) => {
               return (
                 <tr key={s.id} className="text-left text-sm font-normal text-gray-900">
                   <td className="p-2">{s.product.code}</td>
-                  <td className="p-2">{s.quantity}</td>
-                  <td className="p-2">{s.salePrice} Bs</td>
-                  <td className="p-2">{Number(s.salePrice) * s.quantity} Bs</td>
+                  <td className="p-2">{s.amount}</td>
+                  <td className="p-2">{s.unit_price} Bs</td>
+                  <td className="p-2">{s.subtotal} Bs</td>
                 </tr>
               );
             })}
@@ -81,12 +81,9 @@ export const Sales = () => {
 
   const getSales = async (params: { begin: string; end: string; }) => {
     setLoading(true);
-    try {
-      const data = await getApiSales(params);
-      setSales(data);
-    } finally {
-      setLoading(false);
-    }
+    const data = await getApiSales(params);
+    setSales(data);
+    setLoading(false);
   };
 
   const onSubmit = async (params: ParamsReport) => {
@@ -123,10 +120,10 @@ export const Sales = () => {
               return (
                 <tr key={s.id} className="text-left text-sm font-normal text-gray-900">
                   <td className="p-2">{s.client.nit}</td>
-                  <td className="p-2">{s.client.person.firstName} {s.client.person.lastName}</td>
+                  <td className="p-2">{s.client.first_name} {s.client.last_name}</td>
                   <td className="p-2">{new Date(s.date).toLocaleString()}</td>
-                  <td className="p-2">{s.saleDetail.length}</td>
-                  <td className="p-2">{s.saleDetail.reduce((acc, el) => acc + (Number(el.salePrice) * el.quantity), 0)} Bs</td>
+                  <td className="p-2">{s.sale_detail.length}</td>
+                  <td className="p-2">{s.sale_detail.reduce((acc, el) => acc + Number(el.subtotal), 0)} Bs</td>
                   <td className="p-2">
                     <SaleDetail row={s} />
                   </td>

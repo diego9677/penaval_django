@@ -11,13 +11,6 @@ export interface User {
   email: string
 }
 
-export interface Person {
-  id: number;
-  firstName: string;
-  lastName: string;
-  phone: string;
-}
-
 export interface Product {
   id: number;
   code: string;
@@ -25,14 +18,8 @@ export interface Product {
   pucharse_price: number;
   price: number;
   measures: string;
-  place: {
-    id: number;
-    name: string;
-  };
-  brand: {
-    id: number;
-    name: string;
-  };
+  place: Place;
+  brand: Brand;
 }
 
 interface ProductShort {
@@ -47,25 +34,22 @@ export interface Place {
   id: number;
   name: string;
   description?: string;
-  products: ProductShort[];
+  products?: ProductShort[];
 }
 
 export interface Brand {
   id: number;
   name: string;
   description?: string;
-  products: ProductShort[];
+  products?: ProductShort[];
 }
 
 
 export interface Shopping {
   id: number;
   date: string;
-  provider: {
-    id: number;
-    name: string;
-  };
-  shoppingDetail: {
+  provider: Provider;
+  shopping_detail: {
     id: number;
     amount: number;
     unit_price_shopping: number;
@@ -80,15 +64,12 @@ export interface Shopping {
 export interface Sale {
   id: number;
   date: string;
-  client: {
+  client: Client;
+  sale_detail: {
     id: number;
-    nit: string;
-    person: Person;
-  };
-  saleDetail: {
-    id: number;
-    quantity: number;
-    salePrice: number;
+    amount: number;
+    unit_price: number;
+    subtotal: number;
     product: {
       id: number;
       code: string;
@@ -107,10 +88,10 @@ export interface ShoppingCart {
 
 
 export interface SaleCart {
-  productCode: string;
-  productId: number;
-  quantity: number;
-  salePrice: number;
+  product_code: string;
+  product_id: number;
+  amount: number;
+  unit_price: number;
 }
 
 export interface ParamsReport {
@@ -121,5 +102,7 @@ export interface ParamsReport {
 export interface Client {
   id: number;
   nit: string;
-  person: Person;
+  first_name: string;
+  last_name: string;
+  phone: string;
 }

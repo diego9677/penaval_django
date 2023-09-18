@@ -12,34 +12,34 @@ type Props = {
 
 export const BtnSaleDialog = ({ product, onConfirmDialog }: Props) => {
   const [dialog, setDialog] = useState(false);
-  const [saleState, setSaleState] = useState<SaleCart>({ productId: 0, productCode: '', quantity: 0, salePrice: 0 });
+  const [saleState, setSaleState] = useState<SaleCart>({ product_id: 0, product_code: '', amount: 0, unit_price: 0 });
 
   useEffect(() => {
     if (product) {
-      setSaleState((prev) => ({ ...prev, productId: product.id, productCode: product.code, salePrice: Number(product.price) }));
+      setSaleState((prev) => ({ ...prev, product_id: product.id, product_code: product.code, unit_price: Number(product.price) }));
     }
 
   }, [product]);
 
   const closeDialog = () => {
-    setSaleState({ ...saleState, quantity: 0 });
+    setSaleState({ ...saleState, amount: 0 });
     setDialog(false);
   };
 
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (typeof saleState.quantity === 'string' || typeof saleState.salePrice === 'string') {
+    if (typeof saleState.amount === 'string' || typeof saleState.unit_price === 'string') {
       alert('Formulario no valido');
       return;
     }
 
-    if (saleState.quantity === 0) {
+    if (saleState.amount === 0) {
       alert('Debe ingresar una cantidad');
       return;
     }
 
-    if (saleState.quantity > product.stock) {
+    if (saleState.amount > product.stock) {
       alert('No hay stock suficiente');
       return;
     }
@@ -77,8 +77,8 @@ export const BtnSaleDialog = ({ product, onConfirmDialog }: Props) => {
               color="primary"
               min={0}
               placeholder="'3'"
-              value={saleState.quantity}
-              onChange={(e) => setSaleState({ ...saleState, quantity: Number(e.target.value) })}
+              value={saleState.amount}
+              onChange={(e) => setSaleState({ ...saleState, amount: Number(e.target.value) })}
             />
             <Input
               type="number"
@@ -87,8 +87,8 @@ export const BtnSaleDialog = ({ product, onConfirmDialog }: Props) => {
               label="Precio de venta (Bs)"
               color="primary"
               placeholder="'40.5'"
-              value={saleState.salePrice}
-              onChange={(e) => setSaleState({ ...saleState, salePrice: Number(e.target.value) })}
+              value={saleState.unit_price}
+              onChange={(e) => setSaleState({ ...saleState, unit_price: Number(e.target.value) })}
             />
 
             <Button type="submit" color="primary">Guardar</Button>

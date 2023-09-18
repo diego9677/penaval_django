@@ -35,6 +35,7 @@ class Client(models.Model):
     nit = models.CharField(max_length=20, unique=True, verbose_name='Nit')
     first_name = models.CharField(max_length=255, verbose_name='Nombres')
     last_name = models.CharField(max_length=255, verbose_name='Apellidos')
+    phone = models.CharField(max_length=50, verbose_name='Teléfono')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Fecha Creación')
 
     def __str__(self):

@@ -55,7 +55,7 @@ const ShoppingDetail = ({ row }: { row: ShoppingType; }) => {
 
           <TableBuilder
             columns={COLUMNS_DETAIL}
-            children={row.shoppingDetail.map((s) => {
+            children={row.shopping_detail.map((s) => {
               return (
                 <tr key={s.id} className="text-left text-sm font-normal text-gray-900">
                   <td className="p-2">{s.product.code}</td>
@@ -78,14 +78,10 @@ export const Shopping = () => {
   const [shopping, setShopping] = useState<ShoppingType[]>([]);
 
   const getShopping = async (params: { begin: string; end: string; }) => {
-    console.log(params)
     setLoading(true);
-    try {
-      const data = await getApiShopping(params);
-      setShopping(data);
-    } finally {
-      setLoading(false);
-    }
+    const data = await getApiShopping(params);
+    setShopping(data);
+    setLoading(false);
   };
 
   const onSubmit = async (params: ParamsReport) => {
@@ -125,8 +121,8 @@ export const Shopping = () => {
                   <td className="p-2">{s.id}</td>
                   <td className="p-2">{s.provider.name}</td>
                   <td className="p-2">{new Date(s.date).toLocaleString()}</td>
-                  <td className="p-2">{s.shoppingDetail.length}</td>
-                  <td className="p-2">{s.shoppingDetail.reduce((acc, el) => acc + (Number(el.unit_price_sale) * el.amount), 0)} Bs</td>
+                  <td className="p-2">{s.shopping_detail.length}</td>
+                  <td className="p-2">{s.shopping_detail.reduce((acc, el) => acc + (Number(el.unit_price_sale) * el.amount), 0)} Bs</td>
                   <td className="p-2">
                     <ShoppingDetail row={s} />
                   </td>
