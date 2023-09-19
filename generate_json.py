@@ -1,3 +1,4 @@
+from typing import List
 import json
 import requests
 
@@ -8,10 +9,10 @@ places_response = requests.get("https://penaval.com/api/places?limit=1000", head
 products_response = requests.get("https://penaval.com/api/products?limit=1000", headers={'Content-Type': 'application/json', 'Authorization': f'Bearer {token}'})
 providers_response = requests.get("https://penaval.com/api/providers?limit=1000", headers={'Content-Type': 'application/json', 'Authorization': f'Bearer {token}'})
 
-brands_json: list[dict] = brands_response.json()
-places_json: list[dict] = places_response.json()
-products_json: list[dict] = products_response.json()
-providers_json: list[dict] = providers_response.json()
+brands_json: List[dict] = brands_response.json()
+places_json: List[dict] = places_response.json()
+products_json: List[dict] = products_response.json()
+providers_json: List[dict] = providers_response.json()
 
 result = []
 

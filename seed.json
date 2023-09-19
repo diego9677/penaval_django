@@ -1,0 +1,6296 @@
+[
+  {
+    "model": "products.brand",
+    "pk": 1,
+    "fields": {
+      "name": "NTN",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 2,
+    "fields": {
+      "name": "KOYO",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 3,
+    "fields": {
+      "name": "NSK",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 4,
+    "fields": {
+      "name": "FAG",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 5,
+    "fields": {
+      "name": "NATIONAL",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 6,
+    "fields": {
+      "name": "TIMKEN",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 7,
+    "fields": {
+      "name": "SKF",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 8,
+    "fields": {
+      "name": "NACHI",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 9,
+    "fields": {
+      "name": "LUK",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 10,
+    "fields": {
+      "name": "ZKL",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 11,
+    "fields": {
+      "name": "CRAFT BEARINGS",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 12,
+    "fields": {
+      "name": "NIS",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 13,
+    "fields": {
+      "name": "VAP",
+      "description": "(Aleman)"
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 14,
+    "fields": {
+      "name": "KSM",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 15,
+    "fields": {
+      "name": "BALL ROLLER BEARINGS",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 16,
+    "fields": {
+      "name": "INA",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 17,
+    "fields": {
+      "name": "MAR",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 18,
+    "fields": {
+      "name": "PFI",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 19,
+    "fields": {
+      "name": "FBJ",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 20,
+    "fields": {
+      "name": "WTW",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 21,
+    "fields": {
+      "name": "TOYO",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 22,
+    "fields": {
+      "name": "ZSG",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 23,
+    "fields": {
+      "name": "FEBEST",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 24,
+    "fields": {
+      "name": "ZSG",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 25,
+    "fields": {
+      "name": "GMB",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 26,
+    "fields": {
+      "name": "GMB",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 27,
+    "fields": {
+      "name": "GMB",
+      "description": "CRUCETA"
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 28,
+    "fields": {
+      "name": "GMB",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 29,
+    "fields": {
+      "name": "GMB",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 30,
+    "fields": {
+      "name": "GMB",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 31,
+    "fields": {
+      "name": "GMB",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 32,
+    "fields": {
+      "name": "GMB",
+      "description": "(Cruceta)\n"
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 33,
+    "fields": {
+      "name": "gmb",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 34,
+    "fields": {
+      "name": "GMB",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.brand",
+    "pk": 35,
+    "fields": {
+      "name": "TOYO",
+      "description": "(cruceta)\n"
+    }
+  },
+  {
+    "model": "products.place",
+    "pk": 1,
+    "fields": {
+      "name": "Bloque 1 RIGIDOS",
+      "description": "(RIGIDO O BOLAS)"
+    }
+  },
+  {
+    "model": "products.place",
+    "pk": 9,
+    "fields": {
+      "name": "BLOQUE 2",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.place",
+    "pk": 10,
+    "fields": {
+      "name": "BLOQUE 3",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.place",
+    "pk": 11,
+    "fields": {
+      "name": "BLOQUE 4",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.place",
+    "pk": 12,
+    "fields": {
+      "name": "BLOQUE 4",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.place",
+    "pk": 13,
+    "fields": {
+      "name": "BLOQUE 5",
+      "description": "(CONICO O RODILLO)"
+    }
+  },
+  {
+    "model": "products.place",
+    "pk": 14,
+    "fields": {
+      "name": "BLOQUE 6",
+      "description": "(CONICO O RODILLO)"
+    }
+  },
+  {
+    "model": "products.place",
+    "pk": 15,
+    "fields": {
+      "name": "BLOQUE 7",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.place",
+    "pk": 16,
+    "fields": {
+      "name": "PARA TRAER",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.place",
+    "pk": 17,
+    "fields": {
+      "name": "MODESTO MARQUEZ",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+      "code": "6208-2RS1K",
+      "brand_id": 7,
+      "place_id": 1,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "430",
+      "measures": "40x80x18"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+      "code": "32210JR",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "180",
+      "measures": "50x90x24.7"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+      "code": "32210JRYA2",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "300",
+      "measures": "50X90X24.75"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+      "code": "F32350",
+      "brand_id": 13,
+      "place_id": 15,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "380",
+      "measures": "50X80X15 (Cilindrico)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+      "code": "ZA-45BWD10ACA86",
+      "brand_id": 3,
+      "place_id": 10,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "400",
+      "measures": "45x84x45"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+      "code": "6220",
+      "brand_id": 7,
+      "place_id": 1,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "1200",
+      "measures": "105x120x37"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+      "code": "3210A-2RS1",
+      "brand_id": 7,
+      "place_id": 10,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "800",
+      "measures": "50X90X30"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+      "code": "395A",
+      "brand_id": 1,
+      "place_id": 15,
+      "stock": 8,
+      "pucharse_price": "0",
+      "price": "95",
+      "measures": "66.6X21.9"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+      "code": "6309-2RS1/C3",
+      "brand_id": 7,
+      "place_id": 1,
+      "stock": 3,
+      "pucharse_price": "145",
+      "price": "300",
+      "measures": "45X100X25"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 12,
+    "fields": {
+      "code": "30207-A",
+      "brand_id": 4,
+      "place_id": 13,
+      "stock": 24,
+      "pucharse_price": "0",
+      "price": "80",
+      "measures": "35x72x17 "
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 13,
+    "fields": {
+      "code": "32207-A",
+      "brand_id": 4,
+      "place_id": 13,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "35X72X17"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 14,
+    "fields": {
+      "code": "DAC4382W-3CS79",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "360",
+      "measures": "43X82X45  (Toyota-Rav4-Lexus)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 15,
+    "fields": {
+      "code": "6204-2RSC3",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 19,
+      "pucharse_price": "0",
+      "price": "45",
+      "measures": "20X47X14"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 16,
+    "fields": {
+      "code": "HM88648/10",
+      "brand_id": 6,
+      "place_id": 14,
+      "stock": 8,
+      "pucharse_price": "0",
+      "price": "340",
+      "measures": "35.7X72.2X25.4"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 17,
+    "fields": {
+      "code": "T149-904A2",
+      "brand_id": 6,
+      "place_id": 9,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "38X66X19.8"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 18,
+    "fields": {
+      "code": "4T-716649/10",
+      "brand_id": 1,
+      "place_id": 14,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "600",
+      "measures": "85X130X30"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 19,
+    "fields": {
+      "code": "JM-716649/10",
+      "brand_id": 4,
+      "place_id": 14,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "550",
+      "measures": "85X130X30"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 20,
+    "fields": {
+      "code": "518713",
+      "brand_id": 4,
+      "place_id": 10,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "540",
+      "measures": "45X112.7X34.5"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 21,
+    "fields": {
+      "code": "33018",
+      "brand_id": 4,
+      "place_id": 13,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "850",
+      "measures": "90X140X39"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 22,
+    "fields": {
+      "code": "2DUF054N-2GR",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "650",
+      "measures": "43X78"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 23,
+    "fields": {
+      "code": "NJ305 ECP/C3",
+      "brand_id": 7,
+      "place_id": 15,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "320",
+      "measures": "25X62X17"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 24,
+    "fields": {
+      "code": "NJ210ECJ/C3",
+      "brand_id": 7,
+      "place_id": 15,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "850",
+      "measures": "50X90X20"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 25,
+    "fields": {
+      "code": "NJ212ECJ/C3",
+      "brand_id": 7,
+      "place_id": 15,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "1000",
+      "measures": "60X110X22"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 26,
+    "fields": {
+      "code": "JLM104948/10",
+      "brand_id": 6,
+      "place_id": 14,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "190",
+      "measures": "50X82X21.88"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 27,
+    "fields": {
+      "code": "HM89446/10",
+      "brand_id": 6,
+      "place_id": 14,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "420",
+      "measures": "34.92X76.2X28.57"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 28,
+    "fields": {
+      "code": "F-44494",
+      "brand_id": 16,
+      "place_id": 15,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "480",
+      "measures": "30X62X23.81"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 29,
+    "fields": {
+      "code": "32210",
+      "brand_id": 4,
+      "place_id": 13,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "200",
+      "measures": "50x90x24.7"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 30,
+    "fields": {
+      "code": "27687/20",
+      "brand_id": 6,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "900",
+      "measures": "82.5X125.4X25.5"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 31,
+    "fields": {
+      "code": "37425/625",
+      "brand_id": 4,
+      "place_id": 13,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "950",
+      "measures": "107.9X159X22"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 32,
+    "fields": {
+      "code": "6303-2RSC3",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "65",
+      "measures": "17X47X14"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 33,
+    "fields": {
+      "code": "DG175216B2RDDLX",
+      "brand_id": 12,
+      "place_id": 9,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "110",
+      "measures": "17x52x16 (SF)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 111,
+    "fields": {
+      "code": "HI-CAPHM88547/10",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "290",
+      "measures": "33.34X73.03X27.78"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 112,
+    "fields": {
+      "code": "4T-HM89449/HM89410",
+      "brand_id": 1,
+      "place_id": 14,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "280",
+      "measures": "36.51X76.20X29.37"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 113,
+    "fields": {
+      "code": "HI-CAPJLM104948/10",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 15,
+      "pucharse_price": "0",
+      "price": "130",
+      "measures": "50X82X21.88"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 114,
+    "fields": {
+      "code": "HI-CAPLM102949/10",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 13,
+      "pucharse_price": "0",
+      "price": "103",
+      "measures": "45.24X73.43X19.56"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 115,
+    "fields": {
+      "code": "LM104949/LM10",
+      "brand_id": 6,
+      "place_id": 14,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "210",
+      "measures": "50.8X82.55X21.11"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 116,
+    "fields": {
+      "code": "HM212049/11",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "460",
+      "measures": "66.68X122.24X38.10"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 117,
+    "fields": {
+      "code": "HI-CAPLM501349/10",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 8,
+      "pucharse_price": "0",
+      "price": "110",
+      "measures": "41.28X73.43X19.46"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 118,
+    "fields": {
+      "code": "HI-CAPLM501349",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "90",
+      "measures": "41.28X0X19.81"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 119,
+    "fields": {
+      "code": "4T-LM503349/LM50#01",
+      "brand_id": 1,
+      "place_id": 14,
+      "stock": 6,
+      "pucharse_price": "0",
+      "price": "185",
+      "measures": "45.98X74.97X18"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 120,
+    "fields": {
+      "code": "JM515649/10",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "1070",
+      "measures": "80X130X35"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 121,
+    "fields": {
+      "code": "6000ZZCM",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 13,
+      "pucharse_price": "0",
+      "price": "45",
+      "measures": "10x26x8"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 122,
+    "fields": {
+      "code": "60012RSCM",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "45",
+      "measures": "12X28X8"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 123,
+    "fields": {
+      "code": "6001ZZC3",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 6,
+      "pucharse_price": "0",
+      "price": "45",
+      "measures": "12X28X8"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 124,
+    "fields": {
+      "code": "60022RSCM",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 19,
+      "pucharse_price": "0",
+      "price": "40",
+      "measures": "15X32X9"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 125,
+    "fields": {
+      "code": "62042RSCM",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 8,
+      "pucharse_price": "0",
+      "price": "45",
+      "measures": "20X47X14"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 126,
+    "fields": {
+      "code": "60032RSCM",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 19,
+      "pucharse_price": "0",
+      "price": "45",
+      "measures": "17X35X10"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 127,
+    "fields": {
+      "code": "6003ZZC3/2AS",
+      "brand_id": 1,
+      "place_id": 1,
+      "stock": 10,
+      "pucharse_price": "0",
+      "price": "60",
+      "measures": "17X35X10"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 128,
+    "fields": {
+      "code": "6204ZZC3/2AS",
+      "brand_id": 1,
+      "place_id": 1,
+      "stock": 10,
+      "pucharse_price": "0",
+      "price": "60",
+      "measures": "20X47X14"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 129,
+    "fields": {
+      "code": "60042RSCM",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 16,
+      "pucharse_price": "0",
+      "price": "55",
+      "measures": "20X42X12"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 130,
+    "fields": {
+      "code": "6204ZNR*",
+      "brand_id": 3,
+      "place_id": 1,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "60",
+      "measures": "20X47X14"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 131,
+    "fields": {
+      "code": "60052RSC3",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 13,
+      "pucharse_price": "0",
+      "price": "40",
+      "measures": "25X47X12"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 132,
+    "fields": {
+      "code": "60062RSC3",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 17,
+      "pucharse_price": "0",
+      "price": "70",
+      "measures": "30X55X13"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 133,
+    "fields": {
+      "code": "62052RSCM",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 35,
+      "pucharse_price": "0",
+      "price": "40",
+      "measures": "25X52X15"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 134,
+    "fields": {
+      "code": "6006ZZC3/L627",
+      "brand_id": 1,
+      "place_id": 1,
+      "stock": 19,
+      "pucharse_price": "0",
+      "price": "85",
+      "measures": "30X55X13"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 135,
+    "fields": {
+      "code": "6205ZZCM",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 10,
+      "pucharse_price": "0",
+      "price": "65",
+      "measures": "25X52X15"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 136,
+    "fields": {
+      "code": "60072RSC3",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "75",
+      "measures": "35X62X14"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 137,
+    "fields": {
+      "code": "6205ZNR*",
+      "brand_id": 3,
+      "place_id": 1,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "60",
+      "measures": "25X52X15"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 138,
+    "fields": {
+      "code": "6007ZZC3/2AS",
+      "brand_id": 1,
+      "place_id": 1,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "110",
+      "measures": "35X62X14"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 139,
+    "fields": {
+      "code": "6008ZZCM",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "120",
+      "measures": "40X68X15"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 140,
+    "fields": {
+      "code": "62062RSCM",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 9,
+      "pucharse_price": "0",
+      "price": "55",
+      "measures": "30X62X16"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 141,
+    "fields": {
+      "code": "60092RSCM",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 10,
+      "pucharse_price": "0",
+      "price": "90",
+      "measures": "45X75X16"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 142,
+    "fields": {
+      "code": "6206ZZC3E",
+      "brand_id": 3,
+      "place_id": 1,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "95",
+      "measures": "30X62X16"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 143,
+    "fields": {
+      "code": "6011LLUC3/2AS",
+      "brand_id": 1,
+      "place_id": 1,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "255",
+      "measures": "55X90X18"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 144,
+    "fields": {
+      "code": "6206ZNRC3",
+      "brand_id": 1,
+      "place_id": 1,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "85",
+      "measures": "30X62X16"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 145,
+    "fields": {
+      "code": "6011ZZCM",
+      "brand_id": 3,
+      "place_id": 1,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "230",
+      "measures": "55X90X18"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 146,
+    "fields": {
+      "code": "6012ZZ/5K",
+      "brand_id": 1,
+      "place_id": 1,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "250",
+      "measures": "60X95X18"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 147,
+    "fields": {
+      "code": "6207ZNR",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "90",
+      "measures": "35X72X17"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 148,
+    "fields": {
+      "code": "6015ZZC3/2AS",
+      "brand_id": 1,
+      "place_id": 1,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "500",
+      "measures": "75X115X20"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 149,
+    "fields": {
+      "code": "6208ZZC3/2AS",
+      "brand_id": 1,
+      "place_id": 1,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "125",
+      "measures": "40X80X18"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 150,
+    "fields": {
+      "code": "6016LLUC3/2AS",
+      "brand_id": 1,
+      "place_id": 1,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "700",
+      "measures": "80X125X22"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 151,
+    "fields": {
+      "code": "62092RSC3",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "100",
+      "measures": "45x85x19"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 152,
+    "fields": {
+      "code": "62102RSC3",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 6,
+      "pucharse_price": "0",
+      "price": "95",
+      "measures": "50x90x20"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 153,
+    "fields": {
+      "code": "6020ZZC3/2AS",
+      "brand_id": 1,
+      "place_id": 1,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "700",
+      "measures": "100X150X24"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 154,
+    "fields": {
+      "code": "6210ZZCM",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "182",
+      "measures": "50x90x20"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 155,
+    "fields": {
+      "code": "6006/32-2RS1/VB005",
+      "brand_id": 7,
+      "place_id": 1,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "175",
+      "measures": "32X55X13"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 156,
+    "fields": {
+      "code": "62112RSC3",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "290",
+      "measures": "55x100x21"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 157,
+    "fields": {
+      "code": "6200LLU/2ASU1",
+      "brand_id": 1,
+      "place_id": 1,
+      "stock": 10,
+      "pucharse_price": "0",
+      "price": "50",
+      "measures": "10X30X9"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 158,
+    "fields": {
+      "code": "6213ZZCM",
+      "brand_id": 3,
+      "place_id": 1,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "430",
+      "measures": "65x120x23"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 159,
+    "fields": {
+      "code": "6200ZZCM",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "50",
+      "measures": "10X30X9"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 160,
+    "fields": {
+      "code": "6214ZZCM",
+      "brand_id": 3,
+      "place_id": 1,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "495",
+      "measures": "70x125x24"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 161,
+    "fields": {
+      "code": "62012RSCM",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 18,
+      "pucharse_price": "0",
+      "price": "30",
+      "measures": "12X32X10"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 162,
+    "fields": {
+      "code": "6215DDUC3E",
+      "brand_id": 3,
+      "place_id": 1,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "695",
+      "measures": "75x130x25"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 163,
+    "fields": {
+      "code": "6201ZZC3",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 9,
+      "pucharse_price": "0",
+      "price": "55",
+      "measures": "12X32X10"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 164,
+    "fields": {
+      "code": "6202LLU/15.875",
+      "brand_id": 1,
+      "place_id": 1,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "65",
+      "measures": "15.88x35x11"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 165,
+    "fields": {
+      "code": "6201ZZ/12.7/2AS",
+      "brand_id": 1,
+      "place_id": 1,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "75",
+      "measures": "12.70X32X10"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 166,
+    "fields": {
+      "code": "63012RSCM",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 19,
+      "pucharse_price": "0",
+      "price": "34",
+      "measures": "12x37x12"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 167,
+    "fields": {
+      "code": "62022RSCM",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "35",
+      "measures": "15X35X11"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 168,
+    "fields": {
+      "code": "63022RSCM",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 15,
+      "pucharse_price": "0",
+      "price": "40",
+      "measures": "15x42x13"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 169,
+    "fields": {
+      "code": "62032RSCM",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "32",
+      "measures": "17X40X12"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 170,
+    "fields": {
+      "code": "63042RSCM",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 18,
+      "pucharse_price": "0",
+      "price": "64",
+      "measures": "20x52x15"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 171,
+    "fields": {
+      "code": "6203ZZ/2A",
+      "brand_id": 1,
+      "place_id": 1,
+      "stock": 9,
+      "pucharse_price": "0",
+      "price": "45",
+      "measures": "17X40X12"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 172,
+    "fields": {
+      "code": "6304ZZC3",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "70",
+      "measures": "20x52x15"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 173,
+    "fields": {
+      "code": "63052RSCM",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 7,
+      "pucharse_price": "0",
+      "price": "75",
+      "measures": "25x62x17"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 174,
+    "fields": {
+      "code": "63062RSCM",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 6,
+      "pucharse_price": "0",
+      "price": "100",
+      "measures": "30x72x19"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 175,
+    "fields": {
+      "code": "6306ZZC3/2AS",
+      "brand_id": 1,
+      "place_id": 1,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "110",
+      "measures": "30x72x19"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 176,
+    "fields": {
+      "code": "6307ZZCM",
+      "brand_id": 3,
+      "place_id": 1,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "175",
+      "measures": "35x80x21"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 177,
+    "fields": {
+      "code": "63082RSCM",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "150",
+      "measures": "40x90x23"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 178,
+    "fields": {
+      "code": "6308ZNRC3",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "180",
+      "measures": "40x90x23"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 179,
+    "fields": {
+      "code": "6311ZNR*C3",
+      "brand_id": 3,
+      "place_id": 1,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "575",
+      "measures": "55x120x29"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 180,
+    "fields": {
+      "code": "HI-CAP30203JR",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "70",
+      "measures": "17x40x13.30"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 181,
+    "fields": {
+      "code": "HI-CAP30204JR",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 50,
+      "pucharse_price": "0",
+      "price": "75",
+      "measures": "20x47x15.30"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 182,
+    "fields": {
+      "code": "HI-CAP30205JR",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 9,
+      "pucharse_price": "0",
+      "price": "63",
+      "measures": "25X52X16.30"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 183,
+    "fields": {
+      "code": "HI-CAP30206JR",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 10,
+      "pucharse_price": "0",
+      "price": "75",
+      "measures": "30X62X17.3"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 184,
+    "fields": {
+      "code": "HI-CAP30207JR",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "85",
+      "measures": "35X72X18.3"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 185,
+    "fields": {
+      "code": "HI-CAP30208JR",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 8,
+      "pucharse_price": "0",
+      "price": "120",
+      "measures": "40X80X19.8"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 186,
+    "fields": {
+      "code": "HC30209JR",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 10,
+      "pucharse_price": "0",
+      "price": "160",
+      "measures": "45X85X20.8"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 187,
+    "fields": {
+      "code": "HC30210JR",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 10,
+      "pucharse_price": "0",
+      "price": "156",
+      "measures": "50X90X21.8"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 188,
+    "fields": {
+      "code": "32005 X 26",
+      "brand_id": 11,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "35",
+      "measures": "26X47X15"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 189,
+    "fields": {
+      "code": "HI-CAP32008JR",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 10,
+      "pucharse_price": "0",
+      "price": "180",
+      "measures": "40X68X19"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 190,
+    "fields": {
+      "code": "HC32011JR",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 10,
+      "pucharse_price": "0",
+      "price": "245",
+      "measures": "55X90X23"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 191,
+    "fields": {
+      "code": "HC30302JR",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "86",
+      "measures": "15X42X14.3"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 192,
+    "fields": {
+      "code": "HC30303D",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 12,
+      "pucharse_price": "0",
+      "price": "75",
+      "measures": "17X47X15.3"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 193,
+    "fields": {
+      "code": "HI-CAP30304AJR",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 10,
+      "pucharse_price": "0",
+      "price": "85",
+      "measures": "20X52X16.3"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 194,
+    "fields": {
+      "code": "HC30305JR",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "60",
+      "measures": "25X62X18.3"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 195,
+    "fields": {
+      "code": "HC30306DJ",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "200",
+      "measures": "30X72X20.8"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 196,
+    "fields": {
+      "code": "4T-30307D",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "230",
+      "measures": "35x80x22.8"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 197,
+    "fields": {
+      "code": "368A/362A",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "160",
+      "measures": "50.8X88.9X22.2"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 198,
+    "fields": {
+      "code": "387A/382A",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "250",
+      "measures": "57.15X96.83X21"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 199,
+    "fields": {
+      "code": "469/453X",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "280",
+      "measures": "57.15X104.77X30.16"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 200,
+    "fields": {
+      "code": "4T-683/672",
+      "brand_id": 1,
+      "place_id": 13,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "920",
+      "measures": "95.25X168.28X41.28"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 201,
+    "fields": {
+      "code": "HI-CAP2580/23",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "160",
+      "measures": "31.75X69.85X23.81"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 202,
+    "fields": {
+      "code": "3780/20",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "195",
+      "measures": "50.8x93.26x30.16"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 203,
+    "fields": {
+      "code": "3782/20",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "275",
+      "measures": "44.45x93.26x30.16"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 204,
+    "fields": {
+      "code": "3982/20",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "157",
+      "measures": "63.50x112.71x30.16"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 205,
+    "fields": {
+      "code": "HI-CAP02474/20",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "150",
+      "measures": "28.58x68.26x22.23"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 206,
+    "fields": {
+      "code": "HI-CAPLM11749R/10",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 12,
+      "pucharse_price": "0",
+      "price": "55",
+      "measures": "17.46X39.88X13.84"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 207,
+    "fields": {
+      "code": "HI-CAPM12649/10",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 12,
+      "pucharse_price": "0",
+      "price": "48",
+      "measures": "21.43X50.01X17.53"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 208,
+    "fields": {
+      "code": "HI-CAPLM67048/10",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 25,
+      "pucharse_price": "0",
+      "price": "68",
+      "measures": "31.75X59.15X15.88"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 209,
+    "fields": {
+      "code": "HI-CAPL68149/10",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 23,
+      "pucharse_price": "0",
+      "price": "64",
+      "measures": "34.99X59.13X16.76  (RUEDA TRASERA TOYOTA MUELLE)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 210,
+    "fields": {
+      "code": "HI-CAPL45449/10",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 12,
+      "pucharse_price": "0",
+      "price": "48",
+      "measures": "29X50.29X14.22"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 211,
+    "fields": {
+      "code": "HI-CAPL48548/10",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 15,
+      "pucharse_price": "0",
+      "price": "75",
+      "measures": "34.93X65.09X18.03"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 213,
+    "fields": {
+      "code": "LM300849RG3/811RG",
+      "brand_id": 3,
+      "place_id": 14,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "116",
+      "measures": "41X68X17.5"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 215,
+    "fields": {
+      "code": "HI-CAP14138A/276",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "179",
+      "measures": "34.92X69.01X19.84"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 216,
+    "fields": {
+      "code": "HI-CAP15106/250",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "180",
+      "measures": "26.99X63.50X20.64"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 217,
+    "fields": {
+      "code": "HC17887/31",
+      "brand_id": 2,
+      "place_id": 11,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "128",
+      "measures": "45.23X79.99X19.84"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 218,
+    "fields": {
+      "code": "HI-CAP25590/22",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "250",
+      "measures": "45.62X83.06X23.87"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 219,
+    "fields": {
+      "code": "C06",
+      "brand_id": 2,
+      "place_id": 9,
+      "stock": 10,
+      "pucharse_price": "0",
+      "price": "60",
+      "measures": "30X42X16"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 220,
+    "fields": {
+      "code": "C014",
+      "brand_id": 2,
+      "place_id": 9,
+      "stock": 7,
+      "pucharse_price": "0",
+      "price": "55",
+      "measures": "35X52X18"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 221,
+    "fields": {
+      "code": "MR406119",
+      "brand_id": 2,
+      "place_id": 9,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "137",
+      "measures": "40X61X19"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 222,
+    "fields": {
+      "code": "T126-904A1",
+      "brand_id": 6,
+      "place_id": 9,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "171",
+      "measures": "32X55.6X15.9"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 223,
+    "fields": {
+      "code": "T50RC",
+      "brand_id": 2,
+      "place_id": 9,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "270",
+      "measures": "50X82X22"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 224,
+    "fields": {
+      "code": "T199-904A1",
+      "brand_id": 6,
+      "place_id": 9,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "175",
+      "measures": "51.1X74.6X15.9"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 225,
+    "fields": {
+      "code": "VBT17Z-2",
+      "brand_id": 3,
+      "place_id": 9,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "50",
+      "measures": "17.5X38X11"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 226,
+    "fields": {
+      "code": "DG1938AC3",
+      "brand_id": 2,
+      "place_id": 9,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "55",
+      "measures": "18.6X38.1X10"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 227,
+    "fields": {
+      "code": "ACS0404F",
+      "brand_id": 2,
+      "place_id": 9,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "55",
+      "measures": "20.5X38.1X11"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 228,
+    "fields": {
+      "code": "RCTS4067A2RR5",
+      "brand_id": 2,
+      "place_id": 9,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "215",
+      "measures": "40X67X20"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 229,
+    "fields": {
+      "code": "M-CT52A",
+      "brand_id": 2,
+      "place_id": 9,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "215",
+      "measures": "52.4X97X20"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 230,
+    "fields": {
+      "code": "M-5000076200(Z-530689.02KL-HLA)",
+      "brand_id": 9,
+      "place_id": 9,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "850",
+      "measures": "55X91.5X24"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 231,
+    "fields": {
+      "code": "M-2065",
+      "brand_id": 5,
+      "place_id": 9,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "165",
+      "measures": "52.38x89x19"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 232,
+    "fields": {
+      "code": "M-ZA-65TNK20",
+      "brand_id": 3,
+      "place_id": 9,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "165",
+      "measures": "65x102x22"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 233,
+    "fields": {
+      "code": "RCT337SA3-3-AM",
+      "brand_id": 2,
+      "place_id": 9,
+      "stock": 8,
+      "pucharse_price": "0",
+      "price": "216",
+      "measures": "33x66x24"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 234,
+    "fields": {
+      "code": "M-RCTS338SA1",
+      "brand_id": 2,
+      "place_id": 9,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "230",
+      "measures": "33x66.25x24"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 235,
+    "fields": {
+      "code": "ZA-50TKB3505B1R",
+      "brand_id": 3,
+      "place_id": 9,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "250",
+      "measures": "35.3x66.6x40"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 236,
+    "fields": {
+      "code": "ZA-50TKB3504B1R",
+      "brand_id": 3,
+      "place_id": 9,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "245",
+      "measures": "35.2X66.6X44.45"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 237,
+    "fields": {
+      "code": "DG306725W2RSC4",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 9,
+      "pucharse_price": "0",
+      "price": "120",
+      "measures": "30X67X25"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 238,
+    "fields": {
+      "code": "DG357226W2RSC4",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "120",
+      "measures": "35X72X26"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 239,
+    "fields": {
+      "code": "DG358028W2RSHR4C4",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 10,
+      "pucharse_price": "0",
+      "price": "135",
+      "measures": "35X80X28"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 240,
+    "fields": {
+      "code": "DG358026WRKBC4",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "230",
+      "measures": "35X80X26"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 241,
+    "fields": {
+      "code": "DG4080WRKBSH2C4",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "285",
+      "measures": "40X80X18/23"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 242,
+    "fields": {
+      "code": "B8-85T12DDNCXMC3E",
+      "brand_id": 3,
+      "place_id": 9,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "105",
+      "measures": "8x23x14"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 243,
+    "fields": {
+      "code": "B10-50T12DDNCXCG1-01",
+      "brand_id": 3,
+      "place_id": 9,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "95",
+      "measures": "10x27x11"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 244,
+    "fields": {
+      "code": "B15-70AT1XGRDDG6C-01",
+      "brand_id": 3,
+      "place_id": 9,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "60",
+      "measures": "15x32x11"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 245,
+    "fields": {
+      "code": "B17-102AT1XLBDD-02 C",
+      "brand_id": 3,
+      "place_id": 9,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "115",
+      "measures": "17x47x14"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 246,
+    "fields": {
+      "code": "B17-127T1XDDGC01",
+      "brand_id": 3,
+      "place_id": 9,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "240",
+      "measures": "17x62x20"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 247,
+    "fields": {
+      "code": "B17-116T1XDDGCMR",
+      "brand_id": 3,
+      "place_id": 9,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "196",
+      "measures": "17x52x18"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 248,
+    "fields": {
+      "code": "LM603049R/011R",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "120",
+      "measures": "45.24X77.79X19.84"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 249,
+    "fields": {
+      "code": "DG1762212RMZUJ4S0Z(DG176221-2RMZUJ)",
+      "brand_id": 2,
+      "place_id": 9,
+      "stock": 3,
+      "pucharse_price": "420",
+      "price": "530",
+      "measures": "17X62X21"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 250,
+    "fields": {
+      "code": "4T-HM88542/HM88510",
+      "brand_id": 1,
+      "place_id": 14,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "235",
+      "measures": "31.75X73.03X29.37"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 251,
+    "fields": {
+      "code": "RCT283SA",
+      "brand_id": 2,
+      "place_id": 9,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "210",
+      "measures": "28X57X25"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 252,
+    "fields": {
+      "code": "FCR50-46-1G1/2E",
+      "brand_id": 1,
+      "place_id": 9,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "210",
+      "measures": "28X57X25"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 253,
+    "fields": {
+      "code": "RCT4500",
+      "brand_id": 2,
+      "place_id": 9,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "133",
+      "measures": "45X76.3X23"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 254,
+    "fields": {
+      "code": "RNU080623NR",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "211",
+      "measures": "37X60X23"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 255,
+    "fields": {
+      "code": "DG4092A2RKBDNSHR4SH2C3",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "196",
+      "measures": "40X92X25.4"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 256,
+    "fields": {
+      "code": "83A941ASH2C3",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "180",
+      "measures": "45X100X28"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 257,
+    "fields": {
+      "code": "3579/25",
+      "brand_id": 1,
+      "place_id": 13,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "200",
+      "measures": "42.9X82.4X30.6"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 258,
+    "fields": {
+      "code": "4T-30308D",
+      "brand_id": 1,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "180",
+      "measures": "40X90X25.25"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 259,
+    "fields": {
+      "code": "4T-30309D",
+      "brand_id": 1,
+      "place_id": 13,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "250",
+      "measures": "45X100X27.25"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 260,
+    "fields": {
+      "code": "30310DJR",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "320",
+      "measures": "50X110X29.25"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 261,
+    "fields": {
+      "code": "4T-02872/20",
+      "brand_id": 1,
+      "place_id": 13,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "130",
+      "measures": "28.7X73X22.4"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 262,
+    "fields": {
+      "code": "30311D",
+      "brand_id": 12,
+      "place_id": 13,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "140",
+      "measures": "55X120X29"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 263,
+    "fields": {
+      "code": "2201E-2RS",
+      "brand_id": 14,
+      "place_id": 14,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "70",
+      "measures": "12X32X14"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 264,
+    "fields": {
+      "code": "19BSW05A",
+      "brand_id": 3,
+      "place_id": 9,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "75",
+      "measures": "19X35X7"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 265,
+    "fields": {
+      "code": "HI-CAP32207JR",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "125",
+      "measures": "35X72X24"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 266,
+    "fields": {
+      "code": "WBB438245",
+      "brand_id": 15,
+      "place_id": 10,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "180",
+      "measures": "43X82X45"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 267,
+    "fields": {
+      "code": "83A831SC5",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "357",
+      "measures": "36.2x67.18.4"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 268,
+    "fields": {
+      "code": "83A831GCS53",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "218",
+      "measures": "36.2x67x23"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 269,
+    "fields": {
+      "code": "63/22C3",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "75",
+      "measures": "22x56x16"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 270,
+    "fields": {
+      "code": "63/222RSC3",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "145",
+      "measures": "22X56X16"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 271,
+    "fields": {
+      "code": "63/28NRC3",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "140",
+      "measures": "28x68x18"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 272,
+    "fields": {
+      "code": "63/322RSC3",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "220",
+      "measures": "32x75x20"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 273,
+    "fields": {
+      "code": "4T-32206",
+      "brand_id": 1,
+      "place_id": 13,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "100",
+      "measures": "30X62X20.2"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 274,
+    "fields": {
+      "code": "HI-CAP30306JR",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "100",
+      "measures": "30X72X20"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 275,
+    "fields": {
+      "code": "4T-32204",
+      "brand_id": 1,
+      "place_id": 13,
+      "stock": 6,
+      "pucharse_price": "0",
+      "price": "70",
+      "measures": "20X47X19.25"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 276,
+    "fields": {
+      "code": "SC0081LH",
+      "brand_id": 1,
+      "place_id": 9,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "100",
+      "measures": "10X27X14"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 277,
+    "fields": {
+      "code": "63/32NRC3",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "130",
+      "measures": "32x75x20"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 278,
+    "fields": {
+      "code": "62201DDUC3E",
+      "brand_id": 3,
+      "place_id": 1,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "95",
+      "measures": "12x32x14"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 279,
+    "fields": {
+      "code": "6308TPT4C5",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "198",
+      "measures": "40x90x23  (Palier)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 280,
+    "fields": {
+      "code": "6308W-12RSHR4C5",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "250",
+      "measures": "40x90x23/28 (Palier)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 281,
+    "fields": {
+      "code": "6903ZZCM",
+      "brand_id": 3,
+      "place_id": 1,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "45",
+      "measures": "17x30x7"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 282,
+    "fields": {
+      "code": "6904ZZC3",
+      "brand_id": 3,
+      "place_id": 1,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "108",
+      "measures": "20x37x9"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 283,
+    "fields": {
+      "code": "6904DDUCM",
+      "brand_id": 3,
+      "place_id": 1,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "104",
+      "measures": "20x37x9"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 284,
+    "fields": {
+      "code": "6905ZZCM",
+      "brand_id": 3,
+      "place_id": 1,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "120",
+      "measures": "25x42x9"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 285,
+    "fields": {
+      "code": "6906DDUCM",
+      "brand_id": 3,
+      "place_id": 1,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "136",
+      "measures": "30x47x9"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 286,
+    "fields": {
+      "code": "6906ZZC3E",
+      "brand_id": 3,
+      "place_id": 1,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "105",
+      "measures": "30x47x9"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 287,
+    "fields": {
+      "code": "63006-2RS1",
+      "brand_id": 7,
+      "place_id": 1,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "270",
+      "measures": "30x55x19"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 288,
+    "fields": {
+      "code": "6403-2RS1/C3",
+      "brand_id": 7,
+      "place_id": 1,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "390",
+      "measures": "17x62x17"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 289,
+    "fields": {
+      "code": "63203DDUCE",
+      "brand_id": 3,
+      "place_id": 1,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "187",
+      "measures": "17x40x17.5"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 290,
+    "fields": {
+      "code": "PG-EE4SZZ",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "75",
+      "measures": "12.7x28.58x7.94"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 291,
+    "fields": {
+      "code": "HI-53072RS",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "830",
+      "measures": "35x80x35"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 292,
+    "fields": {
+      "code": "4T-CRI-0574LLCS1#02",
+      "brand_id": 1,
+      "place_id": 10,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "278",
+      "measures": "25x52x37"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 293,
+    "fields": {
+      "code": "VKBC 20081(BA2B 246033)",
+      "brand_id": 7,
+      "place_id": 10,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "295",
+      "measures": "30x60x37"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 294,
+    "fields": {
+      "code": "DAC3562W-10CS51",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "145",
+      "measures": "35x62x40 (Palier)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 295,
+    "fields": {
+      "code": "DAC3668AWCS36",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "191",
+      "measures": "36x68x33 (Palier)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 296,
+    "fields": {
+      "code": "HC46T080604-1LFTCZ",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 10,
+      "pucharse_price": "0",
+      "price": "225",
+      "measures": "38x64x33/36.0 (Palier)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 297,
+    "fields": {
+      "code": "DAC3872W-8CS81",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "120",
+      "measures": "38x72x33/36 ("
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 298,
+    "fields": {
+      "code": "DAC3871W-3CS63",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 9,
+      "pucharse_price": "0",
+      "price": "238",
+      "measures": "38x71x39 (Palier)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 299,
+    "fields": {
+      "code": "DAC3874W-6CS84",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 10,
+      "pucharse_price": "0",
+      "price": "161",
+      "measures": "38x74x33/36 (Palier)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 300,
+    "fields": {
+      "code": "DAC39680037",
+      "brand_id": 10,
+      "place_id": 10,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "150",
+      "measures": "39x68x37"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 301,
+    "fields": {
+      "code": "HO/40BWD15ACA50",
+      "brand_id": 3,
+      "place_id": 10,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "310",
+      "measures": "40x74x36"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 302,
+    "fields": {
+      "code": "DAC4074W-3CS80",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "430",
+      "measures": "40x74x42"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 303,
+    "fields": {
+      "code": "HCST2749",
+      "brand_id": 2,
+      "place_id": 11,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "98",
+      "measures": "27x49x15.6"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 304,
+    "fields": {
+      "code": "HCTRA0607RYR",
+      "brand_id": 2,
+      "place_id": 11,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "155",
+      "measures": "30x72x20.8"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 305,
+    "fields": {
+      "code": "HCSTA3072-1LFT",
+      "brand_id": 2,
+      "place_id": 11,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "200",
+      "measures": "30x72x24"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 306,
+    "fields": {
+      "code": "HI-CAP57331",
+      "brand_id": 2,
+      "place_id": 11,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "96",
+      "measures": "35x59.97x18.5"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 307,
+    "fields": {
+      "code": "HCTR070803C",
+      "brand_id": 2,
+      "place_id": 11,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "210",
+      "measures": "35x80x29.25"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 308,
+    "fields": {
+      "code": "TR070904-1-9LFT",
+      "brand_id": 2,
+      "place_id": 11,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "466",
+      "measures": "35x89x38"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 309,
+    "fields": {
+      "code": "HCTR080702J/1D",
+      "brand_id": 2,
+      "place_id": 11,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "140",
+      "measures": "38.5x68x19"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 310,
+    "fields": {
+      "code": "HCTR080702J",
+      "brand_id": 2,
+      "place_id": 12,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "135",
+      "measures": "38.5x72x18.8"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 311,
+    "fields": {
+      "code": "Z-543805.TR1",
+      "brand_id": 4,
+      "place_id": 12,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "765",
+      "measures": "38x90x35.3"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 312,
+    "fields": {
+      "code": "HI-CAPTR080803R-9",
+      "brand_id": 2,
+      "place_id": 11,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "246",
+      "measures": "40x80x30"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 313,
+    "fields": {
+      "code": "KETR081105ARUR4",
+      "brand_id": 2,
+      "place_id": 11,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "510",
+      "measures": "40x105x45"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 314,
+    "fields": {
+      "code": "HCTR100802-2",
+      "brand_id": 2,
+      "place_id": 11,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "260",
+      "measures": "50x83x21"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 315,
+    "fields": {
+      "code": "201026A1",
+      "brand_id": 4,
+      "place_id": 11,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "480",
+      "measures": "50x100x38"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 316,
+    "fields": {
+      "code": "HCSTA5383LFT",
+      "brand_id": 2,
+      "place_id": 11,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "330",
+      "measures": "53x83x24.8"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 317,
+    "fields": {
+      "code": "HC46T080805CS70",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "271",
+      "measures": "40x80x45"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 318,
+    "fields": {
+      "code": "PG-419-20024",
+      "brand_id": 6,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "615",
+      "measures": "41.28x0x29.08"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 319,
+    "fields": {
+      "code": "PG-414-20024",
+      "brand_id": 6,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "315",
+      "measures": "0x88.5x22.23"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 320,
+    "fields": {
+      "code": "PG-480/472",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "698",
+      "measures": "68.26x120x29.8"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 321,
+    "fields": {
+      "code": "PG-HC57410LFT/LM2971Z",
+      "brand_id": 2,
+      "place_id": 11,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "191",
+      "measures": "38.1x65.09x21.4"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 322,
+    "fields": {
+      "code": "HI-CAP57414/LM300Z",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "80",
+      "measures": "41x68x18"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 323,
+    "fields": {
+      "code": "PG-57551",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "520",
+      "measures": "109.54x158.75x23.02"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 324,
+    "fields": {
+      "code": "4T-59175/59412",
+      "brand_id": 1,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "525",
+      "measures": "44.45x104.78x36.51"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 325,
+    "fields": {
+      "code": "4T-59412",
+      "brand_id": 1,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "215",
+      "measures": "41.28x0x36.51"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 326,
+    "fields": {
+      "code": "B15-69T12DDWNCXCM",
+      "brand_id": 3,
+      "place_id": 9,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "120",
+      "measures": "15X35X13"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 327,
+    "fields": {
+      "code": "RCT356SA8-AM",
+      "brand_id": 2,
+      "place_id": 9,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "170",
+      "measures": "35X44X38"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 328,
+    "fields": {
+      "code": "HI-CAPM84548/10",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 10,
+      "pucharse_price": "0",
+      "price": "155",
+      "measures": "25.4x57.15x19.43"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 329,
+    "fields": {
+      "code": "PG-4T-JL69349/JL699310",
+      "brand_id": 1,
+      "place_id": 14,
+      "stock": 8,
+      "pucharse_price": "0",
+      "price": "115",
+      "measures": "38x63x17"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 330,
+    "fields": {
+      "code": "PG-HI-CAPL68149/11",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "130",
+      "measures": "34.99x59.97x15.88"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 331,
+    "fields": {
+      "code": "HC32211JR",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "185",
+      "measures": "55X100X25"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 332,
+    "fields": {
+      "code": "6008LLUC3/2AS",
+      "brand_id": 1,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "127",
+      "measures": "40X68X15"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 333,
+    "fields": {
+      "code": "6010-2RSC3",
+      "brand_id": 7,
+      "place_id": 1,
+      "stock": 9,
+      "pucharse_price": "90",
+      "price": "181",
+      "measures": "50X80X16"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 334,
+    "fields": {
+      "code": "6012DDUCM",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "258",
+      "measures": "60X95X18"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 335,
+    "fields": {
+      "code": "60132RS",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "365",
+      "measures": "65X100X18"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 336,
+    "fields": {
+      "code": "6014DDUC3",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "425",
+      "measures": "70X110X20"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 337,
+    "fields": {
+      "code": "6017-NSL C3",
+      "brand_id": 8,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "640",
+      "measures": "85X130X22"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 338,
+    "fields": {
+      "code": "62072-2RSC3",
+      "brand_id": 7,
+      "place_id": 1,
+      "stock": 8,
+      "pucharse_price": "65",
+      "price": "100",
+      "measures": "35X72X17"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 339,
+    "fields": {
+      "code": "6208-2RSC3",
+      "brand_id": 7,
+      "place_id": 1,
+      "stock": 10,
+      "pucharse_price": "88",
+      "price": "185",
+      "measures": "40X80X18"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 340,
+    "fields": {
+      "code": "62122RSC3",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "391",
+      "measures": "60X110X22"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 341,
+    "fields": {
+      "code": "6213LL",
+      "brand_id": 1,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "490",
+      "measures": "65X120X23"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 342,
+    "fields": {
+      "code": "62142RSC3",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "561",
+      "measures": "70X125X24"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 343,
+    "fields": {
+      "code": "6303DDUC3",
+      "brand_id": 3,
+      "place_id": 1,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "65",
+      "measures": "17X47X14"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 344,
+    "fields": {
+      "code": "63072RSC3",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "130",
+      "measures": "35X80X21"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 345,
+    "fields": {
+      "code": "63092RSC3",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "290",
+      "measures": "45X100X25"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 346,
+    "fields": {
+      "code": "63102RSC3",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "445",
+      "measures": "50X110X27"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 347,
+    "fields": {
+      "code": "63122RSC3",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "840",
+      "measures": "60X130X31"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 348,
+    "fields": {
+      "code": "HC30211JR",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "287",
+      "measures": "55X100X22"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 349,
+    "fields": {
+      "code": "30212JR",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "343",
+      "measures": "60X110X23.8"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 350,
+    "fields": {
+      "code": "4T-30213",
+      "brand_id": 1,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "400",
+      "measures": "65X120X24.8"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 351,
+    "fields": {
+      "code": "4T-30214",
+      "brand_id": 1,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "485",
+      "measures": "70X125X26.3"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 352,
+    "fields": {
+      "code": "HR30215J",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "570",
+      "measures": "75X130X27.3"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 353,
+    "fields": {
+      "code": "HI-CAP32007JR",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "170",
+      "measures": "35X62X18"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 354,
+    "fields": {
+      "code": "32009JR",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "170",
+      "measures": "45X75X20"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 355,
+    "fields": {
+      "code": "HR32010XJ",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "1150",
+      "measures": "50X80X20"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 356,
+    "fields": {
+      "code": "HI-CAP30304AJRRS",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "180",
+      "measures": "20X52X16.3"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 357,
+    "fields": {
+      "code": "HI-CAP15123-245",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "145",
+      "measures": "31.75X62X19.05"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 358,
+    "fields": {
+      "code": "24780R/21",
+      "brand_id": 1,
+      "place_id": 13,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "290",
+      "measures": "41.27X76.2X25.4"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 359,
+    "fields": {
+      "code": "33019",
+      "brand_id": 12,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "420",
+      "measures": "95X145X40"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 360,
+    "fields": {
+      "code": "528946-20",
+      "brand_id": 17,
+      "place_id": 14,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "600",
+      "measures": "105X170X39"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 361,
+    "fields": {
+      "code": "UC205-16",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "25x52x34"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 362,
+    "fields": {
+      "code": "UC206-18",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "28.5X62X38.5"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 363,
+    "fields": {
+      "code": "4T-03062",
+      "brand_id": 1,
+      "place_id": 14,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "60",
+      "measures": "15.87X41.27X14.28"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 364,
+    "fields": {
+      "code": "28584/21",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "190",
+      "measures": "52.3X92X26"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 365,
+    "fields": {
+      "code": "PU385827ARR9DY",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "210",
+      "measures": "26X58X35"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 366,
+    "fields": {
+      "code": "PU355816RR9D",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "120",
+      "measures": "12X57.5X29"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 367,
+    "fields": {
+      "code": "PU255728CRR1HV1",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "210",
+      "measures": "24X57X28"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 368,
+    "fields": {
+      "code": "BA2B309609",
+      "brand_id": 7,
+      "place_id": 12,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "390",
+      "measures": "42X80X42"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 369,
+    "fields": {
+      "code": "DG357222DWC4",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 6,
+      "pucharse_price": "0",
+      "price": "150",
+      "measures": "35X72X22"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 370,
+    "fields": {
+      "code": "PW41680040/35",
+      "brand_id": 18,
+      "place_id": 10,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "220",
+      "measures": "41X68X40/35 (zuzuki)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 371,
+    "fields": {
+      "code": "NTF41KWD01G3CA54",
+      "brand_id": 3,
+      "place_id": 10,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "420",
+      "measures": "41X68X40/35 (Zuzuki Rueda Delantera)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 372,
+    "fields": {
+      "code": "497/493",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "85.73x136.53x30.16"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 373,
+    "fields": {
+      "code": "580R/572",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "82.55X139.99X36.51"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 374,
+    "fields": {
+      "code": "663/653",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "82.55X146.05X41.28"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 375,
+    "fields": {
+      "code": "HI-CAP2788R/20",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "38.1X76.2X23.78"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 376,
+    "fields": {
+      "code": "HI-CAP09081/195",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "0X0X0"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 377,
+    "fields": {
+      "code": "HI-CALM12749/10",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "70",
+      "measures": "21.99X45.24X15.49 (RUEDA TRASERA TOYOTA MUELLE)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 378,
+    "fields": {
+      "code": "HI-CAP15101/245",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "25.4X62X19.05"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 379,
+    "fields": {
+      "code": "HI-CAP15123/245",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "31.75X62X19.05"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 380,
+    "fields": {
+      "code": "HI-CAP25590/20",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "45.62X82.93X25.4"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 381,
+    "fields": {
+      "code": "BR015",
+      "brand_id": 8,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "40X50X13 (SEGURO RODAMIENTO)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 382,
+    "fields": {
+      "code": "07SR",
+      "brand_id": 19,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "35X48X20 (SEGURO RODAMIENTO)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 383,
+    "fields": {
+      "code": "18BSW03",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "18X35X10"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 384,
+    "fields": {
+      "code": "C-Tk70B",
+      "brand_id": 2,
+      "place_id": 17,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "440",
+      "measures": "70X117X27"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 385,
+    "fields": {
+      "code": "50TKB3501",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "35.2X66.6X34.5"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 386,
+    "fields": {
+      "code": "DG3572W-3RSCS27",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "35X72X22"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 387,
+    "fields": {
+      "code": "SD6202-2RS-WTW23743",
+      "brand_id": 20,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "15X38X19"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 388,
+    "fields": {
+      "code": "2J-SC03A57LLVACS#03",
+      "brand_id": 1,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "17X52X21"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 389,
+    "fields": {
+      "code": "30BD5222AT1XDDUM1",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 2,
+      "pucharse_price": "115",
+      "price": "145",
+      "measures": "30X52X22"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 390,
+    "fields": {
+      "code": "30BD219T12XDDUM1",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "30X52X22"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 391,
+    "fields": {
+      "code": "30BD40T12DDUCG21",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "30X55X23"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 392,
+    "fields": {
+      "code": "ZA-32BD5020T12DDUCG33",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "35X50X20"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 393,
+    "fields": {
+      "code": "63/28C3",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "28X68X18"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 394,
+    "fields": {
+      "code": "63/282RS",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "28X68X18"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 395,
+    "fields": {
+      "code": "63/32C3",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "32X75X20"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 396,
+    "fields": {
+      "code": "6900ZZ",
+      "brand_id": 1,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "10X22X6"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 397,
+    "fields": {
+      "code": "6901ZZ/2AS",
+      "brand_id": 1,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "12X24X6"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 398,
+    "fields": {
+      "code": "6901DDC3E",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "12X24X6"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 399,
+    "fields": {
+      "code": "6905DDUC3",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "25X42X9"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 400,
+    "fields": {
+      "code": "62306-2RS1",
+      "brand_id": 7,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "30X72X27"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 401,
+    "fields": {
+      "code": "62204-2RS1/C3",
+      "brand_id": 7,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "20X47X18"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 402,
+    "fields": {
+      "code": "60/22DDUC3",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "22X44X12"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 403,
+    "fields": {
+      "code": "6010ZNR",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "50X80X16"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 404,
+    "fields": {
+      "code": "6909ZZCM",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "45X68X12"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 405,
+    "fields": {
+      "code": "EE3SZZC3",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "9.53X22.23X7.14"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 406,
+    "fields": {
+      "code": "EE3S2RS",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "9.53X22.23X7.14"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 407,
+    "fields": {
+      "code": "R6DDMC3E",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "9.53X22.23X7.14"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 408,
+    "fields": {
+      "code": "EE4S2RS",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "12.7X28.58X7.94"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 409,
+    "fields": {
+      "code": "3210B-2RSSRTNGC3",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "50X90X30"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 410,
+    "fields": {
+      "code": "5308SCZZ/2AS",
+      "brand_id": 1,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "40X90X36.5"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 411,
+    "fields": {
+      "code": "DAC540733CA",
+      "brand_id": 4,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "39X68X37"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 412,
+    "fields": {
+      "code": "Z-5667.19.21RDL-G1",
+      "brand_id": 4,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "40X72X37"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 413,
+    "fields": {
+      "code": "DAC-42KWD02AG3CA123",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "42X72X38/35"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 414,
+    "fields": {
+      "code": "ZA-42KWD10U42CA-01LB",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "42X82X40"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 415,
+    "fields": {
+      "code": "DAC-VKBC20018(BA2B309609AD)",
+      "brand_id": 7,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "42X80X42"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 416,
+    "fields": {
+      "code": "EP47KWD01CA196U42",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "47X82X57.5"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 417,
+    "fields": {
+      "code": "DAC-HCDU5496-6LFT",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "54X96X51"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 418,
+    "fields": {
+      "code": "ZA-54KWH01R-Y-2CA",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "54X0.0X0.0"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 419,
+    "fields": {
+      "code": "2DUF058N-5R",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "58X126.8X61.9"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 420,
+    "fields": {
+      "code": "2DUF050N-7",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "50X88X55"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 421,
+    "fields": {
+      "code": "ZA-/50KWH01M-Y-01",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "50X86X55"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 422,
+    "fields": {
+      "code": "HI-CAP57307/30208",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "40X80X20"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 423,
+    "fields": {
+      "code": "50KW01",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "50X93.26X30.2"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 424,
+    "fields": {
+      "code": "T7FC050",
+      "brand_id": 4,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "50X105X32"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 425,
+    "fields": {
+      "code": "Z-538971.TR1#S8",
+      "brand_id": 4,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "70X130X43"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 426,
+    "fields": {
+      "code": "47490R/20",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "71.44X120X32.54"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 427,
+    "fields": {
+      "code": "4T-53176/53375",
+      "brand_id": 1,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "44.45X95.25X31"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 428,
+    "fields": {
+      "code": "K53178.53377-J42B",
+      "brand_id": 4,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "44.45X95.25X28.3"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 429,
+    "fields": {
+      "code": "55187CRUR/437UR",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "47.63X111.12X30.16"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 430,
+    "fields": {
+      "code": "4T-55200C/55437",
+      "brand_id": 1,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "50.8X111.12X30.16"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 431,
+    "fields": {
+      "code": "4Y-59412",
+      "brand_id": 1,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "0X104.78X28.58"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 432,
+    "fields": {
+      "code": "4T-67390",
+      "brand_id": 1,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "133.35X0X46.04"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 433,
+    "fields": {
+      "code": "4T-67322",
+      "brand_id": 1,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "0X196.85X38.1"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 434,
+    "fields": {
+      "code": "4T-68462/68712",
+      "brand_id": 1,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "117.48X180.97X34.92"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 435,
+    "fields": {
+      "code": "HI-CAPM86649R/10",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "135",
+      "measures": "30.16X64.29X21.43"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 436,
+    "fields": {
+      "code": "HI-CAPM88048/10",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "33.34X68.26X22.23"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 437,
+    "fields": {
+      "code": "HI-CAPHM88649/10",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "136",
+      "measures": "34.93X72.23X25.4"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 438,
+    "fields": {
+      "code": "JM205149/10",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "50X90X28"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 439,
+    "fields": {
+      "code": "JM207049/10",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "55X95X29"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 440,
+    "fields": {
+      "code": "HM218248/10",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "89.97X147X40"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 441,
+    "fields": {
+      "code": "KHM220149-HM220110#S4",
+      "brand_id": 4,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "99.98X156.98X42"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 442,
+    "fields": {
+      "code": "4T-LM501314",
+      "brand_id": 1,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "0X73.43X16.6"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 443,
+    "fields": {
+      "code": "4T-HM518445/HM518410",
+      "brand_id": 1,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "88.9X152.4X39.69"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 444,
+    "fields": {
+      "code": "4T-LM603049/LM60#02",
+      "brand_id": 1,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "45.24X77.79X21.43"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 445,
+    "fields": {
+      "code": "30BG5222",
+      "brand_id": 8,
+      "place_id": 10,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "130",
+      "measures": "30X52X22 (Aire)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 446,
+    "fields": {
+      "code": "ZA-35BD219T1",
+      "brand_id": 3,
+      "place_id": 10,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "120",
+      "measures": "35X55X20"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 447,
+    "fields": {
+      "code": "60002RSC3",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "45",
+      "measures": "10x26x8"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 448,
+    "fields": {
+      "code": "LM11949/10",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "100",
+      "measures": "19X45X17"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 449,
+    "fields": {
+      "code": "6202ZENR",
+      "brand_id": 8,
+      "place_id": 1,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "40",
+      "measures": "15x35x11"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 450,
+    "fields": {
+      "code": "6202ZNR",
+      "brand_id": 1,
+      "place_id": 1,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "40",
+      "measures": "15x35x11"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 451,
+    "fields": {
+      "code": "GU-2000",
+      "brand_id": 21,
+      "place_id": 15,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "100",
+      "measures": "30X106 (CRUCETA)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 452,
+    "fields": {
+      "code": "GUT-27",
+      "brand_id": 21,
+      "place_id": 15,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "85",
+      "measures": "28.5X80X49 (CRUCETA)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 453,
+    "fields": {
+      "code": "GUMZ-6",
+      "brand_id": 21,
+      "place_id": 15,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "85",
+      "measures": "28X53X80 (CRUCETA)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 454,
+    "fields": {
+      "code": "TIS-163",
+      "brand_id": 21,
+      "place_id": 15,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "70",
+      "measures": "22X60 (CRUCETA)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 455,
+    "fields": {
+      "code": "TT-111",
+      "brand_id": 21,
+      "place_id": 15,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "60",
+      "measures": "20X57 (CRUCETA)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 456,
+    "fields": {
+      "code": "ST-1640",
+      "brand_id": 21,
+      "place_id": 15,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "40",
+      "measures": "16X40 (CRUCETA)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 457,
+    "fields": {
+      "code": "ST-1540",
+      "brand_id": 21,
+      "place_id": 15,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "40",
+      "measures": "15X40 (CRUCETA)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 458,
+    "fields": {
+      "code": "GU-500",
+      "brand_id": 21,
+      "place_id": 15,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "85",
+      "measures": "23.90X61.40 (CRUCETA)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 459,
+    "fields": {
+      "code": "GUM-81",
+      "brand_id": 21,
+      "place_id": 15,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "90",
+      "measures": "25X63.40 (CRUCETA)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 460,
+    "fields": {
+      "code": "TM-191",
+      "brand_id": 21,
+      "place_id": 15,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "85",
+      "measures": "25X76.5 (CRUCETA)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 461,
+    "fields": {
+      "code": "GU-1100",
+      "brand_id": 21,
+      "place_id": 15,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "85",
+      "measures": "27X74.6 (CRUCETA)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 462,
+    "fields": {
+      "code": "TT-124",
+      "brand_id": 21,
+      "place_id": 15,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "70",
+      "measures": "22X57.5 (CRUCETA)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 463,
+    "fields": {
+      "code": "GU-1000",
+      "brand_id": 21,
+      "place_id": 15,
+      "stock": 6,
+      "pucharse_price": "0",
+      "price": "85",
+      "measures": "27X81.7 (CRUCETA)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 464,
+    "fields": {
+      "code": "GUN-26",
+      "brand_id": 21,
+      "place_id": 15,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "85",
+      "measures": "24X62 (CRUCETA)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 465,
+    "fields": {
+      "code": "GUT-16",
+      "brand_id": 21,
+      "place_id": 15,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "160",
+      "measures": "40X118 (CRUCETA)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 466,
+    "fields": {
+      "code": "TN-132",
+      "brand_id": 21,
+      "place_id": 15,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "100",
+      "measures": "35.5X119 (CRUCETA)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 467,
+    "fields": {
+      "code": "TM-193",
+      "brand_id": 21,
+      "place_id": 15,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "85",
+      "measures": "30X85"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 468,
+    "fields": {
+      "code": "TT-120",
+      "brand_id": 21,
+      "place_id": 15,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "100",
+      "measures": "32X61X92 (CRUCETA)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 469,
+    "fields": {
+      "code": "GUN-46",
+      "brand_id": 21,
+      "place_id": 15,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "85",
+      "measures": "27X46.10X72 (CRUCETA)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 470,
+    "fields": {
+      "code": "TT-121",
+      "brand_id": 21,
+      "place_id": 15,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "85",
+      "measures": "29X49X77 (CRUCETA)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 471,
+    "fields": {
+      "code": "GUT-16 FONTON",
+      "brand_id": 21,
+      "place_id": 15,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "190",
+      "measures": "39X118 (CRUCETA)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 472,
+    "fields": {
+      "code": "30BD4718T1",
+      "brand_id": 3,
+      "place_id": 10,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "125",
+      "measures": "30x47x18 (AIRE)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 473,
+    "fields": {
+      "code": "32BD4718T1",
+      "brand_id": 3,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "32x47x18 (AIRE)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 474,
+    "fields": {
+      "code": "2TS2-DF07",
+      "brand_id": 1,
+      "place_id": 10,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "130",
+      "measures": "35x52x20 (AIRE)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 475,
+    "fields": {
+      "code": "2TS2-DF0719",
+      "brand_id": 1,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "35x55x20 (AIRE)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 476,
+    "fields": {
+      "code": "40BGS11G-2DS",
+      "brand_id": 8,
+      "place_id": 10,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "135",
+      "measures": "40x62x24 (AIRE)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 477,
+    "fields": {
+      "code": "4T-LM29748",
+      "brand_id": 1,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "110",
+      "measures": "38X65.08X18.03"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 478,
+    "fields": {
+      "code": "HI-CAPM802048/11",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "161",
+      "measures": "41.27X82.55X26.5"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 479,
+    "fields": {
+      "code": "4T-LM29749",
+      "brand_id": 1,
+      "place_id": 14,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "127",
+      "measures": "38.1x65.08x18.03"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 480,
+    "fields": {
+      "code": "DAC2565N",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "850",
+      "measures": "25.5x65x31 (Caja Zubaru)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 481,
+    "fields": {
+      "code": "32205",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "170",
+      "measures": "25x52x19.25"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 482,
+    "fields": {
+      "code": "ZA-68TKB3506A2R",
+      "brand_id": 3,
+      "place_id": 9,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "280",
+      "measures": "35x83x41 (Toyota Coaster)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 483,
+    "fields": {
+      "code": "4T-32208",
+      "brand_id": 1,
+      "place_id": 13,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "145",
+      "measures": "40x80x24.75"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 484,
+    "fields": {
+      "code": "4t-32209",
+      "brand_id": 1,
+      "place_id": 13,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "165",
+      "measures": "45x85x23"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 485,
+    "fields": {
+      "code": "32212jr",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "260",
+      "measures": "60x110x29.75"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 486,
+    "fields": {
+      "code": "2788/20",
+      "brand_id": 12,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "110",
+      "measures": "65x120x32.75"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 487,
+    "fields": {
+      "code": "32213",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "340",
+      "measures": "65x120x32.75"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 488,
+    "fields": {
+      "code": "Hi-CAP26882R/20",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "250",
+      "measures": "41.27x80.16x25"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 489,
+    "fields": {
+      "code": "f-228537",
+      "brand_id": 9,
+      "place_id": 9,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "180",
+      "measures": "35x46x32"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 490,
+    "fields": {
+      "code": "TN-134",
+      "brand_id": 21,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "21X85 (Cruceta)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 492,
+    "fields": {
+      "code": "0788-001",
+      "brand_id": 23,
+      "place_id": 11,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "240",
+      "measures": "Tesador de correa (Zuzuki)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 493,
+    "fields": {
+      "code": "60012RSC3",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "45",
+      "measures": "12x28x8"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 494,
+    "fields": {
+      "code": "6208DU",
+      "brand_id": 3,
+      "place_id": 1,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "160",
+      "measures": "40x80x18"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 495,
+    "fields": {
+      "code": "6221-2RS",
+      "brand_id": 7,
+      "place_id": 14,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "1000",
+      "measures": "105X190X36"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 496,
+    "fields": {
+      "code": "HI-CAPL44649/10",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "75",
+      "measures": "27X50.2X15"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 497,
+    "fields": {
+      "code": "LM603049",
+      "brand_id": 2,
+      "place_id": 14,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "130",
+      "measures": "45.24X77.79X19.84"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 498,
+    "fields": {
+      "code": "NFTK41KW01G3CA54",
+      "brand_id": 3,
+      "place_id": 10,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "350",
+      "measures": "41X68X40 (ZUZUKI)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 499,
+    "fields": {
+      "code": "4T-11590/11",
+      "brand_id": 1,
+      "place_id": 14,
+      "stock": 3,
+      "pucharse_price": "0",
+      "price": "90",
+      "measures": "15.90X42.90X14.5"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 500,
+    "fields": {
+      "code": "HK2526",
+      "brand_id": 7,
+      "place_id": 12,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "75",
+      "measures": "25X32.5X26"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 501,
+    "fields": {
+      "code": "PC355522",
+      "brand_id": 22,
+      "place_id": 10,
+      "stock": 5,
+      "pucharse_price": "0",
+      "price": "90",
+      "measures": "35X55X22 (AIRE)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 502,
+    "fields": {
+      "code": "T182",
+      "brand_id": 6,
+      "place_id": 9,
+      "stock": 4,
+      "pucharse_price": "0",
+      "price": "600",
+      "measures": "26.4X83X24"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 503,
+    "fields": {
+      "code": "2DUF054N-2RG ",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "550",
+      "measures": "RETENES HILUX (T1406-T1407)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 504,
+    "fields": {
+      "code": "PU345637RR",
+      "brand_id": 2,
+      "place_id": 11,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "180",
+      "measures": "MOTOR 5E"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 506,
+    "fields": {
+      "code": "UCP210",
+      "brand_id": 1,
+      "place_id": 15,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "450",
+      "measures": "50X159X57.2 "
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 509,
+    "fields": {
+      "code": "DAC3464W-52RSCS44",
+      "brand_id": 2,
+      "place_id": 10,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "320",
+      "measures": "34X64X37"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 510,
+    "fields": {
+      "code": "14125A/276",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "195",
+      "measures": "31.75X69X19.85"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 511,
+    "fields": {
+      "code": "25580/20",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "260",
+      "measures": "44,45X82,93X23,81"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 512,
+    "fields": {
+      "code": "4T-32307",
+      "brand_id": 1,
+      "place_id": 13,
+      "stock": 1,
+      "pucharse_price": "0",
+      "price": "190",
+      "measures": "35x80x32.5"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 513,
+    "fields": {
+      "code": "6203DDUC3",
+      "brand_id": 3,
+      "place_id": 1,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "35",
+      "measures": "17X40X12\t"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 514,
+    "fields": {
+      "code": "4T-30306D",
+      "brand_id": 1,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "0",
+      "price": "180",
+      "measures": "30X72X20.8"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 515,
+    "fields": {
+      "code": "F-571115",
+      "brand_id": 9,
+      "place_id": 10,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "850",
+      "measures": "56.6X70X34"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 516,
+    "fields": {
+      "code": "431935-C",
+      "brand_id": 7,
+      "place_id": 15,
+      "stock": 1,
+      "pucharse_price": "300",
+      "price": "350",
+      "measures": "30X62X19.5"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 517,
+    "fields": {
+      "code": "RMS9",
+      "brand_id": 2,
+      "place_id": 15,
+      "stock": 1,
+      "pucharse_price": "250",
+      "price": "300",
+      "measures": "28.5X71.4X20.6"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 518,
+    "fields": {
+      "code": "6203-2RSC3",
+      "brand_id": 7,
+      "place_id": 1,
+      "stock": 20,
+      "pucharse_price": "25",
+      "price": "50",
+      "measures": "17X40X12"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 519,
+    "fields": {
+      "code": "HM903249/10",
+      "brand_id": 4,
+      "place_id": 14,
+      "stock": 2,
+      "pucharse_price": "400",
+      "price": "460",
+      "measures": "44.5X95.2X30.9"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 520,
+    "fields": {
+      "code": "3984/20",
+      "brand_id": 7,
+      "place_id": 13,
+      "stock": 1,
+      "pucharse_price": "340",
+      "price": "450",
+      "measures": "66.5X112.7X30.1"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 521,
+    "fields": {
+      "code": "29590/20",
+      "brand_id": 6,
+      "place_id": 13,
+      "stock": 1,
+      "pucharse_price": "400",
+      "price": "500",
+      "measures": "66.6X107.9X25.4"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 522,
+    "fields": {
+      "code": "32216 JR",
+      "brand_id": 2,
+      "place_id": 17,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "550",
+      "measures": "80X140X35.2"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 523,
+    "fields": {
+      "code": "30312",
+      "brand_id": 1,
+      "place_id": 17,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "400",
+      "measures": "60X130X33.5"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 529,
+    "fields": {
+      "code": "32316",
+      "brand_id": 1,
+      "place_id": 17,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "2300",
+      "measures": "80X170X61.5"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 530,
+    "fields": {
+      "code": "30222",
+      "brand_id": 1,
+      "place_id": 17,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "2900",
+      "measures": "110X200X41"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 535,
+    "fields": {
+      "code": "32310",
+      "brand_id": 2,
+      "place_id": 17,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "520",
+      "measures": "50X110X42.2"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 537,
+    "fields": {
+      "code": "32314",
+      "brand_id": 2,
+      "place_id": 17,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "1170",
+      "measures": "70X150X54"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 538,
+    "fields": {
+      "code": "4t-CR1175",
+      "brand_id": 1,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "0",
+      "measures": "55x100x42.2  (RUEDA DELANTERA NISSAN CONDOR)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 539,
+    "fields": {
+      "code": "T208",
+      "brand_id": 6,
+      "place_id": 9,
+      "stock": 1,
+      "pucharse_price": "400",
+      "price": "450",
+      "measures": "52.6x93.2x26.9"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 540,
+    "fields": {
+      "code": "4T-17887/31",
+      "brand_id": 1,
+      "place_id": 11,
+      "stock": 4,
+      "pucharse_price": "87",
+      "price": "138",
+      "measures": "45.23X79.99X19.84"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 541,
+    "fields": {
+      "code": "PC30470018",
+      "brand_id": 18,
+      "place_id": 10,
+      "stock": 2,
+      "pucharse_price": "115",
+      "price": "145",
+      "measures": "30X47X18"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 542,
+    "fields": {
+      "code": "DAC3872W8",
+      "brand_id": 3,
+      "place_id": 10,
+      "stock": 2,
+      "pucharse_price": "115",
+      "price": "150",
+      "measures": "38X72X36/33"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 543,
+    "fields": {
+      "code": "32008JR-3",
+      "brand_id": 2,
+      "place_id": 16,
+      "stock": 0,
+      "pucharse_price": "0",
+      "price": "220",
+      "measures": "40X68X23        (DATHIASU)"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 544,
+    "fields": {
+      "code": "33115",
+      "brand_id": 4,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "441",
+      "price": "650",
+      "measures": "75x125x45"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 545,
+    "fields": {
+      "code": "6306-ZNR",
+      "brand_id": 2,
+      "place_id": 1,
+      "stock": 3,
+      "pucharse_price": "45",
+      "price": "110",
+      "measures": "30x72x19"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 546,
+    "fields": {
+      "code": "6210-2ZNRC3",
+      "brand_id": 7,
+      "place_id": 1,
+      "stock": 3,
+      "pucharse_price": "85",
+      "price": "180",
+      "measures": "50X90X20"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 547,
+    "fields": {
+      "code": "16010",
+      "brand_id": 7,
+      "place_id": 10,
+      "stock": 1,
+      "pucharse_price": "130",
+      "price": "210",
+      "measures": "50X80X10"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 548,
+    "fields": {
+      "code": "6206-2RSC3",
+      "brand_id": 7,
+      "place_id": 1,
+      "stock": 10,
+      "pucharse_price": "65",
+      "price": "105",
+      "measures": "30X62X10"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 549,
+    "fields": {
+      "code": "32214JR",
+      "brand_id": 2,
+      "place_id": 13,
+      "stock": 2,
+      "pucharse_price": "210",
+      "price": "310",
+      "measures": "70X125X33.25"
+    }
+  },
+  {
+    "model": "shopping.provider",
+    "pk": 1,
+    "fields": {
+      "name": "Finilager",
+      "address": "Av. Grigota entre 2do y 3er anillo"
+    }
+  },
+  {
+    "model": "shopping.provider",
+    "pk": 2,
+    "fields": {
+      "name": "InterParte",
+      "address": "3er Anillo Doble Via La Guardia"
+    }
+  },
+  {
+    "model": "shopping.provider",
+    "pk": 3,
+    "fields": {
+      "name": "Rodalems",
+      "address": "3er anillo doble via la guardia"
+    }
+  },
+  {
+    "model": "shopping.provider",
+    "pk": 4,
+    "fields": {
+      "name": "RODAPART",
+      "address": "AV.CRISTO REDENTOR/2DO ANILLO"
+    }
+  }
+]
