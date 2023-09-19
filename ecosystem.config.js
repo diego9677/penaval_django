@@ -16,8 +16,11 @@ module.exports = {
       // }
       {
         name: 'penaval_django',
-        interpreter: 'python3',
-        cmd: 'gunicorn --env DJANGO_SETTINGS_MODULE=config.settings config.wsgi',
+        interpreter: 'gunicorn',
+        cmd: 'config.wsgi',
+        env: {
+          DJANGO_SETTINGS_MODULE: 'config.settings'
+        },
         cron_restart: '0',
         autorestart: false,
         merge_logs: true,
