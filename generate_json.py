@@ -14,6 +14,7 @@ places_json: List[dict] = places_response.json()
 products_json: List[dict] = products_response.json()
 providers_json: List[dict] = providers_response.json()
 
+
 result = []
 
 for data in brands_json:
