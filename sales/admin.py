@@ -1,6 +1,9 @@
 from django.contrib import admin
-from .models import Sale, SaleDetail, Proform, ProformDetail
+from .models import Sale, SaleDetail, Proform, ProformDetail, Client
 
+@admin.register(Client)
+class ClientAdmin(admin.ModelAdmin):
+    list_display = ('pk', 'first_name', 'last_name', 'created_at')
 
 @admin.register(Sale)
 class SaleAdmin(admin.ModelAdmin):

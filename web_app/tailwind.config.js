@@ -3,7 +3,7 @@ export default {
   content: [
     "./home.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "../registration/templates/**/*.html"
+    "../templates/**/*.html"
   ],
   theme: {
     extend: {},

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-3j#xcdmuxr%qa9xmt_@sn0vpoks(r@-qv+-z2tj+s#%$y+g-#t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['penaval.com']
+ALLOWED_HOSTS = ['localhost', 'penaval.com']
 
 INTERNAL_IPS = [
     'localhost',
@@ -63,7 +63,9 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -87,7 +89,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'penaval_db',
         'USER': 'postgres',
-        'PASSWORD': 'Dayala123',
+        'PASSWORD': 'Telecom2',
         'HOST': 'localhost',
         'PORT': 5432,
     }
