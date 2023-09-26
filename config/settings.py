@@ -88,7 +88,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'penaval_db',
         'USER': 'postgres',
-        'PASSWORD': 'Dayala123',
+        'PASSWORD': 'Telecom2',
         'HOST': 'localhost',
         'PORT': 5432,
     }

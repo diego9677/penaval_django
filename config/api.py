@@ -4,131 +4,15 @@ from django.shortcuts import get_object_or_404
 from django.db.models import Q, Prefetch
 from django.http import HttpRequest
 from products.models import Brand, Place, Product
+from products.schemas import BrandIn, BrandSchema, PlaceIn, PlaceSchema, ProductIn, ProductSchema
+from sales.schemas import ClientSchema, SaleIn, SaleSchema
 from shopping.models import Provider, Shopping, ShoppingDetail
-from sales.models import Client, Sale, SaleDetail, Proform, ProformDetail
-from ninja import NinjaAPI, ModelSchema, Schema
-from ninja.orm import create_schema
+from sales.models import Client, Sale, SaleDetail
+from ninja import NinjaAPI
+
+from shopping.schemas import ProviderIn, ProviderSchema, ShoppingIn, ShoppingSchema
 
 api = NinjaAPI()
-
-
-class BrandSchema(ModelSchema):
-    class Config:
-        model = Brand
-        model_fields = ['id', 'name', 'description']
-
-
-class PlaceSchema(ModelSchema):
-    class Config:
-        model = Place
-        model_fields = ['id', 'name', 'description']
-
-
-class ProductSchema(ModelSchema):
-    place: PlaceSchema = None
-    brand: BrandSchema = None
-
-    class Config:
-        model = Product
-        model_fields = ['id', 'code', 'place', 'brand', 'stock', 'price', 'pucharse_price', 'measures']
-
-
-class ProviderSchema(ModelSchema):
-    class Config:
-        model = Provider
-        model_fields = ['id', 'name', 'address']
-
-
-class ProductIn(ModelSchema):
-    place_id: int
-    brand_id: int
-
-    class Config:
-        model = Product
-        model_fields = ['code', 'stock', 'price', 'measures']
-
-
-class PlaceIn(ModelSchema):
-    class Config:
-        model = Place
-        model_fields = ['name', 'description']
-
-
-class BrandIn(ModelSchema):
-    class Config:
-        model = Brand
-        model_fields = ['name', 'description']
-
-
-class ProviderIn(ModelSchema):
-    class Config:
-        model = Provider
-        model_fields = ['name', 'address']
-
-
-class ShoppingCart(Schema):
-    product_code: str
-    product_id: int
-    pucharse_price: float
-    sale_price: float
-    amount: int
-
-
-class ShoppingIn(Schema):
-    provider_id: int
-    products: List[ShoppingCart]
-
-
-class SaleCart(Schema):
-    product_code: str
-    product_id: str
-    unit_price: float
-    amount: int
-
-
-class SaleIn(Schema):
-    nit: str
-    first_name: str
-    last_name: str
-    phone: str
-    products: List[SaleCart]
-
-
-ProductSchemaShort = create_schema(Product, fields=['id', 'code'])
-class ShoppingDetailSchema(ModelSchema):
-    product: ProductSchemaShort
-
-    class Config:
-        model = ShoppingDetail
-        model_fields = ['id', 'amount', 'unit_price_shopping', 'unit_price_sale']
-
-
-class ShoppingSchema(Schema):
-    id: int
-    date: datetime
-    provider: ProviderSchema
-    shopping_detail: List[ShoppingDetailSchema]
-
-
-class ClientSchema(ModelSchema):
-    class Config:
-        model = Client
-        model_fields = ['id', 'nit', 'first_name', 'last_name', 'phone']
-
-
-class SaleDetailSchema(ModelSchema):
-    product: ProductSchemaShort
-
-    class Config:
-        model = SaleDetail
-        model_fields = ['id', 'amount',  'unit_price', 'subtotal']
-
-
-class SaleSchema(Schema):
-    id: int
-    date: datetime
-    client: ClientSchema
-    sale_detail: List[SaleDetailSchema]
 
 
 # products section
@@ -158,21 +42,22 @@ def create_product(request: HttpRequest, input: ProductIn):
 def update_product(request: HttpRequest, id: int, input: ProductIn):
     Product.objects.filter(id=id).update(**input.dict())
     qs = Product.objects.select_related('brand', 'place').get(id=id)
-    return qs;
+    return qs
 
 
 @api.delete('products/{id}/', response=ProductSchema)
 def delete_product(request: HttpRequest, id: int):
-    qs = get_object_or_404(Product, id=id);
+    qs = get_object_or_404(Product, id=id)
     qs.delete()
     return qs
 
 
-#places section
+# places section
 @api.get('places/', response=List[PlaceSchema])
 def get_places(request: HttpRequest, search: str):
     qs = Place.objects.filter(name__iendswith=search).order_by('id')[:20]
     return qs
+
 
 @api.get('places/{id}', response=PlaceSchema)
 def get_one_place(request: HttpRequest, id: int):
@@ -206,6 +91,7 @@ def get_brands(request: HttpRequest, search: str):
     qs = Brand.objects.filter(name__icontains=search).order_by('id')[:20]
     return qs
 
+
 @api.get('brands/{id}/', response=BrandSchema)
 def get_one_brand(request: HttpRequest, id: int):
     qs = Brand.objects.get(id=id)
@@ -237,6 +123,7 @@ def delete_brand(request: HttpRequest, id: int):
 def get_providers(request: HttpRequest, search: str):
     qs = Provider.objects.filter(name__icontains=search).order_by('id')[:20]
     return qs
+
 
 @api.get('providers/{id}/', response=ProviderSchema)
 def get_one_provider(request: HttpRequest, id: int):
@@ -272,7 +159,7 @@ def get_shopping(request: HttpRequest, begin: str, end: str):
     qs = Shopping.objects.select_related('provider')\
         .prefetch_related(
             Prefetch('shopping_detail', queryset=ShoppingDetail.objects.select_related('product').all())
-        ).filter(date__range=(date1, date2))
+    ).filter(date__range=(date1, date2))
     return qs
 
 
@@ -303,7 +190,7 @@ def get_sales(request: HttpRequest, begin: str, end: str):
     qs = Sale.objects.select_related('client')\
         .prefetch_related(
             Prefetch('sale_detail', queryset=SaleDetail.objects.select_related('product').all())
-        ).filter(date__range=(date1, date2))
+    ).filter(date__range=(date1, date2))
     return qs
 
 
