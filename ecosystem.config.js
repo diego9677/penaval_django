@@ -2,7 +2,7 @@ module.exports = {
     apps: [
         {
             name: 'penaval_django',
-            script: 'gunicorn --env DJANGO_SETTINGS_MODULE=config.settings config.wsgi',
+            script: '/home/diego/penaval_django/.env/bin/gunicorn --env DJANGO_SETTINGS_MODULE=config.settings --workers=3 config.wsgi',
             cron_restart: '0',
             merge_logs: true,
             autorestart: false,
