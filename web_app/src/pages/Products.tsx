@@ -56,11 +56,11 @@ export const Products = () => {
 
   return (
     <main className="flex flex-col gap-2 md:gap-8">
-      <header className="flex justify-between py-2 px-4 md:p-0">
+      <header className="flex justify-between items-center py-2 px-4 md:p-0">
 
         <div className="w-20">
-          <Link to="/products/form" className="hidden md:block">
-            <Button type="button">Nuevo</Button>
+          <Link to="/products/form" className="bg-blue-600 ring-blue-600 hover:bg-opacity-80 w-full ring-1 outline-none rounded-sm shadow-sm text-sm font-medium text-gray-100 p-2">
+            Nuevo
           </Link>
         </div>
 
@@ -123,9 +123,9 @@ export const Products = () => {
             </div>
             <div className="block md:hidden">
               {products.map(p => (
-                <div key={p.id} className="border-b flex gap-7 items-center">
+                <Link to={`/products/form?id=${p.id}`} key={p.id} className="border-b flex gap-7 items-center" >
                   <ProductItem product={p} />
-                </div>
+                </Link>
               ))}
             </div>
           </>

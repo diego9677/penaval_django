@@ -81,7 +81,7 @@ export const ProductForm = () => {
 
   return (
     <main className="flex justify-center">
-      <form className="w-full sm:w-1/2 flex flex-col gap-6" onSubmit={onSubmit}>
+      <form className="w-full sm:w-1/2 flex flex-col gap-4 md:gap-6 p-4 md:p-0" onSubmit={onSubmit}>
         <header className="border-b flex justify-between py-2">
           <h3 className="text-xl font-bold text-gray-700">
             {id ? 'Editar' : 'Nuevo'} Producto
@@ -95,7 +95,7 @@ export const ProductForm = () => {
           </div>
         </header>
 
-        <section className="flex gap-2">
+        <section className="flex flex-col md:flex-row gap-4">
           <div className="flex-1">
             <Input
               label="Codigo"
@@ -117,7 +117,7 @@ export const ProductForm = () => {
           </div>
         </section>
 
-        <section className="flex gap-2">
+        <section className="flex flex-col md:flex-row gap-4">
           <div className="flex-1">
             <Input
               label="Precio (Bs)"
@@ -140,7 +140,7 @@ export const ProductForm = () => {
           </div>
         </section>
 
-        <section className="flex gap-2">
+        <section className="flex flex-col md:flex-row gap-4">
           <div className="flex-1">
 
             <Select
@@ -152,7 +152,6 @@ export const ProductForm = () => {
 
           </div>
           <div className="flex-1">
-
             <Select
               label="Lugar"
               options={places.map(p => ({ label: p.name, value: p.id }))}
@@ -161,7 +160,6 @@ export const ProductForm = () => {
             />
           </div>
         </section>
-
 
         <Button
           type="submit"
