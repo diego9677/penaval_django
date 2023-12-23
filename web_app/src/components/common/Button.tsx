@@ -15,16 +15,16 @@ const SIZES = {
 };
 
 const COLORS = {
-  'primary': 'bg-blue-600 ring-blue-600 hover:bg-opacity-80',
-  'secondary': 'border-gray-300 text-gray-600 hover:border-blue-100 hover:bg-blue-100 hover:text-blue-900',
-  'danger': 'bg-red-600 ring-red-600 hover:bg-opacity-80',
-  'success': 'bg-green-600 ring-green-600 hover:bg-opacity-80'
+  'primary': 'btn btn-primary',
+  'secondary': 'btn btn-secondary',
+  'danger': 'btn btn-danger',
+  'success': 'btn btn-success'
 };
 
 export const Button = ({ type, size = 'md', color = 'primary', onClick, children }: Props) => {
   return (
     <button
-      className={clsx('w-full ring-1 outline-none rounded-sm shadow-sm text-sm font-medium text-gray-100', SIZES[size], COLORS[color])}
+      className={clsx(SIZES[size], COLORS[color])}
       type={type}
       onClick={onClick}
     >

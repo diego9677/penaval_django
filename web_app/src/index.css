@@ -3,11 +3,39 @@
 @tailwind utilities;
 
 @layer components {
+  .btn {
+    @apply w-full ring-1 outline-none rounded-sm shadow-sm text-sm font-medium text-gray-100;
+  }
+
   .form-control {
     @apply p-2 shadow-sm rounded-sm placeholder:text-gray-400 w-full text-sm font-normal text-gray-800 outline-none ring-1 ring-gray-300 focus:ring-2 focus:ring-blue-600;
   }
 
   .btn-primary {
-    @apply w-full ring-1 outline-none rounded-sm shadow-sm text-sm font-medium text-gray-100 p-2 bg-blue-600 ring-blue-600 hover:bg-opacity-80;
+    @apply btn ring-1 outline-none text-gray-100 bg-blue-600 ring-blue-600 hover:bg-opacity-80;
+  }
+
+  .btn-light {
+    @apply btn text-neutral-800 ring-1 ring-neutral-300 md:hover:text-blue-600 md:hover:ring-blue-600 md:hover:ring-opacity-20 md:hover:bg-blue-600 md:hover:bg-opacity-10 outline-none w-full;
+  }
+
+  .btn-selected {
+    @apply bg-blue-600 bg-opacity-10 ring-blue-600 ring-opacity-20 text-blue-600;
+  }
+
+  .link {
+    @apply text-sm font-medium text-neutral-800 md:hover:text-blue-600;
+  }
+
+  .btn-secondary {
+    @apply border-gray-300 text-gray-600 hover:border-blue-100 hover:bg-blue-100 hover:text-blue-900;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 ring-red-600 hover:bg-opacity-80;
+  }
+
+  .btn-success {
+     @apply bg-green-600 ring-green-600 hover:bg-opacity-80;
   }
 }

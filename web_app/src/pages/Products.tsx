@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Product } from "../interfaces";
 import { deleteApiProduct, getApiProducts } from "../services";
 import { Link } from "react-router-dom";
@@ -27,20 +27,23 @@ export const Products = () => {
   const [search, setSearch] = useState('');
   const [loading, setLoading] = useState(true);
 
+  const getProducts = useCallback(async (signal?: AbortSignal) => {
+    setLoading(true);
+    const data = await getApiProducts(search, signal);
+    setProducts(data);
+    setLoading(false);
+  }, [search]);
+
   useEffect(() => {
     const controller = new AbortController();
 
     getProducts(controller.signal);
 
-  }, []);
+    return () => {
+      controller.abort();
+    };
+  }, [getProducts]);
 
-
-  const getProducts = async (signal?: AbortSignal) => {
-    setLoading(true);
-    const data = await getApiProducts(search, signal);
-    setProducts(data);
-    setLoading(false);
-  };
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -59,7 +62,7 @@ export const Products = () => {
       <header className="flex justify-between items-center py-2 px-4 md:p-0">
 
         <div className="w-20">
-          <Link to="/products/form" className="bg-blue-600 ring-blue-600 hover:bg-opacity-80 w-full ring-1 outline-none rounded-sm shadow-sm text-sm font-medium text-gray-100 p-2">
+          <Link to="/products/form" className="btn btn-primary">
             Nuevo
           </Link>
         </div>

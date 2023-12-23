@@ -38,8 +38,8 @@ export const MainLayout = ({ title, children }: Props) => {
   }
 
   return (
-    <main className="grid grid-cols-12 h-screen">
-      <section className="hidden md:block md:col-span-2 bg-gray-800">
+    <main className="flex" style={{ height: `${window.innerHeight}px` }}>
+      <section className="hidden md:block md:w-[300px] h-full bg-gray-800">
         <h4 className='text-2xl text-gray-300 text-center py-4 font-bold'>PeñaVal</h4>
         <div className="flex flex-col">
           <NavItem icon={<i className="las la-clipboard la-lg" />} to="/products" title="Productos" />
@@ -50,7 +50,7 @@ export const MainLayout = ({ title, children }: Props) => {
           <NavItem icon={<i className="las la-store-alt la-lg" />} to="/providers" title="Provedores" />
         </div>
       </section>
-      <section className="col-span-12 md:col-span-10">
+      <section className="flex-1">
         <div className="flex flex-col">
           <header className="flex justify-between items-center border-b px-4 py-2">
             <div>
