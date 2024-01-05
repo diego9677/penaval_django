@@ -24,9 +24,11 @@ from .api import api
 class WebAppView(LoginRequiredMixin, TemplateView):
     template_name = 'registration/home.html'
 
+
 FRONTEND_URLS = [
     'products',
     'products/form',
+    'products/detail',
     'brands',
     'brands/form',
     'providers',
@@ -35,6 +37,7 @@ FRONTEND_URLS = [
     'sales/form',
     'shopping',
     'shopping/form',
+    'cart/',
 ]
 
 urlpatterns = [
@@ -42,4 +45,3 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('api/', api.urls),
 ] + [path(url, WebAppView.as_view()) for url in FRONTEND_URLS] + [path('', WebAppView.as_view(), name='index')]
-

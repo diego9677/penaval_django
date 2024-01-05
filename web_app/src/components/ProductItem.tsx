@@ -15,12 +15,10 @@ export const ProductItem = ({ product }: Props) => {
         <span className="text-normal font-normal text-gray-700">{product.measures}</span>
         <span className="text-sm font-light text-gray-700">{product.place.name}</span>
       </div>
-      <div className="w-10 sm:w-12">
-        <span className={clsx('w-8 h-8 flex justify-center items-center text-sm font-medium border rounded-md', product.stock > 0 ? 'text-green-600 border-green-600' : 'text-red-600 border-red-600')}>
-          {product.stock}
-        </span>
+      <div className={clsx('w-8 h-8 flex justify-center items-center text-sm font-medium border rounded-md', product.stock > 0 ? 'text-green-600 border-green-600' : 'text-red-600 border-red-600')}>
+        {product.stock}
       </div>
-      <div className="w-12 sm:w-16 text-sm font-medium text-gray-800">
+      <div className="w-20 text-right text-sm font-medium text-gray-800">
         {product.price} Bs
       </div>
     </>

@@ -26,13 +26,14 @@ export const BtnDeletaConfirmDialog = ({ title, subtitle, onConfirm }: Props) =>
         type="button"
         onClick={openModal}
         color="danger"
-        size="xs"
+        size="md"
       >
         <i className="las la-trash-alt la-lg" />
+        {title}
       </Button>
 
 
-      <CustomDialog dialog={isOpen} closeDialog={closeModal}>
+      <CustomDialog dialog={isOpen} closeDialog={closeModal} size="xl">
         <Dialog.Title
           as="h3"
           className="text-xl font-semibold leading-6 text-gray-700"

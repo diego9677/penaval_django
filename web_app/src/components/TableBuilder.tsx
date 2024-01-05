@@ -12,7 +12,7 @@ export const TableBuilder = ({ columns, children, footer }: Props) => {
       <thead>
         <tr className="sticky top-0 bg-gray-200 text-left text-gray-800 text-sm font-semibold">
           {columns.map((c, i) => (
-            <th key={i} className="p-2 uppercase border">{c}</th>
+            <th key={i} className="p-1 uppercase border">{c}</th>
           ))}
         </tr>
       </thead>

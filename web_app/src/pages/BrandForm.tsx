@@ -1,10 +1,11 @@
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { createApiBrand, getApiBrand, updateApiBrand } from "../services";
+import { createApiBrand, deleteApiBrand, getApiBrand, updateApiBrand } from "../services";
 import { Input } from "../components/common/Input";
 import { TextArea } from "../components/common/TextArea";
 import { Spinner } from "../components/Spinner";
 import { Button } from "../components/common/Button";
+import { BtnDeletaConfirmDialog } from "../components/common/BtnDeleteConfirmDialog";
 
 interface StateData {
   name: string;
@@ -48,6 +49,10 @@ export const BrandForm = () => {
     }
   };
 
+  const onDelete = async (id: number) => {
+    await deleteApiBrand(id);
+    navigate('/brands', { replace: true });
+  };
 
   if (loading) {
     return (
@@ -59,17 +64,17 @@ export const BrandForm = () => {
 
   return (
     <main className="flex justify-center">
-      <form className="w-full sm:w-1/2 flex flex-col gap-6" onSubmit={onSubmit}>
-        <header className="border-b flex justify-between py-2">
-          <h3 className="text-xl font-bold text-gray-700">
-            {id ? 'Editar' : 'Nueva'} Marca
-          </h3>
+      <form className="w-full sm:w-1/2 flex flex-col gap-4 md:gap-6 p-4 md:p-0" onSubmit={onSubmit}>
+        <header className="border-b flex py-2">
           <div className="w-8">
-            <Link to="/ws/brands">
-              <Button type="button" color="danger" size="xs">
-                <i className="las la-times la-lg" />
-              </Button>
+            <Link to="/brands" className="link">
+              <i className="las la-arrow-left la-lg" />
             </Link>
+          </div>
+          <div className="flex-1 text-center">
+            <h3 className="text-xl font-bold text-gray-700">
+              {id ? 'Editar' : 'Nueva'} Marca
+            </h3>
           </div>
         </header>
 
@@ -88,12 +93,26 @@ export const BrandForm = () => {
           onChange={(e) => setData({ ...data, description: e.target.value })}
         />
 
-        <Button
-          type="submit"
-          color="primary"
-        >
-          Guardar
-        </Button>
+        <div className="flex gap-2">
+          {id && (
+            <div className="flex-1">
+              <BtnDeletaConfirmDialog
+                title="Eliminar"
+                subtitle={`¿Esta seguro que desea eliminar la marca ${data.name}?`}
+                onConfirm={() => onDelete(Number(id))}
+              />
+            </div>
+          )}
+
+          <div className="flex-1">
+            <Button
+              type="submit"
+              color="primary"
+            >
+              Guardar
+            </Button>
+          </div>
+        </div>
       </form>
     </main>
   );

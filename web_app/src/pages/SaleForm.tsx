@@ -165,6 +165,7 @@ export const SaleForm = () => {
 
       <section className="flex-1 border shadow-md">
         <h4 className="text-lg font-medium text-gray-800 px-4 py-2">Registrar Ventas</h4>
+        
         <form className="flex items-end gap-1 px-4 w-1/2" onSubmit={onFindClient}>
           <section className="flex-1">
             <Input
@@ -185,6 +186,7 @@ export const SaleForm = () => {
             </Button>
           </section>
         </form>
+        
         <form className="flex flex-col gap-5 px-4 py-2" onSubmit={onSaveSale}>
           <section className="flex gap-2">
             <div className="flex-1">
@@ -273,6 +275,7 @@ export const SaleForm = () => {
             </div>
           </section>
         </form>
+        
       </section>
     </main>
   );

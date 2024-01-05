@@ -11,52 +11,54 @@ import { ProductForm } from "./pages/ProductForm";
 import { Products } from "./pages/Products";
 import { ProviderForm } from "./pages/ProviderForm";
 import { Providers } from "./pages/Providers";
-import { Sales } from "./pages/Sales";
-import { Shopping } from "./pages/Shopping";
-import { SaleForm } from "./pages/SaleForm";
-import { ShoppingForm } from "./pages/ShoppingForm";
+import { ProductDetail } from "./pages/ProductDetail";
+import { Cart } from "./pages/Cart";
+// import { Sales } from "./pages/Sales";
+// import { Shopping } from "./pages/Shopping";
+// import { SaleForm } from "./pages/SaleForm";
+// import { ShoppingForm } from "./pages/ShoppingForm";
 
 const App = () => {
-  return (
-      <Routes>
+    return (
+        <Routes>
 
-        <Route
-          path="/products/form"
-          element={
-              <MainLayout title="Formulario de productos">
-                <ProductForm />
-              </MainLayout>
-          }
-        />
+            <Route
+                path="/products/form"
+                element={
+                    <MainLayout title="Formulario de productos">
+                        <ProductForm />
+                    </MainLayout>
+                }
+            />
 
-        <Route
-          path="/brands/form"
-          element={
-              <MainLayout title="Formulario de marcas">
-                <BrandForm />
-              </MainLayout>
-          }
-        />
+            <Route
+                path="/brands/form"
+                element={
+                    <MainLayout title="Formulario de marcas">
+                        <BrandForm />
+                    </MainLayout>
+                }
+            />
 
-        <Route
-          path="/places/form"
-          element={
-              <MainLayout title="Formulario de lugares">
-                <PlaceForm />
-              </MainLayout>
-          }
-        />
+            <Route
+                path="/places/form"
+                element={
+                    <MainLayout title="Formulario de lugares">
+                        <PlaceForm />
+                    </MainLayout>
+                }
+            />
 
-        <Route
-          path="/providers/form"
-          element={
-              <MainLayout title="Formulario de proveedores">
-                <ProviderForm />
-              </MainLayout>
-          }
-        />
+            <Route
+                path="/providers/form"
+                element={
+                    <MainLayout title="Formulario de proveedores">
+                        <ProviderForm />
+                    </MainLayout>
+                }
+            />
 
-        <Route
+            {/* <Route
           path="/sales/form"
           element={
               <MainLayout title="Formulario de ventas">
@@ -72,17 +74,27 @@ const App = () => {
                 <ShoppingForm />
               </MainLayout>
           }
-        />
+        /> */}
 
-        <Route
-          path="/products"
-          element={
-              <MainLayout title="Productos">
-                <Products />
-              </MainLayout>
-          }
-        />
+            <Route
+                path="/products"
+                element={
+                    <MainLayout title="Productos">
+                        <Products />
+                    </MainLayout>
+                }
+            />
 
+            <Route
+                path="/products/detail"
+                element={
+                    <MainLayout title="Detalle del producto">
+                        <ProductDetail />
+                    </MainLayout>
+                }
+            />
+
+            {/* 
         <Route
           path="/sales"
           element={
@@ -99,42 +111,52 @@ const App = () => {
                 <Shopping />
               </MainLayout>
           }
-        />
+        /> */}
 
-        <Route
-          path="/brands"
-          element={
-              <MainLayout title="Marcas">
-                <Brands />
-              </MainLayout>
-          }
-        />
+            <Route
+                path="/brands"
+                element={
+                    <MainLayout title="Marcas">
+                        <Brands />
+                    </MainLayout>
+                }
+            />
 
-        <Route
-          path="/places"
-          element={
-              <MainLayout title="Lugares">
-                <Places />
-              </MainLayout>
-          }
-        />
+            <Route
+                path="/places"
+                element={
+                    <MainLayout title="Lugares">
+                        <Places />
+                    </MainLayout>
+                }
+            />
 
-        <Route
-          path="/providers"
-          element={
-              <MainLayout title="Proveedores">
-                <Providers />
-              </MainLayout>
-          }
-        />
+            <Route
+                path="/providers"
+                element={
+                    <MainLayout title="Proveedores">
+                        <Providers />
+                    </MainLayout>
+                }
+            />
 
-        <Route
-          path="/"
-          element={<Navigate to="/products" replace />}
-        />
 
-      </Routes>
-  );
+            <Route
+                path="/cart"
+                element={
+                    <MainLayout title="Carrito">
+                        <Cart />
+                    </MainLayout>
+                }
+            />
+
+            <Route
+                path="/"
+                element={<Navigate to="/products" replace />}
+            />
+
+        </Routes>
+    );
 };
 
 export default App;

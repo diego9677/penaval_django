@@ -43,7 +43,10 @@ def create_sales(request: HttpRequest, input: SaleIn):
     return {'msg': 'Sale created successfully'}
 
 
-@router.get('clients/{nit}/', response=ClientSchema)
+@router.get('clients/{nit}/', response={200: ClientSchema, 404: dict})
 def get_client_by_nit(request: HttpRequest, nit: str):
-    qs = Client.objects.get(pk=id)
-    return qs
+    try:
+        qs = Client.objects.get(nit=nit)
+        return qs
+    except Client.DoesNotExist:
+        return 404, {'error': 'client not found'}

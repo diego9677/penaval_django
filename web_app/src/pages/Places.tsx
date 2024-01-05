@@ -1,22 +1,20 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Place } from "../interfaces";
-import { deleteApiPlace, getApiPlaces } from "../services";
-import { TableBuilder } from "../components/TableBuilder";
 import { Button } from "../components/common/Button";
 import { Input } from "../components/common/Input";
 import { Spinner } from "../components/Spinner";
-import { BtnDeletaConfirmDialog } from "../components/common/BtnDeleteConfirmDialog";
+import { getApiPlaces } from "../services";
 
 
-const COLUMNS = [
-  '#',
-  'Nombre',
-  'Descripción',
-  // 'Creado',
-  // 'Actualizado',
-  ''
-];
+// const COLUMNS = [
+//   '#',
+//   'Nombre',
+//   'Descripción',
+//   // 'Creado',
+//   // 'Actualizado',
+//   ''
+// ];
 
 export const Places = () => {
   const [places, setPlaces] = useState<Place[]>([]);
@@ -28,6 +26,9 @@ export const Places = () => {
 
     getPlaces(controller.signal);
 
+    return () => {
+      controller.abort()
+    }
   }, []);
 
 
@@ -46,17 +47,10 @@ export const Places = () => {
     await getPlaces();
   };
 
-  const onDelete = async (id: number) => {
-    setLoading(true);
-    await deleteApiPlace(id);
-    await getPlaces();
-    setLoading(false);
-  };
 
   return (
-    <main className="flex flex-col gap-8">
-      <header className="flex justify-between">
-
+    <main className="flex flex-col md:gap-8 md:mx-auto md:w-[500px]">
+      <header className="flex justify-between py-2 px-4 md:p-0">
         <div className="w-20">
           <Link to="/places/form">
             <Button type="button">Nuevo</Button>
@@ -79,39 +73,13 @@ export const Places = () => {
         </form>
       </header>
 
-      <section className="overflow-auto h-[calc(100vh_-_10rem)]">
-        {!loading &&
-          <TableBuilder
-            columns={COLUMNS}
-            children={places.map((b) => {
-              return (
-                <tr key={b.id} className="text-left text-sm font-normal text-gray-900">
-                  <td className="p-2">{b.id}</td>
-                  <td className="p-2">{b.name}</td>
-                  <td className="p-2">{b.description}</td>
-                  {/* <td className="p-2">{new Date(b.createdAt).toLocaleDateString()}</td>
-                  <td className="p-2">{new Date(b.updatedAt).toLocaleDateString()}</td> */}
-                  <td className="flex gap-2 items-center h-12">
-                    <div className="w-8">
-                      <Link to={`/places/form?id=${b.id}`}>
-                        <Button type="button" color="success" size="xs">
-                          <i className="las la-pen la-lg" />
-                        </Button>
-                      </Link>
-                    </div>
-                    <div className="w-8">
-                      <BtnDeletaConfirmDialog
-                        title="Eliminar"
-                        subtitle={`¿Esta seguro que desea eliminar el lugar ${b.name}?`}
-                        onConfirm={() => onDelete(b.id)}
-                      />
-                    </div>
-                  </td>
-                </tr>
-              );
-            })}
-          />
-        }
+      <section className="overflow-auto h-[calc(100vh_-_9rem)] py-2 px-4 md:p-0">
+        {!loading && places.map(p => (
+          <Link to={`/places/form?id=${p.id}`} className="flex flex-col gap-1 py-2 border-b" key={p.id}>
+            <span className="text-sm font-semibold text-gray-800">{p.name}</span>
+            <span className="text-sm font-light text-gray-700">{p.description}</span>
+          </Link>
+        ))}
         {loading &&
           <div className="flex justify-center items-center h-full">
             <Spinner color="primary" size="lg" />
@@ -121,3 +89,37 @@ export const Places = () => {
     </main>
   );
 };
+
+
+// {!loading &&
+//   <TableBuilder
+//     columns={COLUMNS}
+//     children={places.map((b) => {
+//       return (
+//         <tr key={b.id} className="text-left text-sm font-normal text-gray-900">
+//           <td className="p-2">{b.id}</td>
+//           <td className="p-2">{b.name}</td>
+//           <td className="p-2">{b.description}</td>
+//           {/* <td className="p-2">{new Date(b.createdAt).toLocaleDateString()}</td>
+//           <td className="p-2">{new Date(b.updatedAt).toLocaleDateString()}</td> */}
+//           <td className="flex gap-2 items-center h-12">
+//             <div className="w-8">
+//               <Link to={`/places/form?id=${b.id}`}>
+//                 <Button type="button" color="success" size="xs">
+//                   <i className="las la-pen la-lg" />
+//                 </Button>
+//               </Link>
+//             </div>
+//             <div className="w-8">
+//               <BtnDeletaConfirmDialog
+//                 title="Eliminar"
+//                 subtitle={`¿Esta seguro que desea eliminar el lugar ${b.name}?`}
+//                 onConfirm={() => onDelete(b.id)}
+//               />
+//             </div>
+//           </td>
+//         </tr>
+//       );
+//     })}
+//   />
+// }
