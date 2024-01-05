@@ -75,7 +75,7 @@ export const ShoppingCartComponent = () => {
     }, []);
 
     return (
-        <section className="p-2">
+        <section className="p-2 md:mx-auto md:w-[500px]">
             <h4 className="text-lg font-medium text-gray-800">Registrar Compra</h4>
 
             <form className="flex flex-col gap-5" onSubmit={onSaveShopping}>
