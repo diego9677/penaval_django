@@ -17,7 +17,7 @@ const COLUMNS = [
 export const Print = forwardRef<HTMLDivElement, Props>(({ proform }, ref) => {
 
     const setTotal = () => {
-        const total = 100
+        const total = proform.proform_detail.reduce((acc, el) => acc + (el.amount * el.unit_price), 0);
         return total;
     };
 
