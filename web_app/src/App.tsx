@@ -13,6 +13,7 @@ import { ProviderForm } from "./pages/ProviderForm";
 import { Providers } from "./pages/Providers";
 import { ProductDetail } from "./pages/ProductDetail";
 import { Cart } from "./pages/Cart";
+import { Proformas } from "./pages/Proformas";
 // import { Sales } from "./pages/Sales";
 // import { Shopping } from "./pages/Shopping";
 // import { SaleForm } from "./pages/SaleForm";
@@ -140,6 +141,14 @@ const App = () => {
                 }
             />
 
+            <Route
+                path="/proform"
+                element={
+                    <MainLayout title="Proformas">
+                        <Proformas />
+                    </MainLayout>
+                }
+            />
 
             <Route
                 path="/cart"

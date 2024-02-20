@@ -1,19 +1,19 @@
 from datetime import datetime
 from typing import List
-from django.http import HttpRequest
+from django.core.handlers.asgi import ASGIRequest
 from django.db.models import Prefetch
 from ninja import Router
 
 from products.models import Product
 
-from .schemas import SaleSchema, ClientSchema, SaleIn
-from .models import Sale, SaleDetail, Client
+from .schemas import SaleSchema, ClientSchema, SaleIn, ProformIn, ProformSchema
+from .models import Sale, SaleDetail, Client, Proform, ProformDetail
 
 router = Router()
 
 
 @router.get('sales/', response=List[SaleSchema])
-def get_sales(request: HttpRequest, begin: str, end: str):
+def get_sales(request: ASGIRequest, begin: str, end: str):
     date1 = datetime.fromisoformat(begin)
     date2 = datetime.fromisoformat(end)
     qs = Sale.objects.select_related('client')\
@@ -24,7 +24,7 @@ def get_sales(request: HttpRequest, begin: str, end: str):
 
 
 @router.post('sales/')
-def create_sales(request: HttpRequest, input: SaleIn):
+def create_sales(request: ASGIRequest, input: SaleIn):
     client, created = Client.objects.get_or_create(nit=input.nit, defaults=input.dict(exclude={'products'}))
     print(client, created)
     sale = Sale.objects.create(client=client, user=request.user)
@@ -44,9 +44,36 @@ def create_sales(request: HttpRequest, input: SaleIn):
 
 
 @router.get('clients/{nit}/', response={200: ClientSchema, 404: dict})
-def get_client_by_nit(request: HttpRequest, nit: str):
+def get_client_by_nit(request: ASGIRequest, nit: str):
     try:
         qs = Client.objects.get(nit=nit)
         return qs
     except Client.DoesNotExist:
         return 404, {'error': 'client not found'}
+
+
+@router.get('/proform/{proform_id}/', response=List[ProformSchema])
+def get_proform(request: ASGIRequest, proform_id: int):
+    proforms = Proform.objects.prefetch_related('products').filter(pk=proform_id)
+    return proforms
+
+
+@router.post('/proform/', response=ProformSchema)
+def create_proform(request: ASGIRequest, input: ProformIn):
+    proform = Proform.objects.select_related('products').create(user=request.user)
+    for product in input.products:
+        ProformDetail.objects.create(
+            proforma=proform,
+            product_id=product.product_id,
+            amount=product.amount,
+            unit_price=product.unit_price,
+            subtotal=product.amount * product.unit_price
+        )
+    return proform
+
+
+@router.delete('/proform/{proform_id}/')
+def delete_proform(request: ASGIRequest, proform_id: int):
+    proform = Proform.objects.delete(pk=proform_id)
+    print(proform)
+    return {'msg': 'Proform deleted successfully'}

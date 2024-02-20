@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Brand, Client, Place, Product, Provider, Sale, SaleCart, Shopping, ShoppingCart } from "./interfaces";
+import { Brand, Client, Place, Product, Proform, Provider, Sale, SaleCart, Shopping, ShoppingCart } from "./interfaces";
 
 const headers = { 'Content-Type': 'application/json' }
 
@@ -216,4 +216,18 @@ export const getClientByNit = async (nit: string): Promise<ClientResponse> => {
   }
   const data: Client = await response.json()
   return { success: true, data };
+};
+
+
+export const createApiProform = async (input: any) => {
+  const response = await fetch('/api/proform/', { method: 'POST', body: JSON.stringify(input), headers })
+  const data: Proform = await response.json()
+  return data;
+};
+
+
+export const getApiProform = async (proform_id: string, signal?: AbortSignal) => {
+  const response = await fetch(`/api/proform/${proform_id}/`, { signal , headers })
+  const data: Proform[] = await response.json()
+  return data;
 };

@@ -49,7 +49,7 @@ class SaleDetail(models.Model):
 
 class Proform(models.Model):
     user = models.ForeignKey(User, related_name='proforms', on_delete=models.CASCADE)
-    client = models.ForeignKey(Client, related_name='proforms', on_delete=models.CASCADE)
+    # client = models.ForeignKey(Client, related_name='proforms', on_delete=models.CASCADE)
     date = models.DateTimeField(auto_now_add=True, verbose_name='Fecha Emisión')
     products = models.ManyToManyField(Product, related_name='proforms', through='ProformDetail')
 

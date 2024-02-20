@@ -106,3 +106,18 @@ export interface Client {
   last_name: string;
   phone: string;
 }
+
+export interface Proform {
+  id: number;
+  date: string;
+  proform_detail: {
+    id: number;
+    amount: number;
+    unit_price: number;
+    subtotal: number;
+    product: {
+      id: number;
+      code: string;
+    };
+  }[];
+}

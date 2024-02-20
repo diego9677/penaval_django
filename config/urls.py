@@ -38,6 +38,7 @@ FRONTEND_URLS = [
     'shopping',
     'shopping/form',
     'cart/',
+    'proform/',
 ]
 
 urlpatterns = [

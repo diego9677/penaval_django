@@ -1,9 +1,11 @@
 from django.contrib import admin
 from .models import Sale, SaleDetail, Proform, ProformDetail, Client
 
+
 @admin.register(Client)
 class ClientAdmin(admin.ModelAdmin):
     list_display = ('pk', 'first_name', 'last_name', 'created_at')
+
 
 @admin.register(Sale)
 class SaleAdmin(admin.ModelAdmin):
@@ -17,7 +19,7 @@ class SaleDetailAdmin(admin.ModelAdmin):
 
 @admin.register(Proform)
 class ProformaAdmin(admin.ModelAdmin):
-    list_display = ('pk', 'user', 'client', 'date')
+    list_display = ('pk', 'user', 'date')
 
 
 @admin.register(ProformDetail)

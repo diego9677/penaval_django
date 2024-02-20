@@ -1,10 +1,12 @@
-import { useState } from "react";
-import { SaleCart } from "../interfaces";
-import { createApiSale, getClientByNit, getSale, setSale } from "../services";
+import { useEffect, useRef, useState } from "react";
+import { Proform, SaleCart } from "../interfaces";
+import { createApiProform, createApiSale, getClientByNit, getSale, setSale } from "../services";
 import { Spinner } from "./Spinner";
 import { Button } from "./common/Button";
 import { Input } from "./common/Input";
 import { TableBuilder } from "./TableBuilder";
+import { Print } from "../pages/Print";
+import { useReactToPrint } from "react-to-print";
 
 const COLUMNS = [
     'cod',
@@ -24,14 +26,17 @@ interface SaleState {
 export const SaleCartComponent = () => {
     const [saleCartState, setSaleCartState] = useState<SaleCart[]>(getSale());
     const [saleState, setSaleState] = useState<SaleState>({ nit: '', first_name: '', last_name: '', phone: '' });
+    const [proform, setProform] = useState<Proform>();
     // loadings
     const [searchLoading, setSearchLoading] = useState(false);
     const [saveLoading, setSaveLoading] = useState(false);
 
+    const pdfRef = useRef<HTMLDivElement>(null);
+
     const removeItem = (productCode: string) => {
         const data = saleCartState.filter(p => p.product_code !== productCode);
         setSaleCartState(data);
-        setSale(data)
+        setSale(data);
     };
 
     const setTotal = () => {
@@ -83,119 +88,158 @@ export const SaleCartComponent = () => {
         setSearchLoading(false);
     };
 
+    const printProform = async () => {
+        if (saleCartState.length === 0) {
+            alert('No hay productos en el carrito');
+            return;
+        }
+
+        const data = { products: saleCartState };
+        console.log(data);
+        setSaveLoading(true);
+        // call api
+        const resp = await createApiProform(data);
+        setProform(resp);
+        onClean();
+        setSaveLoading(false);
+    };
+
+    const handlePrint = useReactToPrint({
+        content: () => pdfRef.current
+    });
+
+    useEffect(() => {
+        if (proform) {
+            handlePrint();
+        }
+    }, [handlePrint, proform]);
+
     return (
-        <section className="p-2 md:mx-auto md:w-[500px]">
-            <h4 className="text-lg font-medium text-gray-800">Registrar Ventas</h4>
+        <>
+            <section className="p-2 md:mx-auto md:w-[500px]">
+                <h4 className="text-lg font-medium text-gray-800">Registrar Ventas</h4>
 
-            <form className="flex items-end gap-1 w-1/2" onSubmit={onFindClient}>
-                <section className="flex-1">
-                    <Input
-                        type="text"
-                        label="Nit"
-                        placeholder="'2123'"
-                        value={saleState.nit}
-                        onChange={(e) => setSaleState({ ...saleState, nit: e.target.value })}
-                    />
-                </section>
-                <section>
-                    <Button
-                        type="submit"
-                        color="success"
-                    // onClick={findClient}
-                    >
-                        {searchLoading ? <Spinner color="white" size="md" /> : <i className="las la-search la-lg" />}
-                    </Button>
-                </section>
-            </form>
-
-            <form className="flex flex-col gap-5" onSubmit={onSaveSale}>
-                <section className="flex gap-2">
-                    <div className="flex-1">
+                <form className="flex items-end gap-1 w-1/2" onSubmit={onFindClient}>
+                    <section className="flex-1">
                         <Input
                             type="text"
-                            label="Nombres"
-                            placeholder="'Pepe'"
-                            value={saleState.first_name}
-                            onChange={(e) => setSaleState({ ...saleState, first_name: e.target.value })}
+                            label="Nit"
+                            placeholder="'2123'"
+                            value={saleState.nit}
+                            onChange={(e) => setSaleState({ ...saleState, nit: e.target.value })}
                         />
-                    </div>
-                    <div className="flex-1">
-                        <Input
-                            type="text"
-                            label="Apellidos"
-                            placeholder="'Perez'"
-                            value={saleState.last_name}
-                            onChange={(e) => setSaleState({ ...saleState, last_name: e.target.value })}
-                        />
-                    </div>
-                    <div className="flex-1">
-                        <Input
-                            type="text"
-                            label="Telefono"
-                            placeholder="'7832362'"
-                            value={saleState.phone}
-                            onChange={(e) => setSaleState({ ...saleState, phone: e.target.value })}
-                        />
-                    </div>
-                </section>
-
-                <section className="overflow-auto h-[calc(100vh_-_19rem)]">
-                    {saleCartState.length > 0 ?
-                        <TableBuilder
-                            columns={COLUMNS}
-                            children={saleCartState.map((s) => {
-                                return (
-                                    <tr key={s.product_code} className="text-left text-sm font-normal text-gray-900">
-                                        <td className="p-1 w-20 line-clamp-1">{s.product_code}</td>
-                                        <td className="p-1">{s.amount}</td>
-                                        <td className="p-1">{s.unit_price} Bs</td>
-                                        <td className="p-1">{Math.round((s.amount * s.unit_price) * 10) / 10} Bs</td>
-                                        <td className="">
-                                            <div className="w-8">
-                                                <Button
-                                                    type="button"
-                                                    color="danger"
-                                                    size="xs"
-                                                    onClick={() => removeItem(s.product_code)}
-                                                >
-                                                    <i className="las la-trash-alt la-lg" />
-                                                </Button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                );
-                            })}
-                            footer={
-                                <>
-                                    <td className="p-2 uppercase" colSpan={3}>
-                                        Total:
-                                    </td>
-                                    <td className="p-2" colSpan={2}>
-                                        {setTotal()} Bs
-                                    </td>
-                                </>
-                            }
-                        />
-                        :
-                        <div className="flex h-28 bg-gray-200 justify-center items-center rounded-md">
-                            <p className="text-gray-800 font-medium text-lg">
-                                No hay información util
-                            </p>
-                        </div>
-                    }
-                </section>
-
-                <section className="flex gap-4">
-                    <div className="flex-1">
-                        <Button type="button" color="danger" onClick={onClean}>Limpiar</Button>
-                    </div>
-                    <div className="flex-1">
-                        <Button type="submit" color="primary">
-                            {saveLoading ? <Spinner color="white" size="md" /> : 'Guardar'}
+                    </section>
+                    <section>
+                        <Button
+                            type="submit"
+                            color="success"
+                        // onClick={findClient}
+                        >
+                            {searchLoading ? <Spinner color="white" size="md" /> : <i className="las la-search la-lg" />}
                         </Button>
-                    </div>
-                </section>
-            </form>
-        </section>
+                    </section>
+                </form>
+
+                <form className="flex flex-col gap-5" onSubmit={onSaveSale}>
+                    <section className="flex gap-2">
+                        <div className="flex-1">
+                            <Input
+                                type="text"
+                                label="Nombres"
+                                placeholder="'Pepe'"
+                                value={saleState.first_name}
+                                onChange={(e) => setSaleState({ ...saleState, first_name: e.target.value })}
+                            />
+                        </div>
+                        <div className="flex-1">
+                            <Input
+                                type="text"
+                                label="Apellidos"
+                                placeholder="'Perez'"
+                                value={saleState.last_name}
+                                onChange={(e) => setSaleState({ ...saleState, last_name: e.target.value })}
+                            />
+                        </div>
+                        <div className="flex-1">
+                            <Input
+                                type="text"
+                                label="Telefono"
+                                placeholder="'7832362'"
+                                value={saleState.phone}
+                                onChange={(e) => setSaleState({ ...saleState, phone: e.target.value })}
+                            />
+                        </div>
+                    </section>
+
+                    <section className="overflow-auto h-[calc(100vh_-_19rem)]">
+                        {saleCartState.length > 0 ?
+                            <TableBuilder
+                                columns={COLUMNS}
+                                children={saleCartState.map((s) => {
+                                    return (
+                                        <tr key={s.product_code} className="text-left text-sm font-normal text-gray-900">
+                                            <td className="p-1 w-20 line-clamp-1">{s.product_code}</td>
+                                            <td className="p-1">{s.amount}</td>
+                                            <td className="p-1">{s.unit_price} Bs</td>
+                                            <td className="p-1">{Math.round((s.amount * s.unit_price) * 10) / 10} Bs</td>
+                                            <td className="">
+                                                <div className="w-8">
+                                                    <Button
+                                                        type="button"
+                                                        color="danger"
+                                                        size="xs"
+                                                        onClick={() => removeItem(s.product_code)}
+                                                    >
+                                                        <i className="las la-trash-alt la-lg" />
+                                                    </Button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    );
+                                })}
+                                footer={
+                                    <>
+                                        <td className="p-2 uppercase" colSpan={3}>
+                                            Total:
+                                        </td>
+                                        <td className="p-2" colSpan={2}>
+                                            {setTotal()} Bs
+                                        </td>
+                                    </>
+                                }
+                            />
+                            :
+                            <div className="flex h-28 bg-gray-200 justify-center items-center rounded-md">
+                                <p className="text-gray-800 font-medium text-lg">
+                                    No hay información util
+                                </p>
+                            </div>
+                        }
+                    </section>
+
+                    <section className="flex gap-4">
+                        <div className="flex-1">
+                            <Button type="button" color="danger" onClick={onClean}>Limpiar</Button>
+                        </div>
+                        <div className="flex-1">
+                            <Button type="button" color="secondary" onClick={printProform}>
+                                {saveLoading ? <Spinner color="white" size="md" /> : 'Imprimir'}
+                            </Button>
+                        </div>
+                        <div className="flex-1">
+                            <Button type="submit" color="primary">
+                                {saveLoading ? <Spinner color="white" size="md" /> : 'Guardar'}
+                            </Button>
+                        </div>
+                    </section>
+                </form>
+            </section>
+
+            {proform &&
+                <div className="hidden">
+                    <Print ref={pdfRef} proform={proform} />
+                </div>
+            }
+        </>
     );
 };

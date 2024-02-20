@@ -66,6 +66,7 @@ export const MainLayout = ({ title, children }: Props) => {
           <NavItem icon={<i className="las la-memory la-lg" />} to="/brands" title="Marcas" />
           <NavItem icon={<i className="las la-map-pin la-lg" />} to="/places" title="Lugares" />
           <NavItem icon={<i className="las la-store-alt la-lg" />} to="/providers" title="Provedores" />
+          <NavItem icon={<i className="las la-file-alt la-lg" />} to="/proform" title="Proformas" />
         </div>
       </Drawer>
       <section className="flex-1">

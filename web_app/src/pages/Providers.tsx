@@ -34,12 +34,9 @@ export const Providers = () => {
 
   const getProviders = async (signal?: AbortSignal) => {
     setLoading(true);
-    try {
-      const data = await getApiProviders(search, signal);
-      setProviders(data);
-    } finally {
-      setLoading(false);
-    }
+    const data = await getApiProviders(search, signal);
+    setProviders(data);
+    setLoading(false);
   };
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -48,7 +45,7 @@ export const Providers = () => {
   };
 
   return (
-    <main className="flex flex-col md:gap-8 md:mx-auto md:w-[500px]">
+    <main className="flex flex-col w-full md:gap-8 md:mx-auto md:w-[500px]">
       <header className="flex justify-between items-center px-4 py-2 md:p-0">
         <div className="w-20">
           <Link to="/providers/form">

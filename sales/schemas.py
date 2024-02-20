@@ -44,3 +44,13 @@ class SaleSchema(Schema):
     date: datetime
     client: ClientSchema
     sale_detail: List[SaleDetailSchema]
+
+
+class ProformIn(Schema):
+    products: List[SaleCart]
+
+
+class ProformSchema(Schema):
+    id: int
+    date: datetime
+    proform_detail: List[SaleDetailSchema]
