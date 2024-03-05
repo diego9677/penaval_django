@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from "react-router-dom";
 import { User } from "../interfaces";
 import { Drawer } from "../components/Drawer";
+import { useStore } from "../store";
 
 type Props = {
   title: string;
@@ -28,21 +29,26 @@ const NavItem = ({ to, title, icon }: { to: string; title: string; icon: React.R
 
 export const MainLayout = ({ title, children }: Props) => {
   const [height, setHeight] = useState(window.innerHeight);
+  const [width, setWidth] = useState(window.innerWidth);
   const [isOpen, setIsOpen] = useState(false);
 
   const user: User = (window as any).user;
 
+  const saleCart = useStore(state => state.saleCart);
+  const shoppingCart = useStore(state => state.shoppingCart);
+
   useEffect(() => {
 
-    const resizeHeight = () => {
+    const resize = () => {
       setHeight(window.innerHeight);
+      setWidth(window.innerWidth);
     };
 
-    window.addEventListener('resize', resizeHeight);
+    window.addEventListener('resize', resize);
 
 
     return () => {
-      window.removeEventListener('resize', resizeHeight);
+      window.removeEventListener('resize', resize);
     };
   }, []);
 
@@ -56,7 +62,7 @@ export const MainLayout = ({ title, children }: Props) => {
   };
 
   return (
-    <main className="flex" style={{ height: `${height}px` }}>
+    <main className="flex" style={{ width: `${width}pk`, height: `${height}px` }}>
       <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
         <h4 className='text-2xl text-gray-300 text-center py-4 font-bold'>PeñaVal</h4>
         <div className="flex flex-col">
@@ -79,17 +85,15 @@ export const MainLayout = ({ title, children }: Props) => {
               <h4 className='text-2xl text-gray-700 font-bold'>PeñaVal</h4>
             </div>
 
-            <div className="flex items-center gap-2 divide-x divide-dashed">
+            <div className="flex items-center gap-2">
               <section className="relative">
-                <Link className="text-lg md:hover:bg-neutral-300 rounded-full p-1" to="/cart">
+                <Link className={clsx("text-lg md:hover:bg-neutral-300 rounded-full p-1", window.location.pathname.includes('cart') ? "text-blue-600" : "text-neutral-800")} to="/cart">
                   <i className="las la-shopping-cart la-lg" />
                 </Link>
-                {/* <span className="absolute -right-0.5 top-0 w-2.5 h-2.5 rounded-full bg-red-500"></span> */}
+                {(saleCart.length > 0 || shoppingCart.length > 0) && <span className="absolute -right-0.5 top-0 w-2.5 h-2.5 rounded-full bg-red-500"></span>}
               </section>
 
-              <div className="pl-2">
-                {user && <UserSection user={user} logout={logout} />}
-              </div>
+              {user && <UserSection user={user} logout={logout} />}
             </div>
           </header>
           <section className="md:py-2 md:px-4 h-[calc(100vh_-_3.5rem)]">

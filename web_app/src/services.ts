@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Brand, Client, Place, Product, Proform, Provider, Sale, SaleCart, Shopping, ShoppingCart } from "./interfaces";
+import { Brand, Client, Place, Product, Proform, Provider, Sale, Shopping } from "./interfaces";
 
 const headers = { 'Content-Type': 'application/json' }
 
@@ -152,59 +152,6 @@ export const createApiSale = async (input: any) => {
   const response = await fetch('/api/sales/', { method: 'POST', body: JSON.stringify(input), headers })
   const data: Sale = await response.json()
   return data;
-};
-
-// cart section
-export const getSale = () => {
-  try {
-    const salePlainText = localStorage.getItem('sale');
-    if (!salePlainText) return [];
-    const sale: SaleCart[] = JSON.parse(salePlainText);
-    return sale;
-  } catch (error) {
-    console.log(error);
-    throw error;
-  }
-};
-
-export const setSale = (data: SaleCart[]) => {
-  try {
-    const salePlainText = JSON.stringify(data);
-    localStorage.setItem('sale', salePlainText);
-  } catch (error) {
-    console.log(error);
-    throw error;
-  }
-};
-
-export const removeSale = () => {
-  localStorage.removeItem('sale');
-};
-
-export const getShopping = () => {
-  try {
-    const shoppingPlainText = localStorage.getItem('shopping');
-    if (!shoppingPlainText) return [];
-    const shopping: ShoppingCart[] = JSON.parse(shoppingPlainText);
-    return shopping;
-  } catch (error) {
-    console.log(error);
-    throw error;
-  }
-};
-
-export const setShopping = (data: ShoppingCart[]) => {
-  try {
-    const shoppingPlainText = JSON.stringify(data);
-    localStorage.setItem('shopping', shoppingPlainText);
-  } catch (error) {
-    console.log(error);
-    throw error;
-  }
-};
-
-export const removeShopping = () => {
-  localStorage.removeItem('shopping');
 };
 
 type ClientResponse = { success: true; data: Client } | { success: false; error: { status: number; text: string } };

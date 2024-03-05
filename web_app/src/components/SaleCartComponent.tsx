@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from "react";
-import { Proform, SaleCart } from "../interfaces";
-import { createApiProform, createApiSale, getClientByNit, getSale, setSale } from "../services";
+import { Proform } from "../interfaces";
+import { createApiProform, createApiSale, getClientByNit } from "../services";
 import { Spinner } from "./Spinner";
 import { Button } from "./common/Button";
 import { Input } from "./common/Input";
 import { TableBuilder } from "./TableBuilder";
 import { Print } from "../pages/Print";
 import { useReactToPrint } from "react-to-print";
+import { useStore } from "../store";
 
 const COLUMNS = [
     'cod',
@@ -24,35 +25,37 @@ interface SaleState {
 }
 
 export const SaleCartComponent = () => {
-    const [saleCartState, setSaleCartState] = useState<SaleCart[]>(getSale());
+    // const [saleCartState, setSaleCartState] = useState<SaleCart[]>(getSale());
     const [saleState, setSaleState] = useState<SaleState>({ nit: '', first_name: '', last_name: '', phone: '' });
     const [proform, setProform] = useState<Proform>();
     // loadings
     const [searchLoading, setSearchLoading] = useState(false);
     const [saveLoading, setSaveLoading] = useState(false);
+    const [proformLoading, setProformLoading] = useState(false);
+
+    const saleCart = useStore(state => state.saleCart);
+    const setSaleCart = useStore(state => state.setSaleCart);
 
     const pdfRef = useRef<HTMLDivElement>(null);
 
     const removeItem = (productCode: string) => {
-        const data = saleCartState.filter(p => p.product_code !== productCode);
-        setSaleCartState(data);
-        setSale(data);
+        const data = saleCart.filter(p => p.product_code !== productCode);
+        setSaleCart(data);
     };
 
     const setTotal = () => {
-        const total = saleCartState.reduce((acc, el) => acc + (el.amount * el.unit_price), 0);
+        const total = saleCart.reduce((acc, el) => acc + (el.amount * el.unit_price), 0);
         return total;
     };
 
     const onClean = () => {
         setSaleState({ nit: '', first_name: '', last_name: '', phone: '' });
-        setSaleCartState([]);
-        setSale([]);
+        setSaleCart([]);
     };
 
     const onSaveSale = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        if (saleCartState.length === 0) {
+        if (saleCart.length === 0) {
             alert('No hay productos en el carrito');
             return;
         }
@@ -63,8 +66,7 @@ export const SaleCartComponent = () => {
         }
 
         setSaveLoading(true);
-        const data = { ...saleState, products: saleCartState };
-        console.log(data);
+        const data = { ...saleState, products: saleCart };
         await createApiSale(data);
         onClean();
         setSaveLoading(false);
@@ -89,23 +91,23 @@ export const SaleCartComponent = () => {
     };
 
     const printProform = async () => {
-        if (saleCartState.length === 0) {
+        if (saleCart.length === 0) {
             alert('No hay productos en el carrito');
             return;
         }
 
-        const data = { products: saleCartState };
-        console.log(data);
-        setSaveLoading(true);
+        const data = { products: saleCart };
+        
+        setProformLoading(true);
         // call api
         const resp = await createApiProform(data);
         setProform(resp);
-        onClean();
-        setSaveLoading(false);
+        setProformLoading(false);
     };
 
     const handlePrint = useReactToPrint({
-        content: () => pdfRef.current
+        content: () => pdfRef.current,
+        onAfterPrint: () => onClean(),
     });
 
     useEffect(() => {
@@ -172,10 +174,10 @@ export const SaleCartComponent = () => {
                     </section>
 
                     <section className="overflow-auto h-[calc(100vh_-_19rem)]">
-                        {saleCartState.length > 0 ?
+                        {saleCart.length > 0 ?
                             <TableBuilder
                                 columns={COLUMNS}
-                                children={saleCartState.map((s) => {
+                                children={saleCart.map((s) => {
                                     return (
                                         <tr key={s.product_code} className="text-left text-sm font-normal text-gray-900">
                                             <td className="p-1 w-20 line-clamp-1">{s.product_code}</td>
@@ -222,13 +224,13 @@ export const SaleCartComponent = () => {
                             <Button type="button" color="danger" onClick={onClean}>Limpiar</Button>
                         </div>
                         <div className="flex-1">
-                            <Button type="button" color="secondary" onClick={printProform}>
-                                {saveLoading ? <Spinner color="white" size="md" /> : 'Imprimir'}
+                            <Button type="button" color="success" onClick={printProform}>
+                                {proformLoading ? <Spinner color="white" size="md" /> : 'Proforma'}
                             </Button>
                         </div>
                         <div className="flex-1">
                             <Button type="submit" color="primary">
-                                {saveLoading ? <Spinner color="white" size="md" /> : 'Guardar'}
+                                {saveLoading ? <Spinner color="white" size="md" /> : 'Venta'}
                             </Button>
                         </div>
                     </section>

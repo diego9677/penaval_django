@@ -1,13 +1,22 @@
 import { SaleCartComponent } from "../components/SaleCartComponent";
 import { ShoppingCartComponent } from "../components/ShoppingCartComponent";
-import { getSale, getShopping } from "../services";
+import { useStore } from "../store";
 
 export const Cart = () => {
-  return (
-    <>
-      {getSale().length > 0 && getShopping().length === 0 && <SaleCartComponent />}
-      {getShopping().length > 0 && getSale().length === 0 && <ShoppingCartComponent />}
-      {getSale().length === 0 && getShopping().length === 0 && <div className='text-gray-900 text-center py-10'>No hay compras ni ventas pendientes</div>}
-    </>
-  );
+  const saleCart = useStore(state => state.saleCart);
+  const shoppingCart = useStore(state => state.shoppingCart);
+
+  if (saleCart.length > 0 && shoppingCart.length === 0) {
+    return <SaleCartComponent />;
+  }
+
+  if (shoppingCart.length > 0 && saleCart.length === 0) {
+    return <ShoppingCartComponent />;
+  }
+
+  if (shoppingCart.length === 0 && saleCart.length === 0) {
+    return (
+      <div className='text-base font-semibold text-neutral-800 text-center py-10'>No hay compras ni ventas pendientes</div>
+    );
+  }
 };

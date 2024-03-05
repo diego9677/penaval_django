@@ -27,7 +27,7 @@ export function CustomDialog({ dialog, closeDialog, children }: Props) {
 
         <Dialog.Overlay className="z-40 fixed inset-0 bg-black opacity-30" />
 
-        <div className='flex h-full items-center justify-center'>
+        <div className='flex mt-2 justify-center'>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"

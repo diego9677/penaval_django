@@ -59,24 +59,6 @@ const App = () => {
                 }
             />
 
-            {/* <Route
-          path="/sales/form"
-          element={
-              <MainLayout title="Formulario de ventas">
-                <SaleForm />
-              </MainLayout>
-          }
-        />
-
-        <Route
-          path="/shopping/form"
-          element={
-              <MainLayout title="Formulario de compras">
-                <ShoppingForm />
-              </MainLayout>
-          }
-        /> */}
-
             <Route
                 path="/products"
                 element={
@@ -94,25 +76,6 @@ const App = () => {
                     </MainLayout>
                 }
             />
-
-            {/* 
-        <Route
-          path="/sales"
-          element={
-              <MainLayout title="Ventas">
-                <Sales />
-              </MainLayout>
-          }
-        />
-
-        <Route
-          path="/shopping"
-          element={
-              <MainLayout title="Compras">
-                <Shopping />
-              </MainLayout>
-          }
-        /> */}
 
             <Route
                 path="/brands"

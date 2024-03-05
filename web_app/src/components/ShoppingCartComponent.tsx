@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Select } from "./common/Select";
 import { TableBuilder } from "./TableBuilder";
 import { Button } from "./common/Button";
-import { Provider, ShoppingCart } from "../interfaces";
+import { Provider } from "../interfaces";
 import { Spinner } from "./Spinner";
-import { createApiShopping, getApiProviders, getShopping, setShopping } from "../services";
+import { createApiShopping, getApiProviders } from "../services";
+import { useStore } from "../store";
 
 const COLUMNS = [
     'cod',
@@ -17,10 +18,12 @@ const COLUMNS = [
 
 export const ShoppingCartComponent = () => {
     const [providers, setProviders] = useState<Provider[]>([]);
-    const [shoppingCartState, setShoppingCartState] = useState<ShoppingCart[]>(getShopping());
+    // const [shoppingCartState, setShoppingCartState] = useState<ShoppingCart[]>(getShopping());
     const [selectedProvider, setSelectedProvider] = useState<number | string>('');
     const [saveLoading, setSaveLoading] = useState(false);
 
+    const shoppingCart = useStore(state => state.shoppingCart);
+    const setShoppingCart = useStore(state => state.setShoppingCart);
 
     const getProviders = async (signal?: AbortSignal) => {
         const data = await getApiProviders('', signal);
@@ -28,26 +31,24 @@ export const ShoppingCartComponent = () => {
     };
 
     const removeItem = (productCode: string) => {
-        const data = shoppingCartState.filter(p => p.product_code !== productCode);
-        setShoppingCartState(data);
-        setShopping(data);
+        const data = shoppingCart.filter(p => p.product_code !== productCode);
+        setShoppingCart(data);
     };
 
     const setTotal = () => {
-        const total = shoppingCartState.reduce((acc, el) => acc + (el.amount * el.pucharse_price), 0);
+        const total = shoppingCart.reduce((acc, el) => acc + (el.amount * el.pucharse_price), 0);
         return total;
     };
 
     const onClean = () => {
         setSelectedProvider('');
-        setShoppingCartState([]);
-        setShopping([]);
+        setShoppingCart([]);
     };
 
     const onSaveShopping = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        if (shoppingCartState.length === 0) {
+        if (shoppingCart.length === 0) {
             alert('No hay productos en el carrito');
             return;
         }
@@ -58,7 +59,7 @@ export const ShoppingCartComponent = () => {
         }
 
         setSaveLoading(true);
-        const data = { provider_id: selectedProvider, products: shoppingCartState };
+        const data = { provider_id: selectedProvider, products: shoppingCart };
         await createApiShopping(data);
         onClean();
         setSaveLoading(false);
@@ -91,10 +92,10 @@ export const ShoppingCartComponent = () => {
                 </section>
 
                 <section className="overflow-auto h-[calc(100vh_-_15rem)]">
-                    {shoppingCartState.length > 0 ?
+                    {shoppingCart.length > 0 ?
                         <TableBuilder
                             columns={COLUMNS}
-                            children={shoppingCartState.map((s) => {
+                            children={shoppingCart.map((s) => {
                                 return (
                                     <tr key={s.product_code} className="text-left text-sm font-normal text-gray-900">
                                         <td className="p-1 w-20 line-clamp-1">{s.product_code}</td>

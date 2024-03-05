@@ -41,7 +41,7 @@ export const SaleFormDetail = ({ product, onConfirmDialog, closeDialog }: Props)
 
     return (
         <form className="flex flex-col gap-4" onSubmit={onSubmit}>
-            <h3 className="text-lg text-center font-bold text-neutral-800">Compra</h3>
+            <h3 className="text-lg text-center font-bold text-neutral-800">Venta</h3>
 
             <Input
                 type="number"
@@ -49,7 +49,7 @@ export const SaleFormDetail = ({ product, onConfirmDialog, closeDialog }: Props)
                 color="primary"
                 min={0}
                 placeholder="'3'"
-                value={saleState.amount}
+                value={saleState.amount === 0 ? '' : saleState.amount}
                 onChange={(e) => setSaleState({ ...saleState, amount: Number(e.target.value) })}
             />
             <Input
@@ -59,7 +59,7 @@ export const SaleFormDetail = ({ product, onConfirmDialog, closeDialog }: Props)
                 label="Precio de venta (Bs)"
                 color="primary"
                 placeholder="'40.5'"
-                value={saleState.unit_price}
+                value={saleState.unit_price === 0 ? '' : saleState.unit_price}
                 onChange={(e) => setSaleState({ ...saleState, unit_price: Number(e.target.value) })}
             />
 

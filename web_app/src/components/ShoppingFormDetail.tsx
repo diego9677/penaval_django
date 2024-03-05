@@ -51,7 +51,7 @@ export const ShoppingFormDetail = ({ product, closeDialog, onConfirmDialog }: Pr
                 color="primary"
                 placeholder="'3'"
                 min={0}
-                value={shoppingState.amount}
+                value={shoppingState.amount === 0 ? '' : shoppingState.amount}
                 onChange={(e) => setShoppingState({ ...shoppingState, amount: Number(e.target.value) })}
             />
 
@@ -62,7 +62,7 @@ export const ShoppingFormDetail = ({ product, closeDialog, onConfirmDialog }: Pr
                 label="Precio de compra (Bs)"
                 color="primary"
                 placeholder="'40.5'"
-                value={shoppingState.pucharse_price}
+                value={shoppingState.pucharse_price === 0 ? '' : shoppingState.pucharse_price}
                 onChange={(e) => setShoppingState({ ...shoppingState, pucharse_price: Number(e.target.value) })}
             />
 
@@ -73,7 +73,7 @@ export const ShoppingFormDetail = ({ product, closeDialog, onConfirmDialog }: Pr
                 label="Precio de venta (Bs)"
                 color="primary"
                 placeholder="'40.5'"
-                value={shoppingState.sale_price}
+                value={shoppingState.sale_price === 0 ? '' : shoppingState.sale_price}
                 onChange={(e) => setShoppingState({ ...shoppingState, sale_price: Number(e.target.value) })}
             />
 

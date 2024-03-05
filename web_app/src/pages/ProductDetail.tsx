@@ -1,13 +1,14 @@
 import { Link, useSearchParams } from "react-router-dom";
 import { ProductItem } from "../components/ProductItem";
 import { useEffect, useState } from "react";
-import { getApiProduct, getSale, getShopping, setSale, setShopping } from "../services";
+import { getApiProduct } from "../services";
 import { Product, SaleCart, ShoppingCart } from "../interfaces";
 import { Spinner } from "../components/Spinner";
 import { Button } from "../components/common/Button";
 import { CustomDialog } from "../components/CustomDialog";
 import { SaleFormDetail } from "../components/SaleFormDetail";
 import { ShoppingFormDetail } from "../components/ShoppingFormDetail";
+import { useStore } from "../store";
 
 export const ProductDetail = () => {
   const [product, setProduct] = useState<Product>();
@@ -17,6 +18,11 @@ export const ProductDetail = () => {
 
   const [searchParams] = useSearchParams();
   const id = searchParams.get('id');
+
+  const saleCart = useStore(state => state.saleCart);
+  const shoppingCart = useStore(state => state.shoppingCart);
+  const setSaleCart = useStore(state => state.setSaleCart);
+  const setShoppingCart = useStore(state => state.setShoppingCart);
 
   useEffect(() => {
     if (id) {
@@ -38,37 +44,34 @@ export const ProductDetail = () => {
   };
 
   const onAddSaleCart = (sale: SaleCart) => {
-    if (getShopping().length > 0) {
+    if (shoppingCart.length > 0) {
       alert('Tiene compras pendientes que debe cerrar');
       return;
     }
 
-    const saleCart = getSale();
     const index = saleCart.findIndex(p => p.product_code === sale.product_code);
     if (saleCart[index]) {
-      saleCart[index] = sale;
+      const data = saleCart.map(s => s.product_id === sale.product_id ? sale : s);
+      setSaleCart(data);
     } else {
-      saleCart.push(sale);
+      setSaleCart([...saleCart, sale]);
     }
-
-    setSale(saleCart);
   };
 
   const onAddShoppingCart = (shopping: ShoppingCart) => {
-    if (getSale().length > 0) {
+    if (saleCart.length > 0) {
       alert('Tiene ventas pendientes que debe cerrar');
       return;
     }
 
-    const shoppingCart = getShopping();
     const index = shoppingCart.findIndex(p => p.product_code === shopping.product_code);
     if (shoppingCart[index]) {
-      shoppingCart[index] = shopping;
+      const data = shoppingCart.map(s => s.product_id === shopping.product_id ? shopping : s)
+      setShoppingCart(data);
     } else {
-      shoppingCart.push(shopping);
+      setShoppingCart([...shoppingCart, shopping]);
     }
 
-    setShopping(shoppingCart);
   };
 
   if (loading) {

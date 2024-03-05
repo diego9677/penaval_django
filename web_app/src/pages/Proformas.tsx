@@ -3,12 +3,15 @@ import { Button } from "../components/common/Button";
 import { Input } from "../components/common/Input";
 import { Spinner } from "../components/Spinner";
 import { Proform } from "../interfaces";
-import { getApiProform, setSale } from "../services";
+import { getApiProform } from "../services";
+import { useStore } from "../store";
 
 export const Proformas = () => {
     const [search, setSearch] = useState('');
     const [loading, setLoading] = useState(false);
     const [proformas, setProformas] = useState<Proform[]>([]);
+
+    const setSaleCart = useStore(state => state.setSaleCart)
 
     const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -20,7 +23,7 @@ export const Proformas = () => {
 
     const loadSales = (proform: Proform) => {
         const saleCart = proform.proform_detail.map(p => ({ product_id: p.product.id, product_code: p.product.code, amount: p.amount, unit_price: p.unit_price }));
-        setSale(saleCart);
+        setSaleCart(saleCart);
         alert('Productos agregados a la venta');
     }
 
