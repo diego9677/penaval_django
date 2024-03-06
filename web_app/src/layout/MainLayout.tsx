@@ -57,7 +57,7 @@ export const MainLayout = ({ title, children }: Props) => {
   };
 
   return (
-    <main className={`flex h-[${height}px]`}>
+    <main className="flex w-full" style={{ height: `${height}px` }}>
       <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
         <header className="flex p-4 items-center">
           <h4 className='flex-1 text-2xl text-gray-300 font-bold'>PeñaVal</h4>

@@ -121,8 +121,8 @@ export const SaleCartComponent = () => {
     }, [handlePrint, proform]);
 
     return (
-        <main className="flex flex-col h-full">
-            <section className="p-2 md:mx-auto md:w-[500px]">
+        <>
+            <section className="p-2 md:mx-auto md:w-[500px] flex flex-col h-full">
                 <h4 className="text-lg font-medium text-gray-800">Registrar Ventas</h4>
 
                 <form className="flex items-end gap-1 w-1/2" onSubmit={onFindClient}>
@@ -145,7 +145,7 @@ export const SaleCartComponent = () => {
                     </section>
                 </form>
 
-                <form className="flex flex-col gap-5" onSubmit={onSaveSale}>
+                <form className="flex-1 flex flex-col gap-5" onSubmit={onSaveSale}>
                     <section className="flex gap-2">
                         <div className="flex-1">
                             <Input
@@ -245,6 +245,6 @@ export const SaleCartComponent = () => {
                     <Print ref={pdfRef} proform={proform} />
                 </div>
             }
-        </main>
+        </>
     );
 };
