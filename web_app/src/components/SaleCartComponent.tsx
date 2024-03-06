@@ -111,7 +111,7 @@ export const SaleCartComponent = () => {
 
     const handlePrint = useReactToPrint({
         content: () => pdfRef.current,
-        // onAfterPrint: () => onClean(),
+        onAfterPrint: () => onClean(),
     });
 
     useEffect(() => {
@@ -227,7 +227,7 @@ export const SaleCartComponent = () => {
                             <Button type="button" color="danger" onClick={onClean}>Limpiar</Button>
                         </div>
                         <div className="flex-1">
-                            <Button type="button" color="success" onClick={proform ? handlePrint : printProform}>
+                            <Button type="button" color="success" onClick={printProform}>
                                 {proformLoading ? <Spinner color="white" size="md" /> : 'Proforma'}
                             </Button>
                         </div>
