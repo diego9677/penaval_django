@@ -89,7 +89,7 @@ export const ProductForm = () => {
       <form className="w-full sm:w-1/2 flex flex-col gap-4 md:gap-6 p-4 md:p-0" onSubmit={onSubmit}>
         <header className="border-b flex py-2">
           <div className="w-8">
-            <Link to={`/products/detail?id=${id}`} className="link">
+            <Link to={id ? `/products/detail?id=${id}` : '/products'} className="link">
               <i className="las la-arrow-left la-lg" />
             </Link>
           </div>
