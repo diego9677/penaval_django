@@ -110,6 +110,7 @@ export interface Client {
 export interface Proform {
   id: number;
   date: string;
+  client: Client;
   proform_detail: {
     id: number;
     amount: number;

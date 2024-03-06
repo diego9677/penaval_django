@@ -18,7 +18,6 @@ const COLUMNS = [
 
 export const ShoppingCartComponent = () => {
     const [providers, setProviders] = useState<Provider[]>([]);
-    // const [shoppingCartState, setShoppingCartState] = useState<ShoppingCart[]>(getShopping());
     const [selectedProvider, setSelectedProvider] = useState<number | string>('');
     const [saveLoading, setSaveLoading] = useState(false);
 
@@ -76,7 +75,7 @@ export const ShoppingCartComponent = () => {
     }, []);
 
     return (
-        <section className="p-2 md:mx-auto md:w-[500px]">
+        <section className="p-2 md:mx-auto md:w-[500px] flex flex-col h-full">
             <h4 className="text-lg font-medium text-gray-800">Registrar Compra</h4>
 
             <form className="flex flex-col gap-5" onSubmit={onSaveShopping}>
@@ -138,7 +137,7 @@ export const ShoppingCartComponent = () => {
                     }
                 </section>
 
-                <section className="flex gap-2">
+                <section className="flex items-center gap-2">
                     <div className="flex-1">
                         <Button type="button" color="danger" onClick={onClean}>Limpiar</Button>
                     </div>

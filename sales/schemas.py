@@ -47,10 +47,15 @@ class SaleSchema(Schema):
 
 
 class ProformIn(Schema):
+    nit: str
+    first_name: str
+    last_name: str
+    phone: str
     products: List[SaleCart]
 
 
 class ProformSchema(Schema):
     id: int
     date: datetime
+    client: ClientSchema
     proform_detail: List[SaleDetailSchema]

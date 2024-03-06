@@ -25,7 +25,6 @@ interface SaleState {
 }
 
 export const SaleCartComponent = () => {
-    // const [saleCartState, setSaleCartState] = useState<SaleCart[]>(getSale());
     const [saleState, setSaleState] = useState<SaleState>({ nit: '', first_name: '', last_name: '', phone: '' });
     const [proform, setProform] = useState<Proform>();
     // loadings
@@ -96,8 +95,13 @@ export const SaleCartComponent = () => {
             return;
         }
 
-        const data = { products: saleCart };
-        
+        if (saleState.nit === '' || saleState.first_name === '' || saleState.last_name === '' || saleState.phone === '') {
+            alert('Debe proporcionar datos del cliente');
+            return;
+        }
+
+        const data = { ...saleState, products: saleCart };
+
         setProformLoading(true);
         // call api
         const resp = await createApiProform(data);
@@ -107,7 +111,7 @@ export const SaleCartComponent = () => {
 
     const handlePrint = useReactToPrint({
         content: () => pdfRef.current,
-        onAfterPrint: () => onClean(),
+        // onAfterPrint: () => onClean(),
     });
 
     useEffect(() => {
@@ -117,7 +121,7 @@ export const SaleCartComponent = () => {
     }, [handlePrint, proform]);
 
     return (
-        <>
+        <main className="flex flex-col h-full">
             <section className="p-2 md:mx-auto md:w-[500px]">
                 <h4 className="text-lg font-medium text-gray-800">Registrar Ventas</h4>
 
@@ -135,7 +139,6 @@ export const SaleCartComponent = () => {
                         <Button
                             type="submit"
                             color="success"
-                        // onClick={findClient}
                         >
                             {searchLoading ? <Spinner color="white" size="md" /> : <i className="las la-search la-lg" />}
                         </Button>
@@ -224,7 +227,7 @@ export const SaleCartComponent = () => {
                             <Button type="button" color="danger" onClick={onClean}>Limpiar</Button>
                         </div>
                         <div className="flex-1">
-                            <Button type="button" color="success" onClick={printProform}>
+                            <Button type="button" color="success" onClick={proform ? handlePrint : printProform}>
                                 {proformLoading ? <Spinner color="white" size="md" /> : 'Proforma'}
                             </Button>
                         </div>
@@ -242,6 +245,6 @@ export const SaleCartComponent = () => {
                     <Print ref={pdfRef} proform={proform} />
                 </div>
             }
-        </>
+        </main>
     );
 };

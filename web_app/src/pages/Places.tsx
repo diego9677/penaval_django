@@ -27,8 +27,8 @@ export const Places = () => {
     getPlaces(controller.signal);
 
     return () => {
-      controller.abort()
-    }
+      controller.abort();
+    };
   }, []);
 
 
@@ -50,22 +50,24 @@ export const Places = () => {
 
   return (
     <main className="flex flex-col md:gap-8 md:mx-auto md:w-[500px]">
-      <header className="flex justify-between py-2 px-4 md:p-0">
-        <div className="w-20">
+      <header className="flex items-center px-4 md:p-0 h-12 gap-6">
+        <div className="flex-initial">
           <Link to="/places/form">
             <Button type="button">Nuevo</Button>
           </Link>
         </div>
 
-        <form className="flex gap-2 items-center" onSubmit={onSubmit}>
-          <Input
-            type="text"
-            placeholder="Ej: Lugar 'X'"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
+        <form className="flex-1 flex gap-2 items-center" onSubmit={onSubmit}>
+          <div className="flex-1">
+            <Input
+              type="text"
+              placeholder="Ej: Lugar 'X'"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+          </div>
 
-          <div className="w-12">
+          <div className="flex-initial">
             <Button type="submit" color="success">
               <i className="las la-search la-lg" />
             </Button>
@@ -73,7 +75,7 @@ export const Places = () => {
         </form>
       </header>
 
-      <section className="overflow-auto h-[calc(100vh_-_9rem)] py-2 px-4 md:p-0">
+      <section className="overflow-auto h-[calc(100vh_-_6rem)] md:h-[calc(100vh_-_9rem)] py-2 px-4 md:p-0">
         {!loading && places.map(p => (
           <Link to={`/places/form?id=${p.id}`} className="flex flex-col gap-1 py-2 border-b" key={p.id}>
             <span className="text-sm font-semibold text-gray-800">{p.name}</span>

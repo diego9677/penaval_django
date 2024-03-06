@@ -9,7 +9,7 @@ class ClientAdmin(admin.ModelAdmin):
 
 @admin.register(Sale)
 class SaleAdmin(admin.ModelAdmin):
-    list_display = ('pk', 'user', 'client', 'date')
+    list_display = ('pk', 'client', 'date')
 
 
 @admin.register(SaleDetail)
@@ -19,7 +19,7 @@ class SaleDetailAdmin(admin.ModelAdmin):
 
 @admin.register(Proform)
 class ProformaAdmin(admin.ModelAdmin):
-    list_display = ('pk', 'user', 'date')
+    list_display = ('pk', 'client', 'date')
 
 
 @admin.register(ProformDetail)

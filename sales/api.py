@@ -60,7 +60,9 @@ def get_proform(request: ASGIRequest, proform_id: int):
 
 @router.post('/proform/', response=ProformSchema)
 def create_proform(request: ASGIRequest, input: ProformIn):
-    proform = Proform.objects.select_related('products').create(user=request.user)
+    client, created = Client.objects.get_or_create(nit=input.nit, defaults=input.dict(exclude={'products'}))
+    print(client, created)
+    proform = Proform.objects.select_related('products').create(client=client, user=request.user)
     for product in input.products:
         ProformDetail.objects.create(
             proforma=proform,
