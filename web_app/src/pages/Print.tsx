@@ -37,23 +37,22 @@ export const Print = forwardRef<HTMLDivElement, Props>(({ proform }, ref) => {
             <style>{getPageStyle()}</style>
             <div className='bg-white rounded-sm p-5 flex flex-col gap-2' ref={ref}>
                 {/* header */}
-                <section className='flex items-start'>
+                <header className='flex items-start'>
                     <div className="flex-1 flex flex-col">
-                        <div className="flex gap-2 items-end">
-                            <div className="w-7 h-7 border"></div>
-                            <h3 className='text-xl text-neutral-800 font-medium'>PeñaVal</h3>
-                        </div>
-                        <p className="text-xs font-normal text-neutral-600">Av. Escuadron Velasco, Calle Remigimiento 31 esquina Miguel Castro Pintó #412</p>
+                        <img className="object-cover h-20 w-32" src="/static/logo.jpg" />
+                        <p className="text-xs font-normal text-neutral-600 text-left">Av. Escuadron Velasco, Calle Remigimiento 31<br />Esquina Miguel Castro Pintó #412</p>
                     </div>
                     <div className="flex flex-col items-end">
                         <p className="text-sm font-normal text-neutral-700">Nro:&nbsp;{proform.id}</p>
-                        <div className="h-24 w-24 border">
-
-                        </div>
+                        <img className="object-cover h-24 w-24" src="/static/qr_code.jpg" />
                     </div>
+                </header>
+
+                <section className="flex justify-center items-center">
+                    <h6 className="text-xl font-bold text-neutral-800">PROFORMA</h6>
                 </section>
                 {/* summary */}
-                <header className='flex items-end mb-5'>
+                <main className='flex items-end mb-5'>
                     <section className="flex-1 flex flex-col">
                         <h5 className='text-base font-bold text-neutral-800'>Cliente</h5>
                         <span className="text-sm font-normal text-neutral-700">{proform.client.first_name}&nbsp;{proform.client.last_name}</span>
@@ -72,7 +71,7 @@ export const Print = forwardRef<HTMLDivElement, Props>(({ proform }, ref) => {
                             {new Date(proform.date).toLocaleString()}
                         </p>
                     </div>
-                </header>
+                </main>
                 {/* table */}
                 <table className='border overflow-hidden rounded-lg border-neutral-200'>
                     <thead className='text-left text-xs font-medium uppercase text-neutral-800 bg-gray-200'>
