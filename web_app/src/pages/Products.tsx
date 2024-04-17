@@ -36,9 +36,9 @@ export const Products = () => {
   };
 
   return (
-    <main className="flex flex-col md:gap-8 md:mx-auto md:w-[500px] h-full">
-      <header className="flex items-center px-4 md:p-0 gap-6 h-12">
-
+    <main className="flex flex-col md:mx-auto md:w-[500px] h-full">
+      <header className="flex items-center px-4 md:p-0 gap-6 h-14">
+        
         <div className="flex-initial">
           <Link to="/products/form" className="btn btn-primary p-2">
             Nuevo
@@ -55,7 +55,7 @@ export const Products = () => {
             />
           </div>
 
-          <div className="">
+          <div className="flex-initial">
             <Button type="submit" color="success">
               <i className="las la-search la-lg" />
             </Button>
@@ -64,9 +64,9 @@ export const Products = () => {
 
       </header>
 
-      <section className="overflow-auto h-[calc(100vh_-_6rem)] md:h-[calc(100vh_-_9rem)] py-2 px-4 md:p-0">
+      <section className="overflow-auto flex-1 px-4 md:p-0">
         {!loading && products.map(p => (
-          <Link to={`/products/detail?id=${p.id}`} key={p.id} className="border-b flex gap-7 items-center py-2">
+          <Link to={`/products/detail?id=${p.id}`} key={p.id} className="border-b flex items-center py-2">
             <ProductItem product={p} />
           </Link>
         ))}

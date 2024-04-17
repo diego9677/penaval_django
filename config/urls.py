@@ -31,6 +31,8 @@ FRONTEND_URLS = [
     'products/detail',
     'brands',
     'brands/form',
+    'places',
+    'places/form',
     'providers',
     'providers/form',
     'sales',

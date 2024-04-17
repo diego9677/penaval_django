@@ -45,8 +45,8 @@ export const Providers = () => {
   };
 
   return (
-    <main className="flex flex-col w-full md:gap-8 md:mx-auto md:w-[500px]">
-      <header className="flex items-center px-4 md:p-0 h-12 gap-6">
+    <main className="flex flex-col w-full md:mx-auto md:w-[500px] h-full">
+      <header className="flex items-center px-4 md:p-0 h-14 gap-6">
         <div className="flex-initial">
           <Link to="/providers/form">
             <Button type="button">Nuevo</Button>
@@ -71,7 +71,7 @@ export const Providers = () => {
         </form>
       </header>
 
-      <section className="overflow-auto h-[calc(100vh_-_6rem)] md:h-[calc(100vh_-_9rem)] py-2 px-4 md:p-0">
+      <section className="overflow-auto flex-1 px-4 md:p-0">
         {!loading && providers.map(p => (
           <Link to={`/providers/form?id=${p.id}`} className="flex flex-col gap-1 border-b py-2" key={p.id}>
             <span className="text-sm font-semibold text-gray-800">{p.name}</span>

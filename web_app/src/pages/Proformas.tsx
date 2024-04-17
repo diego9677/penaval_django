@@ -33,8 +33,8 @@ export const Proformas = () => {
     }
 
     return (
-        <main className="flex flex-col md:gap-8 md:mx-auto md:w-[500px]">
-            <header className="flex items-center px-4 md:p-0 h-12">
+        <main className="flex flex-col md:gap-8 md:mx-auto md:w-[500px] h-full">
+            <header className="flex items-center px-4 md:p-0 h-14">
                 <form className="flex-1 flex gap-2 items-center" onSubmit={onSubmit}>
                     <div className="flex-1">
                         <Input
@@ -53,7 +53,7 @@ export const Proformas = () => {
                 </form>
             </header>
 
-            <section className="overflow-auto h-[calc(100vh_-_6rem)] md:h-[calc(100vh_-_9rem)] py-2 px-4 md:p-0">
+            <section className="overflow-auto flex-1 px-4 md:p-0">
                 {message && !loading && (
                     <div className="flex justify-center items-center h-full">
                         <p className="text-sm font-medium text-neutral-800">{message}</p>

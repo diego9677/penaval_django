@@ -63,7 +63,7 @@ export const BrandForm = () => {
   }
 
   return (
-    <main className="flex justify-center">
+    <main className="flex justify-center h-full">
       <form className="w-full sm:w-1/2 flex flex-col gap-4 md:gap-6 p-4 md:p-0" onSubmit={onSubmit}>
         <header className="border-b flex py-2">
           <div className="w-8">

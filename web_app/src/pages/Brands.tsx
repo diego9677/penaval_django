@@ -45,8 +45,8 @@ export const Brands = () => {
   };
 
   return (
-    <main className="flex flex-col md:gap-8 md:mx-auto md:w-[500px]">
-      <header className="flex items-center px-4 md:p-0 gap-6 h-12">
+    <main className="flex flex-col md:mx-auto md:w-[500px] h-full">
+      <header className="flex items-center px-4 md:p-0 gap-6 h-14">
 
         <div className="flex-initial">
           <Link to="/brands/form">
@@ -73,7 +73,7 @@ export const Brands = () => {
         
       </header>
 
-      <section className="overflow-auto h-[calc(100vh_-_6rem)] md:h-[calc(100vh_-_9rem)] py-2 px-4 md:p-0">
+      <section className="overflow-auto flex-1 px-4 md:p-0">
         {!loading && brands.map(b => (
           <Link to={`/brands/form?id=${b.id}`} className="flex flex-col gap-1 border-b py-2" key={b.id}>
             <span className="text-sm font-semibold text-gray-800">{b.name}</span>

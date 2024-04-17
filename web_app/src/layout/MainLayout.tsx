@@ -57,7 +57,7 @@ export const MainLayout = ({ title, children }: Props) => {
   };
 
   return (
-    <main className="flex w-full" style={{ height: `${height}px` }}>
+    <main className="fixed w-full" style={{ height: `${height}px` }}>
       <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
         <header className="flex p-4 items-center">
           <h4 className='flex-1 text-2xl text-gray-300 font-bold'>PeñaVal</h4>
@@ -73,29 +73,27 @@ export const MainLayout = ({ title, children }: Props) => {
           <NavItem icon={<i className="las la-file-alt la-lg" />} to="/proform" title="Proformas" />
         </div>
       </Drawer>
-      <section className="flex-1 h-full">
-        <div className="flex flex-col">
-          <header className="flex items-center border-b px-4 h-12">
-            <div className="flex-1 flex items-center gap-2">
-              <button className="outline-none text-lg mt-1" onClick={() => setIsOpen(true)}>
-                <i className="las la-bars la-lg" />
-              </button>
-              <h4 className='text-2xl text-gray-700 font-bold'>PeñaVal</h4>
-            </div>
+      <section className="h-full flex flex-col">
+        <header className="flex items-center border-b px-4 h-14">
+          <div className="flex-1 flex items-center gap-2">
+            <button className="outline-none text-lg mt-1" onClick={() => setIsOpen(true)}>
+              <i className="las la-bars la-lg" />
+            </button>
+            <h4 className='text-2xl text-gray-700 font-bold'>PeñaVal</h4>
+          </div>
 
-            <div className="flex items-center gap-2">
-              <section className="relative">
-                <Link className={clsx("text-xl md:hover:bg-neutral-300 rounded-full p-1", window.location.pathname.includes('cart') ? "text-blue-600" : "text-neutral-800")} to="/cart">
-                  <i className="las la-shopping-cart la-lg" />
-                </Link>
-                {(saleCart.length > 0 || shoppingCart.length > 0) && <span className="absolute -right-0.5 top-0 w-2.5 h-2.5 rounded-full bg-red-500"></span>}
-              </section>
-            </div>
-          </header>
-          <section className="md:py-2 md:px-4 h-[calc(100vh_-_3rem)]">
-            {children}
-          </section>
-        </div>
+          <div className="flex items-center gap-2">
+            <section className="relative">
+              <Link className={clsx("text-xl md:hover:bg-neutral-300 rounded-full p-1", window.location.pathname.includes('cart') ? "text-blue-600" : "text-neutral-800")} to="/cart">
+                <i className="las la-shopping-cart la-lg" />
+              </Link>
+              {(saleCart.length > 0 || shoppingCart.length > 0) && <span className="absolute -right-0.5 top-0 w-2.5 h-2.5 rounded-full bg-red-500"></span>}
+            </section>
+          </div>
+        </header>
+        <section className="md:py-2 md:px-4 flex-1 overflow-auto">
+          {children}
+        </section>
       </section>
     </main>
   );
