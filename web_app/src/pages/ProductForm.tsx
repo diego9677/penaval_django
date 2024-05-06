@@ -31,7 +31,7 @@ export const ProductForm = () => {
     const controller = new AbortController();
 
     if (id) {
-      Promise.all([getApiProduct(Number(id), controller.signal), getApiBrands('', controller.signal), getApiPlaces('', controller.signal)])
+      Promise.all([getApiProduct(Number(id), controller.signal), getApiBrands('', 100, controller.signal), getApiPlaces('', controller.signal)])
         .then(([product, brands, places]) => {
           const { code, measures, price, place: { id: place_id }, brand: { id: brand_id } } = product;
           setData({
@@ -46,7 +46,7 @@ export const ProductForm = () => {
           setLoading(false);
         });
     } else {
-      Promise.all([getApiBrands('', controller.signal), getApiPlaces('', controller.signal)])
+      Promise.all([getApiBrands('', 100, controller.signal), getApiPlaces('', controller.signal)])
         .then(([brands, places]) => {
           setBrands(brands);
           setPlaces(places);
@@ -148,6 +148,7 @@ export const ProductForm = () => {
         <section className="flex flex-col md:flex-row gap-4">
           <div className="flex-1">
             <Select
+              isFilter
               label="Marca"
               options={brands.map(b => ({ label: b.name, value: b.id }))}
               value={data.brand_id}

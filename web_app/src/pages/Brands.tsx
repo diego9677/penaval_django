@@ -34,7 +34,7 @@ export const Brands = () => {
 
   const getProviders = async (signal?: AbortSignal) => {
     setLoading(true);
-    const data = await getApiBrands(search, signal);
+    const data = await getApiBrands(search, 20, signal);
     setBrands(data);
     setLoading(false);
   };
