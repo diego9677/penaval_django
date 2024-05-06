@@ -158,6 +158,7 @@ export const ProductForm = () => {
 
           <div className="flex-1">
             <Select
+              isFilter
               label="Lugar"
               options={places.map(p => ({ label: p.name, value: p.id }))}
               value={data.place_id}
