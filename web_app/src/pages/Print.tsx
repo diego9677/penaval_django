@@ -6,9 +6,9 @@ interface Props {
 }
 
 const COLUMNS = [
-    'cod',
+    'producto',
     'cantidad',
-    'p. venta',
+    'precio',
     'subtotal'
 ];
 // landscape
@@ -18,7 +18,7 @@ export const Print = forwardRef<HTMLDivElement, Props>(({ proform }, ref) => {
 
     const setTotal = () => {
         const total = proform.proform_detail.reduce((acc, el) => acc + (el.amount * el.unit_price), 0);
-        return total;
+        return total.toFixed(2);
     };
 
     const getPageStyle = () => {
@@ -35,58 +35,69 @@ export const Print = forwardRef<HTMLDivElement, Props>(({ proform }, ref) => {
     return (
         <>
             <style>{getPageStyle()}</style>
-            <div className='bg-white rounded-sm p-5 flex flex-col gap-8' ref={ref}>
+            <div className='bg-white rounded-sm p-5 flex flex-col gap-2' ref={ref}>
                 {/* header */}
-                <div className='flex justify-between items-start'>
-                    <div className='flex gap-3'>
-                        <div className='w-4 bg-blue-600' />
-                        <h3 className='flex-1 text-xl text-neutral-800 font-medium'>PeñaVal</h3>
+                <header className='flex items-start'>
+                    <div className="flex-1 flex flex-col">
+                        <img className="object-cover h-20 w-32" src="/static/logo.jpg" />
+                        <p className="text-xs font-normal text-neutral-600 text-left">Av. Escuadron Velasco, Calle Remigimiento 31<br />Esquina Miguel Castro Pintó #412</p>
                     </div>
-                </div>
+                    <div className="flex flex-col items-end">
+                        <p className="text-sm font-normal text-neutral-700">Nro:&nbsp;{proform.id}</p>
+                        <img className="object-cover h-24 w-24" src="/static/qr_code.jpg" />
+                    </div>
+                </header>
+
+                <section className="flex justify-center items-center">
+                    <h6 className="text-xl font-bold text-neutral-800">PROFORMA</h6>
+                </section>
                 {/* summary */}
-                <div className='flex flex-col gap-1'>
-                    <div className='flex justify-between items-center'>
-                        <h5 className='text-base font-bold text-neutral-800'>Proforma: {proform.id}</h5>
+                <main className='flex items-end mb-5'>
+                    <section className="flex-1 flex flex-col">
+                        <h5 className='text-base font-bold text-neutral-800'>Cliente</h5>
+                        <span className="text-sm font-normal text-neutral-700">{proform.client.first_name}&nbsp;{proform.client.last_name}</span>
+                        <div className="flex items-center">
+                            <span className="text-sm font-normal text-neutral-700">Nit:&nbsp;</span>
+                            <span className="text-sm font-normal text-neutral-600">{proform.client.nit}</span>
+                        </div>
+                        <div className="flex items-center">
+                            <span className="text-sm font-normal text-neutral-700">Teléfono:&nbsp;</span>
+                            <span className="text-sm font-normal text-neutral-600">{proform.client.phone}</span>
+                        </div>
+                    </section>
+                    <div className="flex items-center">
+                        <span className="text-sm font-normal text-neutral-700">Fecha:&nbsp;</span>
                         <p className='text-sm font-light text-neutral-600 flex gap-1 items-center'>
-                            <i className='las la-clock la-lg' />
                             {new Date(proform.date).toLocaleString()}
                         </p>
                     </div>
-                </div>
+                </main>
                 {/* table */}
-                <table className='report'>
-                    <thead className='text-xs font-semibold uppercase text-gray-2 bg-neutral-200'>
-                        <tr className='font-semibold text-left'>
+                <table className='border overflow-hidden rounded-lg border-neutral-200'>
+                    <thead className='text-left text-xs font-medium uppercase text-neutral-800 bg-gray-200'>
+                        <tr className=''>
                             {COLUMNS.map((c, i) => <th key={i} className='p-2'>{c}</th>)}
                         </tr>
                     </thead>
 
-                    <tbody className='text-sm text-neutral-800 divide-y divide-gray-100'>
+                    <tbody className='text-sm text-neutral-800 divide-y divide-neutral-200 font-normal'>
                         {proform.proform_detail.map((d) => (
-                            <tr key={d.id} className='text-gray-700 text-sm font-normal'>
-                                <td className='p-2'>
-                                    <p className="text-sm font-medium text-black">{d.product.code}</p>
-                                </td>
-                                <td className='p-2'>
-                                    <p className="text-sm font-medium text-black">{d.amount}</p>
-                                </td>
-                                <td className='p-2'>
-                                    <p className="text-sm font-medium text-black">{d.unit_price} Bs</p>
-                                </td>
-                                <td className='p-2'>
-                                    <p className="text-sm font-medium text-black">{d.subtotal} Bs</p>
-                                </td>
+                            <tr key={d.id}>
+                                <td className='p-2'>{d.product.code}</td>
+                                <td className='p-2'>{d.amount}</td>
+                                <td className='p-2'>{d.unit_price}&nbsp;Bs</td>
+                                <td className='p-2'>{d.subtotal}&nbsp;Bs</td>
                             </tr>
                         ))}
                     </tbody>
 
                     <tfoot>
-                        <tr className="sticky bottom-0 text-left bg-neutral-200 text-gray-800 text-sm font-semibold">
-                            <td className="p-2 uppercase" colSpan={3}>
+                        <tr className="sticky bottom-0 text-left bg-gray-200">
+                            <td className="p-2 uppercase text-neutral-800 text-sm font-semibold" colSpan={3}>
                                 Total:
                             </td>
-                            <td className="p-2" colSpan={1}>
-                                {setTotal()} Bs
+                            <td className="p-2 text-neutral-800 text-sm font-normal" colSpan={1}>
+                                {setTotal()}&nbsp;Bs
                             </td>
                         </tr>
                     </tfoot>

@@ -98,8 +98,8 @@ export const deleteApiProvider = async (id: number) => {
 };
 
 // brands section
-export const getApiBrands = async (search: string, signal?: AbortSignal) => {
-  const response = await fetch(`/api/brands/?search=${search}`, { signal , headers })
+export const getApiBrands = async (search: string, limit: number, signal?: AbortSignal) => {
+  const response = await fetch(`/api/brands/?search=${search}&limit=${limit}`, { signal , headers })
   const data: Brand[] = await response.json()
   return data;
 };

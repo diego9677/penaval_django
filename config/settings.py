@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', False) == 'on'
 
-ALLOWED_HOSTS = ['localhost', 'penaval.com', '*']
+ALLOWED_HOSTS = ['localhost', 'penaval.com']
 
 INTERNAL_IPS = [
     'localhost',
@@ -137,6 +137,9 @@ STATICFILES_DIRS = [
     BASE_DIR / 'web_app/dist'
 ]
 STATIC_ROOT = BASE_DIR / 'static'
+
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

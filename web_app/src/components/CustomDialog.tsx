@@ -37,7 +37,7 @@ export function CustomDialog({ dialog, closeDialog, children }: Props) {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <div className="z-50 overflow-hidden rounded-lg bg-white p-4 md:p-6 text-left shadow-xl w-11/12 md:w-1/3">
+            <div className="z-50 overflow-hidden rounded-md bg-white p-4 md:p-6 text-left shadow-xl w-11/12 md:w-1/3">
               {children}
             </div>
           </Transition.Child>

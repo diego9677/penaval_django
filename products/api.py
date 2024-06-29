@@ -80,8 +80,8 @@ def delete_place(request: HttpRequest, id: int):
 
 # brands section
 @router.get('brands/', response=List[BrandSchema])
-def get_brands(request: HttpRequest, search: str):
-    qs = Brand.objects.filter(name__icontains=search).order_by('id')[:20]
+def get_brands(request: HttpRequest, search: str, limit: int):
+    qs = Brand.objects.filter(name__icontains=search).order_by('id')[:limit]
     return qs
 
 

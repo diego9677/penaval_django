@@ -15,12 +15,14 @@ type Props = {
   value?: string | number | readonly string[];
   color?: 'primary' | 'danger' | 'success';
   options: Item[];
+  isFilter?: boolean;
   onChange: (value: string | number) => void;
 };
 
 
-export const Select = ({ id, label, options, value, onChange }: Props) => {
+export const Select = ({ id, label, options, value, isFilter = false, onChange }: Props) => {
   const [selected, setSelected] = useState<Item | string>('');
+  const [filter, setFilter] = useState('');
 
   useEffect(() => {
     setSelected(options.find((o) => o.value === value) || '');
@@ -30,6 +32,8 @@ export const Select = ({ id, label, options, value, onChange }: Props) => {
     setSelected(item);
     onChange(item.value);
   };
+
+  const filteredList = () => options.filter(o => o.label.toLowerCase().includes(filter.toLowerCase()));
 
   return (
     <section className="flex flex-col gap-1">
@@ -49,7 +53,11 @@ export const Select = ({ id, label, options, value, onChange }: Props) => {
             leaveTo="opacity-0"
           >
             <Listbox.Options className="absolute z-10 mt-2 max-h-60 w-full overflow-auto rounded-sm bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-              {options.map((o, i) => (
+              {isFilter &&
+                <div className='p-2 border-b border-dashed border-neutral-300'>
+                  <input type="text" placeholder='Buscar...' className="form-control" value={filter} onChange={(e) => setFilter(e.target.value)} />
+                </div>}
+              {filteredList().map((o, i) => (
                 <Listbox.Option
                   key={i}
                   className={({ active, selected }) => clsx('relative cursor-default select-none p-2', active || selected ? 'bg-blue-100 text-blue-900' : 'text-gray-900')}
