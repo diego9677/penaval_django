@@ -13,7 +13,7 @@ router = Router()
 def get_products(request: HttpRequest, search: str):
     qs = Product.objects.select_related('brand', 'place').filter(
         Q(code__icontains=search) |
-        Q(measures__icontains=search) |
+        Q(measures__startswith=search) |
         Q(brand__name__icontains=search)
     ).order_by('id')[:20]
     return qs
