@@ -110,7 +110,7 @@ export const Products = () => {
 
       <section className="overflow-auto flex-1 px-4 md:p-0">
         {!loading && filterList().map(p => (
-          <Link to={`/products/detail?id=${p.id}`} key={p.id} className="border-b flex items-center py-2">
+          <Link to={`/products/detail?id=${p.id}`} key={p.id} className="border-b flex items-center py-2" style={{ contentVisibility: 'auto' }}>
             <ProductItem product={p} />
           </Link>
         ))}
