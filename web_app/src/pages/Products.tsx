@@ -38,6 +38,7 @@ export const Products = () => {
 
   const filterList = () => products.filter(p => tab === 0 ? true : p.place.id === tab).filter(p => {
     const [internal, external, height] = p.measures.split('x');
+
     return (filters.internal === '' || internal.includes(filters.internal)) &&
       (filters.external === '' || external.includes(filters.external)) &&
       (filters.height === '' || height.includes(filters.height));
