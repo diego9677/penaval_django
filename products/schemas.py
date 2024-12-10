@@ -9,6 +9,8 @@ class BrandSchema(ModelSchema):
 
 
 class PlaceSchema(ModelSchema):
+    products_count: int = 0
+
     class Config:
         model = Place
         model_fields = ['id', 'name', 'description']

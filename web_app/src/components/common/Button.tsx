@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import React from "react";
 
 type Props = {
@@ -9,10 +8,6 @@ type Props = {
   size?: 'xs' | 'md';
 };
 
-const SIZES = {
-  'xs': 'p-1',
-  'md': 'p-2'
-};
 
 const COLORS = {
   'primary': 'btn btn-primary',
@@ -21,10 +16,10 @@ const COLORS = {
   'success': 'btn btn-success'
 };
 
-export const Button = ({ type, size = 'md', color = 'primary', onClick, children }: Props) => {
+export const Button = ({ type, color = 'primary', onClick, children }: Props) => {
   return (
     <button
-      className={clsx(SIZES[size], COLORS[color])}
+      className={COLORS[color]}
       type={type}
       onClick={onClick}
     >

@@ -5,7 +5,7 @@
 
 @layer components {
   .btn {
-    @apply w-full ring-1 outline-none rounded-sm shadow-sm text-sm font-medium text-gray-100 flex justify-center items-center;
+    @apply w-full h-full ring-1 outline-none rounded-sm shadow-sm text-sm font-medium text-gray-100 flex justify-center items-center;
   }
 
   .form-control {

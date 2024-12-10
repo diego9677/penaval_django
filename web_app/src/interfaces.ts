@@ -33,6 +33,7 @@ interface ProductShort {
 export interface Place {
   id: number;
   name: string;
+  products_count: number;
   description?: string;
   products?: ProductShort[];
 }

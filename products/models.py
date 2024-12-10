@@ -17,6 +17,10 @@ class Place(models.Model):
     name = models.CharField(max_length=200, verbose_name='Nombre')
     description = models.TextField(blank=True, null=True, verbose_name='Descripción')
 
+    @property
+    def products_count(self):
+        return self.products.count()
+
     def __str__(self):
         return self.name
 

@@ -15,7 +15,7 @@ def get_products(request: HttpRequest, search: str):
         Q(code__icontains=search) |
         Q(measures__startswith=search) |
         Q(brand__name__icontains=search)
-    ).order_by('id')[:20]
+    ).order_by('id')
     return qs
 
 
@@ -48,7 +48,7 @@ def delete_product(request: HttpRequest, id: int):
 # places section
 @router.get('places/', response=List[PlaceSchema])
 def get_places(request: HttpRequest, search: str):
-    qs = Place.objects.filter(name__iendswith=search).order_by('id')[:20]
+    qs = Place.objects.prefetch_related('products').filter(name__iendswith=search).order_by('id')
     return qs
 
 
