@@ -47,33 +47,35 @@ export const Products = () => {
     <main className="flex flex-col md:mx-auto md:w-[500px] h-full relative">
       <header className="flex flex-col px-4 md:p-0 h-32 justify-evenly">
 
-        <section className="flex border divide-x rounded-l-lg rounded-r-lg">
+        <div className="overflow-auto pb-2 flex">
+          <section className="flex-1 flex divide-x border rounded-l-lg rounded-r-lg">
 
-          <button className={clsx("flex-1 p-2 flex items-center gap-1 hover:bg-gray-100 hover:rounded-l-lg", tab === 0 && "bg-gray-100")} onClick={() => setTab(0)}>
-            <span className="py-1 px-2 rounded-lg bg-gray-900">
-              <p className="text-white text-xs font-bold">{products.length}</p>
-            </span>
-            <p className={clsx("flex-1 font-semibold text-xs", tab === 0 ? "text-black" : "text-gray-500")}>Todos</p>
-          </button>
-
-          {places.map((p, i) => (
-            <button
-              key={p.id}
-              className={clsx("flex-1 p-2 flex items-center gap-1 hover:bg-gray-100", tab === p.id && "bg-gray-100", i === places.length - 1 && "hover:rounded-r-lg")}
-              onClick={() => {
-                setTab(p.id);
-              }}
-            >
+            <button className={clsx("flex-1 p-2 flex items-center gap-1 hover:bg-gray-100 hover:rounded-l-lg", tab === 0 && "bg-gray-100")} onClick={() => setTab(0)}>
               <span className="py-1 px-2 rounded-lg bg-gray-900">
-                <p className="text-white text-xs font-bold">{p.products_count}</p>
+                <p className="text-white text-xs font-bold">{products.length}</p>
               </span>
-              <div className="flex-1 flex items-start flex-col">
-                <p className={clsx("text-xs font-semibold whitespace-nowrap line-clamp-1", tab === p.id ? "text-black" : "text-gray-500")}>{p.name}</p>
-                <p className={clsx("text-xs font-light whitespace-nowrap line-clamp-1", tab === p.id ? "text-gray-600" : "text-gray-400")}>{p.description}</p>
-              </div>
+              <p className={clsx("flex-1 font-semibold text-xs", tab === 0 ? "text-black" : "text-gray-500")}>Todos</p>
             </button>
-          ))}
-        </section>
+
+            {places.map((p, i) => (
+              <button
+                key={p.id}
+                className={clsx("flex-1 p-2 flex items-center gap-1 hover:bg-gray-100", tab === p.id && "bg-gray-100", i === places.length - 1 && "hover:rounded-r-lg")}
+                onClick={() => {
+                  setTab(p.id);
+                }}
+              >
+                <span className="py-1 px-2 rounded-lg bg-gray-900">
+                  <p className="text-white text-xs font-bold">{p.products_count}</p>
+                </span>
+                <div className="flex-1 flex items-start flex-col">
+                  <p className={clsx("text-xs font-semibold whitespace-nowrap line-clamp-1", tab === p.id ? "text-black" : "text-gray-500")}>{p.name}</p>
+                  <p className={clsx("text-xs font-light whitespace-nowrap line-clamp-1", tab === p.id ? "text-gray-600" : "text-gray-400")}>{p.description}</p>
+                </div>
+              </button>
+            ))}
+          </section>
+        </div>
 
         <section className="flex gap-2 items-center">
           <div className="flex-1 h-8">
