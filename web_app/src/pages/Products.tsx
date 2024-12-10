@@ -44,6 +44,14 @@ export const Products = () => {
       (filters.height === '' || height === filters.height);
   });
 
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-full">
+        <Spinner color="primary" size="lg" />
+      </div>
+    );
+  }
+
   return (
     <main className="flex flex-col md:mx-auto md:w-[500px] h-full relative">
       <header className="flex flex-col px-4 md:p-0 h-32 justify-evenly">
@@ -110,16 +118,11 @@ export const Products = () => {
       </header>
 
       <section className="overflow-auto flex-1 px-4 md:p-0">
-        {!loading && filterList().map(p => (
+        {filterList().map(p => (
           <Link to={`/products/detail?id=${p.id}`} key={p.id} className="border-b flex items-center py-2" style={{ contentVisibility: 'auto' }}>
             <ProductItem product={p} />
           </Link>
         ))}
-        {loading &&
-          <div className="flex justify-center items-center h-full">
-            <Spinner color="primary" size="lg" />
-          </div>
-        }
       </section>
 
       <div className="absolute bottom-5 right-5">
