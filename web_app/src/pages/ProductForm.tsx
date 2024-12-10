@@ -100,7 +100,7 @@ export const ProductForm = () => {
           </div>
         </header>
 
-        <section className="flex flex-col md:flex-row gap-4">
+        <section className="flex flex-col md:flex-row gap-4 h-16">
           <div className="flex-1">
             <Input
               label="Codigo"
@@ -122,7 +122,7 @@ export const ProductForm = () => {
           </div>
         </section>
 
-        <section className="flex flex-col md:flex-row gap-4">
+        <section className="flex flex-col md:flex-row gap-4 h-16">
           <div className="flex-1">
             <Input
               label="Precio (Bs)"
@@ -167,7 +167,7 @@ export const ProductForm = () => {
           </div>
         </section>
 
-        <div className="flex gap-2">
+        <div className="flex gap-2 h-8">
           {id && (
             <div className="flex-1">
               <BtnDeletaConfirmDialog

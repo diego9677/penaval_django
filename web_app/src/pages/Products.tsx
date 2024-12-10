@@ -44,7 +44,7 @@ export const Products = () => {
   });
 
   return (
-    <main className="flex flex-col md:mx-auto md:w-[500px] h-full">
+    <main className="flex flex-col md:mx-auto md:w-[500px] h-full relative">
       <header className="flex flex-col px-4 md:p-0 h-32 justify-evenly">
 
         <section className="flex border divide-x rounded-l-lg rounded-r-lg">
@@ -118,6 +118,14 @@ export const Products = () => {
           </div>
         }
       </section>
+
+      <div className="absolute bottom-5 right-5">
+        <Link to="/products/form">
+          <div className="h-10 w-10 bg-blue-600 rounded-full flex justify-center items-center text-white">
+            <i className="las la-plus la-lg" />
+          </div>
+        </Link>
+      </div>
     </main>
   );
 };

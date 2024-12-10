@@ -43,27 +43,35 @@ export const SaleFormDetail = ({ product, onConfirmDialog, closeDialog }: Props)
         <form className="flex flex-col gap-4" onSubmit={onSubmit}>
             <h3 className="text-lg text-center font-bold text-neutral-800">Venta</h3>
 
-            <Input
-                type="number"
-                label="Cantidad"
-                color="primary"
-                min={0}
-                placeholder="'3'"
-                value={saleState.amount === 0 ? '' : saleState.amount}
-                onChange={(e) => setSaleState({ ...saleState, amount: Number(e.target.value) })}
-            />
-            <Input
-                type="number"
-                step={0.1}
-                min={0}
-                label="Precio de venta (Bs)"
-                color="primary"
-                placeholder="'40.5'"
-                value={saleState.unit_price === 0 ? '' : saleState.unit_price}
-                onChange={(e) => setSaleState({ ...saleState, unit_price: Number(e.target.value) })}
-            />
+            <div className="div h-14">
+                <Input
+                    type="number"
+                    label="Cantidad"
+                    color="primary"
+                    min={0}
+                    placeholder="'3'"
+                    value={saleState.amount === 0 ? '' : saleState.amount}
+                    onChange={(e) => setSaleState({ ...saleState, amount: Number(e.target.value) })}
+                />
+            </div>
 
-            <Button type="submit" color="primary">Agregar</Button>
+
+            <div className="h-14">
+                <Input
+                    type="number"
+                    step={0.1}
+                    min={0}
+                    label="Precio de venta (Bs)"
+                    color="primary"
+                    placeholder="'40.5'"
+                    value={saleState.unit_price === 0 ? '' : saleState.unit_price}
+                    onChange={(e) => setSaleState({ ...saleState, unit_price: Number(e.target.value) })}
+                />
+            </div>
+
+            <div className="h-8">
+                <Button type="submit" color="primary">Agregar</Button>
+            </div>
         </form>
     );
 };

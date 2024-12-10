@@ -102,15 +102,21 @@ export const ProductDetail = () => {
         </main>
 
         <footer className="flex flex-col gap-5">
-          <Button type="button" color="primary" onClick={() => openDialog('sale')}>
-            Venta
-          </Button>
-          <Button type="button" color="success" onClick={() => openDialog('shopping')}>
-            Compra
-          </Button>
-          <Link to={`/products/form?id=${id}`} className="btn btn-secondary p-2 text-center">
-            Editar
-          </Link>
+          <div className="h-8">
+            <Button type="button" color="primary" onClick={() => openDialog('sale')}>
+              Venta
+            </Button>
+          </div>
+          <div className="h-8">
+            <Button type="button" color="success" onClick={() => openDialog('shopping')}>
+              Compra
+            </Button>
+          </div>
+          <div className="h-8">
+            <Link to={`/products/form?id=${id}`} className="btn btn-secondary text-center">
+              Editar
+            </Link>
+          </div>
         </footer>
       </section>
 

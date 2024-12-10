@@ -36,7 +36,7 @@ export const Proformas = () => {
         <main className="flex flex-col md:gap-8 md:mx-auto md:w-[500px] h-full">
             <header className="flex items-center px-4 md:p-0 h-14">
                 <form className="flex-1 flex gap-2 items-center" onSubmit={onSubmit}>
-                    <div className="flex-1">
+                    <div className="flex-1 h-8">
                         <Input
                             type="number"
                             placeholder="Ej: Proforma"
@@ -45,7 +45,7 @@ export const Proformas = () => {
                         />
                     </div>
 
-                    <div className="flex-initial">
+                    <div className="flex-initial h-8 w-8">
                         <Button type="submit" color="success">
                             <i className="las la-search la-lg" />
                         </Button>

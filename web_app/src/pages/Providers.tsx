@@ -47,14 +47,14 @@ export const Providers = () => {
   return (
     <main className="flex flex-col w-full md:mx-auto md:w-[500px] h-full">
       <header className="flex items-center px-4 md:p-0 h-14 gap-6">
-        <div className="flex-initial">
+        <div className="flex-initial h-8 w-14">
           <Link to="/providers/form">
             <Button type="button">Nuevo</Button>
           </Link>
         </div>
 
         <form className="flex-1 flex gap-2 items-center" onSubmit={onSubmit}>
-          <div className="flex-1">
+          <div className="flex-1 h-8">
             <Input
               type="text"
               placeholder="Ej: Provedor 'X'"
@@ -63,7 +63,7 @@ export const Providers = () => {
             />
           </div>
 
-          <div className="flex-initial">
+          <div className="flex-initial h-8 w-8">
             <Button type="submit" color="success">
               <i className="las la-search la-lg" />
             </Button>

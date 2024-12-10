@@ -78,23 +78,27 @@ export const ProviderForm = () => {
           </div>
         </header>
 
-        <Input
-          label="Nombre"
-          type="text"
-          placeholder="'Mundo Repuesto'"
-          value={data.name}
-          onChange={(e) => setData({ ...data, name: e.target.value })}
-        />
+        <div className="h-14">
+          <Input
+            label="Nombre"
+            type="text"
+            placeholder="'Mundo Repuesto'"
+            value={data.name}
+            onChange={(e) => setData({ ...data, name: e.target.value })}
+          />
+        </div>
 
-        <Input
-          label="Dirección"
-          type="text"
-          placeholder="'Av. Siempre Viva'"
-          value={data.address}
-          onChange={(e) => setData({ ...data, address: e.target.value })}
-        />
+        <div className="h-14">
+          <Input
+            label="Dirección"
+            type="text"
+            placeholder="'Av. Siempre Viva'"
+            value={data.address}
+            onChange={(e) => setData({ ...data, address: e.target.value })}
+          />
+        </div>
 
-        <div className="flex gap-2">
+        <div className="flex gap-2 h-8">
           {id && (
             <div className="flex-1">
               <BtnDeletaConfirmDialog

@@ -11,10 +11,10 @@ type Props = {
 
 export const ShoppingFormDetail = ({ product, closeDialog, onConfirmDialog }: Props) => {
     const [shoppingState, setShoppingState] = useState<ShoppingCart>({
-        product_id: product.id, 
-        product_code: product.code, 
-        amount: 0, 
-        pucharse_price: Number(product.pucharse_price), 
+        product_id: product.id,
+        product_code: product.code,
+        amount: 0,
+        pucharse_price: Number(product.pucharse_price),
         sale_price: Number(product.price),
     });
 
@@ -45,39 +45,45 @@ export const ShoppingFormDetail = ({ product, closeDialog, onConfirmDialog }: Pr
         <form className="flex flex-col gap-4" onSubmit={onSubmit}>
             <h3 className="text-lg text-center font-bold text-neutral-800">Compra</h3>
 
-            <Input
-                type="number"
-                label="Cantidad"
-                color="primary"
-                placeholder="'3'"
-                min={0}
-                value={shoppingState.amount === 0 ? '' : shoppingState.amount}
-                onChange={(e) => setShoppingState({ ...shoppingState, amount: Number(e.target.value) })}
-            />
+            <div className="h-14">
+                <Input
+                    type="number"
+                    label="Cantidad"
+                    color="primary"
+                    placeholder="'3'"
+                    min={0}
+                    value={shoppingState.amount === 0 ? '' : shoppingState.amount}
+                    onChange={(e) => setShoppingState({ ...shoppingState, amount: Number(e.target.value) })}
+                />
+            </div>
+            <div className="h-14">
+                <Input
+                    type="number"
+                    step={0.1}
+                    min={0}
+                    label="Precio de compra (Bs)"
+                    color="primary"
+                    placeholder="'40.5'"
+                    value={shoppingState.pucharse_price === 0 ? '' : shoppingState.pucharse_price}
+                    onChange={(e) => setShoppingState({ ...shoppingState, pucharse_price: Number(e.target.value) })}
+                />
 
-            <Input
-                type="number"
-                step={0.1}
-                min={0}
-                label="Precio de compra (Bs)"
-                color="primary"
-                placeholder="'40.5'"
-                value={shoppingState.pucharse_price === 0 ? '' : shoppingState.pucharse_price}
-                onChange={(e) => setShoppingState({ ...shoppingState, pucharse_price: Number(e.target.value) })}
-            />
-
-            <Input
-                type="number"
-                step={0.1}
-                min={0}
-                label="Precio de venta (Bs)"
-                color="primary"
-                placeholder="'40.5'"
-                value={shoppingState.sale_price === 0 ? '' : shoppingState.sale_price}
-                onChange={(e) => setShoppingState({ ...shoppingState, sale_price: Number(e.target.value) })}
-            />
-
-            <Button type="submit" color="primary">Agregar</Button>
+            </div>
+            <div className="h-14">
+                <Input
+                    type="number"
+                    step={0.1}
+                    min={0}
+                    label="Precio de venta (Bs)"
+                    color="primary"
+                    placeholder="'40.5'"
+                    value={shoppingState.sale_price === 0 ? '' : shoppingState.sale_price}
+                    onChange={(e) => setShoppingState({ ...shoppingState, sale_price: Number(e.target.value) })}
+                />
+            </div>
+            <div className="h-8">
+                <Button type="submit" color="primary">Agregar</Button>
+            </div>
         </form>
     );
 };

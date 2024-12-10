@@ -136,10 +136,10 @@ export const ShoppingCartComponent = () => {
             </section>
 
             <section className="flex gap-4 h-14 items-center">
-                <div className="flex-1">
+                <div className="flex-1 h-8">
                     <Button type="button" color="danger" onClick={onClean}>Limpiar</Button>
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 h-8">
                     <Button type="submit" color="primary">
                         {saveLoading ? <Spinner color="white" size="md" /> : 'Guardar'}
                     </Button>

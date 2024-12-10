@@ -78,13 +78,15 @@ export const PlaceForm = () => {
           </div>
         </header>
 
-        <Input
-          label="Nombre"
-          type="text"
-          placeholder="'Bloque 1'"
-          value={data.name}
-          onChange={(e) => setData({ ...data, name: e.target.value })}
-        />
+        <div className="h-14">
+          <Input
+            label="Nombre"
+            type="text"
+            placeholder="'Bloque 1'"
+            value={data.name}
+            onChange={(e) => setData({ ...data, name: e.target.value })}
+          />
+        </div>
 
         <TextArea
           label="Descripción"
@@ -93,7 +95,7 @@ export const PlaceForm = () => {
           onChange={(e) => setData({ ...data, description: e.target.value })}
         />
 
-        <div className="flex gap-2">
+        <div className="flex gap-2 h-8">
           {id && (
             <div className="flex-1">
               <BtnDeletaConfirmDialog

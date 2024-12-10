@@ -122,9 +122,9 @@ export const SaleCartComponent = () => {
     return (
         <form className="px-4 py-2 md:mx-auto md:w-[500px] flex flex-col h-full" onSubmit={onSaveSale}>
             <h4 className="text-lg font-medium text-gray-800 h-8">Registrar Ventas (Bs)</h4>
-            <section className="flex h-16 items-start">
+            <section className="flex h-12 items-start">
                 <div className="flex-1 flex gap-2 items-end">
-                    <div className="flex-1">
+                    <div className="flex-1 h-12">
                         <Input
                             type="text"
                             label="Nit"
@@ -133,7 +133,7 @@ export const SaleCartComponent = () => {
                             onChange={(e) => setSaleState({ ...saleState, nit: e.target.value })}
                         />
                     </div>
-                    <div className="w-8 h-8">
+                    <div className="w-6 h-6">
                         <Button
                             type="button"
                             color="success"
@@ -147,7 +147,7 @@ export const SaleCartComponent = () => {
             </section>
 
             <section className="flex items-center gap-2 h-20">
-                <div className="flex-1">
+                <div className="flex-1 h-12">
                     <Input
                         type="text"
                         label="Nombres"
@@ -156,7 +156,7 @@ export const SaleCartComponent = () => {
                         onChange={(e) => setSaleState({ ...saleState, first_name: e.target.value })}
                     />
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 h-12">
                     <Input
                         type="text"
                         label="Apellidos"
@@ -165,7 +165,7 @@ export const SaleCartComponent = () => {
                         onChange={(e) => setSaleState({ ...saleState, last_name: e.target.value })}
                     />
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 h-12">
                     <Input
                         type="text"
                         label="Telefono"
@@ -223,15 +223,15 @@ export const SaleCartComponent = () => {
             </section>
 
             <section className="flex gap-4 h-14 items-center">
-                <div className="flex-1">
+                <div className="flex-1 h-8">
                     <Button type="button" color="danger" onClick={onClean}>Limpiar</Button>
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 h-8">
                     <Button type="button" color="success" onClick={proform ? handlePrint : printProform}>
                         {proformLoading ? <Spinner color="white" size="md" /> : 'Proforma'}
                     </Button>
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 h-8">
                     <Button type="submit" color="primary">
                         {saveLoading ? <Spinner color="white" size="md" /> : 'Venta'}
                     </Button>

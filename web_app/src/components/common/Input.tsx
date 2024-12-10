@@ -31,7 +31,7 @@ export const Input = ({ id, label, name, error, step, min, placeholder, color = 
       }
       <div className="relative flex items-center h-full">
         <input
-          className={clsx('h-full shadow-sm rounded-sm placeholder:text-gray-400 w-full text-sm font-normal text-gray-800 outline-none ring-1 ring-gray-300 focus:ring-2', COLORS[color])}
+          className={clsx('h-full px-2 shadow-sm rounded-sm placeholder:text-gray-400 w-full text-sm font-normal text-gray-800 outline-none ring-1 ring-gray-300 focus:ring-2', COLORS[color])}
           type={type === 'password' && show ? 'text' : type}
           value={value}
           placeholder={placeholder}
