@@ -9,7 +9,7 @@ import clsx from "clsx";
 
 export const Products = () => {
   const [tab, setTab] = useState<number>(0);
-  const [filters, setFilters] = useState({ internal: '', external: '', height: '' });
+  const [filters, setFilters] = useState({ word: '', internal: '', external: '', height: '' });
   const [products, setProducts] = useState<Product[]>([]);
   const [places, setPlaces] = useState<Place[]>([]);
   const [loading, setLoading] = useState(true);
@@ -38,10 +38,12 @@ export const Products = () => {
 
   const filterList = () => products.filter(p => tab === 0 ? true : p.place.id === tab).filter(p => {
     const [internal, external, height] = p.measures.split('x');
+    const criter = `${p.brand} ${p.code}`.toLowerCase()
+    const filter = filters.word.toLowerCase();
 
-    return (filters.internal === '' || internal === filters.internal) &&
+    return ((filters.internal === '' || internal === filters.internal) &&
       (filters.external === '' || external === filters.external) &&
-      (filters.height === '' || height === filters.height);
+      (filters.height === '' || height === filters.height)) && criter.includes(filter);
   });
 
   if (loading) {
@@ -54,7 +56,15 @@ export const Products = () => {
 
   return (
     <main className="flex flex-col md:mx-auto md:w-[500px] h-full relative">
-      <header className="flex flex-col px-4 md:p-0 h-32 justify-evenly">
+      <header className="flex flex-col px-4 md:p-0 h-44 justify-evenly">
+        <div className="h-8">
+            <Input
+              type="text"
+              placeholder="Buscar codigo, marca..."
+              name="word"
+              onChange={(e) => onChange(e.target.name, e.target.value)}
+            />
+          </div>
 
         <div className="overflow-auto pb-2 flex">
           <section className="flex-1 flex divide-x border rounded-l-lg rounded-r-lg">
