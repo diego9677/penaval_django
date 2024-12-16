@@ -14,6 +14,7 @@ import { Providers } from "./pages/Providers";
 import { ProductDetail } from "./pages/ProductDetail";
 import { Cart } from "./pages/Cart";
 import { Proformas } from "./pages/Proformas";
+import { SaleConfirmation } from "./pages/SaleConfirmation";
 // import { Sales } from "./pages/Sales";
 // import { Shopping } from "./pages/Shopping";
 // import { SaleForm } from "./pages/SaleForm";
@@ -118,6 +119,15 @@ const App = () => {
                 element={
                     <MainLayout title="Carrito">
                         <Cart />
+                    </MainLayout>
+                }
+            />
+
+            <Route
+                path="/sale"
+                element={
+                    <MainLayout title="Venta">
+                        <SaleConfirmation />
                     </MainLayout>
                 }
             />

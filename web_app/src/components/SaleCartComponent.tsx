@@ -8,6 +8,7 @@ import { TableBuilder } from "./TableBuilder";
 import { Print } from "../pages/Print";
 import { useReactToPrint } from "react-to-print";
 import { useStore } from "../store";
+import { useNavigate } from "react-router-dom";
 
 const COLUMNS = [
     'cod',
@@ -36,6 +37,7 @@ export const SaleCartComponent = () => {
     const setSaleCart = useStore(state => state.setSaleCart);
 
     const pdfRef = useRef<HTMLDivElement>(null);
+    const navigate = useNavigate();
 
     const removeItem = (productCode: string) => {
         const data = saleCart.filter(p => p.product_code !== productCode);
@@ -66,7 +68,8 @@ export const SaleCartComponent = () => {
 
         setSaveLoading(true);
         const data = { ...saleState, products: saleCart };
-        await createApiSale(data);
+        const resp = await createApiSale(data);
+        navigate(`/sale?sale_id=${resp.id}`);
         onClean();
         setSaveLoading(false);
     };
@@ -122,9 +125,9 @@ export const SaleCartComponent = () => {
     return (
         <form className="px-4 py-2 md:mx-auto md:w-[500px] flex flex-col h-full" onSubmit={onSaveSale}>
             <h4 className="text-lg font-medium text-gray-800 h-8">Registrar Ventas (Bs)</h4>
-            <section className="flex h-12 items-start">
-                <div className="flex-1 flex gap-2 items-end">
-                    <div className="flex-1 h-12">
+            <section className="flex h-14 items-start">
+                <div className="flex-1 flex gap-4 items-end">
+                    <div className="flex-1 h-14">
                         <Input
                             type="text"
                             label="Nit"
@@ -133,7 +136,7 @@ export const SaleCartComponent = () => {
                             onChange={(e) => setSaleState({ ...saleState, nit: e.target.value })}
                         />
                     </div>
-                    <div className="w-6 h-6">
+                    <div className="w-7 h-7">
                         <Button
                             type="button"
                             color="success"
@@ -146,8 +149,8 @@ export const SaleCartComponent = () => {
                 <div className="flex-1"></div>
             </section>
 
-            <section className="flex items-center gap-2 h-20">
-                <div className="flex-1 h-12">
+            <section className="flex items-center gap-6 h-24">
+                <div className="flex-1 h-14">
                     <Input
                         type="text"
                         label="Nombres"
@@ -156,7 +159,7 @@ export const SaleCartComponent = () => {
                         onChange={(e) => setSaleState({ ...saleState, first_name: e.target.value })}
                     />
                 </div>
-                <div className="flex-1 h-12">
+                <div className="flex-1 h-14">
                     <Input
                         type="text"
                         label="Apellidos"
@@ -165,7 +168,7 @@ export const SaleCartComponent = () => {
                         onChange={(e) => setSaleState({ ...saleState, last_name: e.target.value })}
                     />
                 </div>
-                <div className="flex-1 h-12">
+                <div className="flex-1 h-14">
                     <Input
                         type="text"
                         label="Telefono"

@@ -12,6 +12,14 @@ from .models import Sale, SaleDetail, Client, Proform, ProformDetail
 router = Router()
 
 
+@router.get('sales/{sale_id}/', response={200: SaleSchema, 404: dict})
+def get_sale(request: ASGIRequest, sale_id: int):
+    sale_db = Sale.objects.select_related('client').prefetch_related('products').filter(pk=sale_id).first()
+    if not sale_db:
+        return 404, {'error': 'Sale not found'}
+    return sale_db
+
+
 @router.get('sales/', response=List[SaleSchema])
 def get_sales(request: ASGIRequest, begin: str, end: str):
     date1 = datetime.fromisoformat(begin)
@@ -23,10 +31,9 @@ def get_sales(request: ASGIRequest, begin: str, end: str):
     return qs
 
 
-@router.post('sales/')
+@router.post('sales/', response={200: SaleSchema, 404: dict})
 def create_sales(request: ASGIRequest, input: SaleIn):
     client, created = Client.objects.get_or_create(nit=input.nit, defaults=input.dict(exclude={'products'}))
-    print(client, created)
     sale = Sale.objects.create(client=client, user=request.user)
     for product in input.products:
         prod_instance = Product.objects.get(pk=product.product_id)
@@ -39,8 +46,10 @@ def create_sales(request: ASGIRequest, input: SaleIn):
         )
         prod_instance.stock -= product.amount
         prod_instance.save()
-
-    return {'msg': 'Sale created successfully'}
+    sale_db = Sale.objects.select_related('client').prefetch_related('products').filter(pk=sale.pk).first()
+    if sale_db:
+        return sale_db
+    return 404, {'error': 'sale not found'}
 
 
 @router.get('clients/{nit}/', response={200: ClientSchema, 404: dict})

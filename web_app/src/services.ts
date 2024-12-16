@@ -148,6 +148,12 @@ export const getApiSales = async (params: { begin: string; end: string; }, signa
   return data;
 };
 
+export const getApiSale = async (saleId: number, signal?: AbortSignal) => {
+  const response = await fetch(`/api/sales/${saleId}/`, { signal, headers })
+  const data: Sale = await response.json()
+  return data;
+};
+
 export const createApiSale = async (input: any) => {
   const response = await fetch('/api/sales/', { method: 'POST', body: JSON.stringify(input), headers })
   const data: Sale = await response.json()

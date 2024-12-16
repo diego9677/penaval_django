@@ -40,6 +40,7 @@ FRONTEND_URLS = [
     'shopping',
     'shopping/form',
     'cart/',
+    'sale/',
     'proform/',
 ]
 
