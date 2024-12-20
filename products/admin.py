@@ -1,5 +1,10 @@
 from django.contrib import admin
-from .models import Place, Brand, Product
+from .models import Place, Brand, Product, TypeProduct
+
+
+@admin.register(TypeProduct)
+class TypeProductAdmin(admin.ModelAdmin):
+    list_display = ('pk', 'name', 'description')
 
 
 @admin.register(Place)
