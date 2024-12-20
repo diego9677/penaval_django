@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 
-import { createApiProduct, deleteApiProduct, getApiBrands, getApiPlaces, getApiProduct, updateApiProduct } from "../services";
-import { Brand, Place } from "../interfaces";
+import { createApiProduct, deleteApiProduct, getApiBrands, getApiPlaces, getApiProduct, getApiTypeProducts, updateApiProduct } from "../services";
+import { Brand, Place, TypeProduct } from "../interfaces";
 import { Spinner } from "../components/Spinner";
 import { Button } from "../components/common/Button";
 import { Input } from "../components/common/Input";
@@ -15,13 +15,15 @@ interface StateData {
   price: number;
   place_id: number | string;
   brand_id: number | string;
+  type_product_id: number | string;
 }
 
 export const ProductForm = () => {
-  const [data, setData] = useState<StateData>({ code: '', measures: '', price: 0, brand_id: '', place_id: '' });
+  const [data, setData] = useState<StateData>({ code: '', measures: '', price: 0, brand_id: '', place_id: '', type_product_id: '' });
   const [loading, setLoading] = useState(true);
   const [brands, setBrands] = useState<Brand[]>([]);
   const [places, setPlaces] = useState<Place[]>([]);
+  const [typeProducts, setTypeProducts] = useState<TypeProduct[]>([]);
 
   const [searchParams] = useSearchParams();
   const id = searchParams.get('id');
@@ -31,25 +33,28 @@ export const ProductForm = () => {
     const controller = new AbortController();
 
     if (id) {
-      Promise.all([getApiProduct(Number(id), controller.signal), getApiBrands('', 100, controller.signal), getApiPlaces('', controller.signal)])
-        .then(([product, brands, places]) => {
-          const { code, measures, price, place: { id: place_id }, brand: { id: brand_id } } = product;
+      Promise.all([getApiProduct(Number(id), controller.signal), getApiBrands('', 100, controller.signal), getApiPlaces('', controller.signal), getApiTypeProducts('', controller.signal)])
+        .then(([product, brands, places, typeProducts]) => {
+          const { code, measures, price, place: { id: place_id }, brand: { id: brand_id }, type_product: { id: type_product_id } } = product;
           setData({
             code,
             measures,
             price: Number(price),
             brand_id,
             place_id,
+            type_product_id,
           });
           setBrands(brands);
           setPlaces(places);
+          setTypeProducts(typeProducts);
           setLoading(false);
         });
     } else {
-      Promise.all([getApiBrands('', 100, controller.signal), getApiPlaces('', controller.signal)])
-        .then(([brands, places]) => {
+      Promise.all([getApiBrands('', 100, controller.signal), getApiPlaces('', controller.signal), getApiTypeProducts('', controller.signal)])
+        .then(([brands, places, typeProducts]) => {
           setBrands(brands);
           setPlaces(places);
+          setTypeProducts(typeProducts);
           setLoading(false);
         });
     }
@@ -146,6 +151,15 @@ export const ProductForm = () => {
         </section>
 
         <section className="flex flex-col md:flex-row gap-4">
+        <div className="flex-1">
+            <Select
+              isFilter
+              label="Tipo de Producto"
+              options={typeProducts.map(p => ({ label: p.name, value: p.id }))}
+              value={data.place_id}
+              onChange={(value) => setData({ ...data, place_id: Number(value) })}
+            />
+          </div>
           <div className="flex-1">
             <Select
               isFilter

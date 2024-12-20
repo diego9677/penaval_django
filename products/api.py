@@ -3,15 +3,15 @@ from django.http import HttpRequest
 from django.db.models import Q
 from ninja import Router
 
-from .schemas import ProductSchema, ProductIn, PlaceSchema, BrandSchema, PlaceIn, BrandIn
-from .models import Product, Place, Brand
+from .schemas import ProductSchema, ProductIn, PlaceSchema, BrandSchema, TypeProductSchema, PlaceIn, BrandIn, TypeProductIn
+from .models import Product, Place, Brand, TypeProduct
 
 router = Router()
 
 
 @router.get('products/', response=List[ProductSchema])
 def get_products(request: HttpRequest, search: str):
-    qs = Product.objects.select_related('brand', 'place').filter(
+    qs = Product.objects.select_related('brand', 'place', 'type_product').filter(
         Q(code__icontains=search) |
         Q(measures__startswith=search) |
         Q(brand__name__icontains=search)
@@ -21,7 +21,7 @@ def get_products(request: HttpRequest, search: str):
 
 @router.get('products/{id}/', response=ProductSchema)
 def get_one_product(request: HttpRequest, id: int):
-    qs = Product.objects.select_related('brand', 'place').get(pk=id)
+    qs = Product.objects.select_related('brand', 'place', 'type_product').get(pk=id)
     return qs
 
 
@@ -34,7 +34,7 @@ def create_product(request: HttpRequest, input: ProductIn):
 @router.put('products/{id}/', response=ProductSchema)
 def update_product(request: HttpRequest, id: int, input: ProductIn):
     Product.objects.filter(id=id).update(**input.dict())
-    qs = Product.objects.select_related('brand', 'place').get(id=id)
+    qs = Product.objects.select_related('brand', 'place', 'type_product').get(id=id)
     return qs
 
 
@@ -107,5 +107,38 @@ def update_brand(request: HttpRequest, id: int, input: BrandIn):
 @router.delete('brands/{id}/', response=BrandSchema)
 def delete_brand(request: HttpRequest, id: int):
     qs = Brand.objects.get(pk=id)
+    qs.delete()
+    return qs
+
+
+# type product section
+@router.get('type-products/', response=List[TypeProductSchema])
+def get_type_products(request: HttpRequest, search: str):
+    qs = TypeProduct.objects.filter(name__icontains=search).order_by('id')
+    return qs
+
+
+@router.get('type-products/{id}/', response=TypeProductSchema)
+def get_one_type_product(request: HttpRequest, id: int):
+    qs = TypeProduct.objects.get(id=id)
+    return qs
+
+
+@router.post('type-products/', response=TypeProductSchema)
+def create_type_product(request: HttpRequest, input: TypeProductIn):
+    qs = TypeProduct.objects.create(**input.dict())
+    return qs
+
+
+@router.put('type-products/{id}/', response=TypeProductSchema)
+def update_type_product(request: HttpRequest, id: int, input: TypeProductIn):
+    TypeProduct.objects.filter(id=id).update(**input.dict())
+    qs = TypeProduct.objects.get(id=id)
+    return qs
+
+
+@router.delete('type-products/{id}/', response=TypeProductSchema)
+def delete_type_product(request: HttpRequest, id: int):
+    qs = TypeProduct.objects.get(pk=id)
     qs.delete()
     return qs

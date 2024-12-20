@@ -11,7 +11,7 @@ export const ProductItem = ({ product }: Props) => {
     <>
       <div className="flex-1 flex flex-col gap-1">
         <span className="text-xs font-normal text-gray-900">{product.brand.name}</span>
-        <span className="text-sm font-semibold text-gray-800">{product.code}</span>
+        <span className="text-sm font-semibold text-gray-800">{product.type_product.name} {product.code}</span>
         <span className="text-normal font-normal text-gray-700">{product.measures}</span>
         <span className="text-sm font-light text-gray-700">{product.place.name}</span>
       </div>

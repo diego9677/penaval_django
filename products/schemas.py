@@ -1,10 +1,16 @@
 from ninja import ModelSchema
-from products.models import Brand, Place, Product
+from products.models import Brand, Place, Product, TypeProduct
 
 
 class BrandSchema(ModelSchema):
     class Config:
         model = Brand
+        model_fields = ['id', 'name', 'description']
+
+
+class TypeProductSchema(ModelSchema):
+    class Config:
+        model = TypeProduct
         model_fields = ['id', 'name', 'description']
 
 
@@ -19,6 +25,7 @@ class PlaceSchema(ModelSchema):
 class ProductSchema(ModelSchema):
     place: PlaceSchema = None
     brand: BrandSchema = None
+    type_product: TypeProductSchema = None
 
     class Config:
         model = Product
@@ -28,6 +35,7 @@ class ProductSchema(ModelSchema):
 class ProductIn(ModelSchema):
     place_id: int
     brand_id: int
+    type_product_id: int
 
     class Config:
         model = Product
@@ -43,4 +51,10 @@ class PlaceIn(ModelSchema):
 class BrandIn(ModelSchema):
     class Config:
         model = Brand
+        model_fields = ['name', 'description']
+
+
+class TypeProductIn(ModelSchema):
+    class Config:
+        model = TypeProduct
         model_fields = ['name', 'description']

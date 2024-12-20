@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import { getApiSale } from "../services";
+import { getApiSale, updateApiUrlSale } from "../services";
 import { Sale } from "../interfaces";
 import { Spinner } from "../components/Spinner";
+import { Input } from "../components/common/Input";
+import { Button } from "../components/common/Button";
 
 const COLUMNS = [
     'producto',
@@ -25,6 +27,18 @@ export const SaleConfirmation = () => {
         return total.toFixed(2);
     };
 
+    const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const formData = new FormData(e.currentTarget);
+        const datos = Object.fromEntries(formData.entries()) as { url: string };
+        if (sale) {
+            updateApiUrlSale(sale?.id, datos.url)
+                .then((resp) => {
+                    console.log(resp);
+                    alert('Url Guardada correctamente');
+                });
+        }
+    };
 
     useEffect(() => {
         const controler = new AbortController();
@@ -111,8 +125,8 @@ export const SaleConfirmation = () => {
                                 <tr key={d.id}>
                                     <td className='p-2'>
                                         <div className="flex items-center gap-2 w-52">
-                                            <span className="text-sm text-gray-800 font-normal flex-1">{d.product.code}</span>
-                                            <CopyToClipBoardButton value={d.product.code} />
+                                            <span className="text-sm text-gray-800 font-normal whitespace-nowrap flex-1">{d.product.type_product.name} {d.product.code}</span>
+                                            <CopyToClipBoardButton value={`${d.product.type_product.name} ${d.product.code}`} />
                                         </div>
                                     </td>
                                     <td className='p-2'>
@@ -145,6 +159,15 @@ export const SaleConfirmation = () => {
                     </table>
                 </section>
             )}
+
+            <form className="flex items-end gap-2 px-1" onSubmit={onSubmit}>
+                <div className="h-14 flex-1">
+                    <Input name="url" label="URL de la Factura" type="text" />
+                </div>
+                <div className="w-20 h-8">
+                    <Button type={"submit"} >Guardar</Button>
+                </div>
+            </form>
         </main>
     );
 };

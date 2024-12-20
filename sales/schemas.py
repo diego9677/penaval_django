@@ -1,13 +1,19 @@
 from typing import List
 from datetime import datetime
 from ninja import ModelSchema, Schema
-from ninja.orm import create_schema
+# from ninja.orm import create_schema
 
-from products.models import Product
+from products.schemas import TypeProductSchema
+# from products.models import Product
 from .models import Client, SaleDetail
 
 
-ProductSchemaShort = create_schema(Product, fields=['id', 'code'])
+# ProductSchemaShort = create_schema(Product, fields=['id', 'code', 'type_product'])
+
+class ProductSchemaShort(Schema):
+    id: int
+    code: str
+    type_product: TypeProductSchema
 
 
 class SaleCart(Schema):
@@ -52,6 +58,10 @@ class ProformIn(Schema):
     last_name: str
     phone: str
     products: List[SaleCart]
+
+
+class UpdateURLInSchema(Schema):
+    url: str
 
 
 class ProformSchema(Schema):

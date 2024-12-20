@@ -184,3 +184,42 @@ export const getApiProform = async (proform_id: string, signal?: AbortSignal) =>
   const data: Proform[] = await response.json()
   return data;
 };
+
+// type product section
+export const getApiTypeProducts = async (search: string, signal?: AbortSignal) => {
+  const response = await fetch(`/api/type-products/?search=${search}`, { signal , headers })
+  const data: Place[] = await response.json()
+  return data;
+};
+
+export const getApiTypeProduct = async (id: number, signal?: AbortSignal) => {
+  const response = await fetch(`/api/type-products/${id}`, { signal , headers })
+  const data: Place = await response.json()
+  return data;
+};
+
+export const createApiTypeProduct = async (input: any) => {
+  const response = await fetch('/api/type-products/', { method: 'POST', body: JSON.stringify(input), headers })
+  const data: Place = await response.json()
+  return data;
+};
+
+export const updateApiTypeProduct = async (id: number, input: any) => {
+  const response = await fetch(`/api/type-products/${id}/`, { method: 'PUT', body: JSON.stringify(input), headers })
+  const data: Place = await response.json()
+  return data;
+};
+
+export const deleteApiTypeProduct = async (id: number) => {
+  const response = await fetch(`/api/type-products/${id}/`, { method: 'DELETE', headers })
+  const data: Place = await response.json()
+  return data;
+};
+
+
+// url section
+export const updateApiUrlSale = async (saleId: number, url: string) => {
+  const response = await fetch(`/api/update-url/${saleId}/`, { method: 'PUT', body: JSON.stringify({ url }), headers })
+  const data: Place[] = await response.json()
+  return data;
+};

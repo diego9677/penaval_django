@@ -3,7 +3,6 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { MainLayout } from "./layout/MainLayout";
 
 // pages
-import { BrandForm } from "./pages/BrandForm";
 import { Brands } from "./pages/Brands";
 import { PlaceForm } from "./pages/PlaceForm";
 import { Places } from "./pages/Places";
@@ -15,6 +14,8 @@ import { ProductDetail } from "./pages/ProductDetail";
 import { Cart } from "./pages/Cart";
 import { Proformas } from "./pages/Proformas";
 import { SaleConfirmation } from "./pages/SaleConfirmation";
+import { TypeProducts } from "./pages/TypeProducts";
+import { TypeProductForm } from "./pages/TypeProductForm";
 // import { Sales } from "./pages/Sales";
 // import { Shopping } from "./pages/Shopping";
 // import { SaleForm } from "./pages/SaleForm";
@@ -37,7 +38,16 @@ const App = () => {
                 path="/brands/form"
                 element={
                     <MainLayout title="Formulario de marcas">
-                        <BrandForm />
+                        <TypeProductForm />
+                    </MainLayout>
+                }
+            />
+
+            <Route
+                path="/type-products/form"
+                element={
+                    <MainLayout title="Formulario de tipo de producto">
+                        <TypeProductForm />
                     </MainLayout>
                 }
             />
@@ -86,6 +96,16 @@ const App = () => {
                     </MainLayout>
                 }
             />
+
+            <Route
+                path="/type-products"
+                element={
+                    <MainLayout title="Tipos de Productos">
+                        <TypeProducts />
+                    </MainLayout>
+                }
+            />
+
 
             <Route
                 path="/places"

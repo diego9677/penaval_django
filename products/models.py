@@ -29,6 +29,18 @@ class Place(models.Model):
         verbose_name_plural = 'Lugares'
 
 
+class TypeProduct(models.Model):
+    name = models.CharField(max_length=250)
+    description = models.TextField(null=True, blank=True)
+
+    def __str__(self) -> str:
+        return self.name
+
+    class Meta:
+        verbose_name = 'Tipo de Producto'
+        verbose_name_plural = 'Tipos de Productos'
+
+
 class Product(models.Model):
     code = models.CharField(max_length=100, unique=True, verbose_name='Código')
     place = models.ForeignKey(Place, related_name='products', on_delete=models.CASCADE)
@@ -37,6 +49,7 @@ class Product(models.Model):
     pucharse_price = models.DecimalField(default=0, max_digits=9, decimal_places=2, verbose_name='Precio Compra')
     price = models.DecimalField(default=0, max_digits=9, decimal_places=2, verbose_name='Precio Unitario')
     measures = models.CharField(max_length=255, verbose_name='Medidas')
+    type_product = models.ForeignKey(TypeProduct, null=True, related_name='products', on_delete=models.SET_NULL)
 
     def __str__(self):
         return self.code

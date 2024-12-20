@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Brand } from "../interfaces";
-import { getApiBrands } from "../services";
+import { TypeProduct } from "../interfaces";
+import { getApiTypeProducts } from "../services";
 import { Button } from "../components/common/Button";
 import { Input } from "../components/common/Input";
 import { Spinner } from "../components/Spinner";
 
 
-export const Brands = () => {
-  const [brands, setBrands] = useState<Brand[]>([]);
+export const TypeProducts = () => {
+  const [typeProducts, setTypeProducts] = useState<TypeProduct[]>([]);
   const [search, setSearch] = useState('');
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const controller = new AbortController();
 
-    getProviders(controller.signal);
+    getTypes(controller.signal);
 
     return () => {
       controller.abort();
@@ -23,16 +23,16 @@ export const Brands = () => {
   }, []);
 
 
-  const getProviders = async (signal?: AbortSignal) => {
+  const getTypes = async (signal?: AbortSignal) => {
     setLoading(true);
-    const data = await getApiBrands(search, 20, signal);
-    setBrands(data);
+    const data = await getApiTypeProducts(search, signal);
+    setTypeProducts(data);
     setLoading(false);
   };
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await getProviders();
+    await getTypes();
   };
 
   return (
@@ -49,7 +49,7 @@ export const Brands = () => {
           <div className="flex-1 h-8">
             <Input
               type="text"
-              placeholder="'Marca X'"
+              placeholder="Buscar Tipo de productos"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
@@ -65,8 +65,8 @@ export const Brands = () => {
       </header>
 
       <section className="overflow-auto flex-1 px-4 md:p-0">
-        {!loading && brands.map(b => (
-          <Link to={`/brands/form?id=${b.id}`} className="flex flex-col gap-1 border-b py-2" key={b.id}>
+        {!loading && typeProducts.map(b => (
+          <Link to={`/type-products/form?id=${b.id}`} className="flex flex-col gap-1 border-b py-2" key={b.id}>
             <span className="text-sm font-semibold text-gray-800">{b.name}</span>
             <span className="text-sm font-light text-gray-700">{b.description}</span>
           </Link>

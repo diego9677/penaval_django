@@ -6,7 +6,7 @@ from ninja import Router
 
 from products.models import Product
 
-from .schemas import SaleSchema, ClientSchema, SaleIn, ProformIn, ProformSchema
+from .schemas import SaleSchema, ClientSchema, SaleIn, ProformIn, ProformSchema, UpdateURLInSchema
 from .models import Sale, SaleDetail, Client, Proform, ProformDetail
 
 router = Router()
@@ -46,7 +46,7 @@ def create_sales(request: ASGIRequest, input: SaleIn):
         )
         prod_instance.stock -= product.amount
         prod_instance.save()
-    sale_db = Sale.objects.select_related('client').prefetch_related('products').filter(pk=sale.pk).first()
+    sale_db = Sale.objects.select_related('client').prefetch_related(Prefetch('products', queryset=Product.objects.select_related('type_product'))).filter(pk=sale.pk).first()
     if sale_db:
         return sale_db
     return 404, {'error': 'sale not found'}
@@ -88,3 +88,14 @@ def delete_proform(request: ASGIRequest, proform_id: int):
     proform = Proform.objects.delete(pk=proform_id)
     print(proform)
     return {'msg': 'Proform deleted successfully'}
+
+
+@router.put('/update-url/{sale_id}/', response={200: dict, 404: dict})
+def update_url_sale(request: ASGIRequest, sale_id: int, update_url_in: UpdateURLInSchema):
+    sale_db = Sale.objects.filter(pk=sale_id).first()
+    if not sale_db:
+        return 404, {'error': 'Sale not found'}
+
+    sale_db.url = update_url_in.url
+    sale_db.save()
+    return 200, {'msg': 'Sale url saved'}

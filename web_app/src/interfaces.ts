@@ -20,6 +20,7 @@ export interface Product {
   measures: string;
   place: Place;
   brand: Brand;
+  type_product: TypeProduct;
 }
 
 interface ProductShort {
@@ -37,6 +38,13 @@ export interface Place {
   description?: string;
   products?: ProductShort[];
 }
+
+export interface TypeProduct {
+  id: number;
+  name: string;
+  description?: string;
+}
+
 
 export interface Brand {
   id: number;
@@ -74,6 +82,10 @@ export interface Sale {
     product: {
       id: number;
       code: string;
+      type_product: {
+        id: number;
+        name: string;
+      };
     };
   }[];
 }

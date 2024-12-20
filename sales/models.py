@@ -23,6 +23,7 @@ class Sale(models.Model):
     client = models.ForeignKey(Client, related_name='sales', on_delete=models.CASCADE)
     date = models.DateTimeField(auto_now_add=True, verbose_name='Fecha Emisión')
     products = models.ManyToManyField(Product, related_name='sales', through='SaleDetail')
+    url = models.URLField(null=True, blank=True, verbose_name='URl de la factura')
 
     def __str__(self):
         return self.date.strftime('%d/%m/%Y %H:%M:%S')
