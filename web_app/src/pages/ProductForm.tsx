@@ -156,8 +156,8 @@ export const ProductForm = () => {
               isFilter
               label="Tipo de Producto"
               options={typeProducts.map(p => ({ label: p.name, value: p.id }))}
-              value={data.place_id}
-              onChange={(value) => setData({ ...data, place_id: Number(value) })}
+              value={data.type_product_id}
+              onChange={(value) => setData({ ...data, type_product_id: Number(value) })}
             />
           </div>
           <div className="flex-1">
